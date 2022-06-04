@@ -1,54 +1,76 @@
 @import '../../../sass/';
 
 .Button {
-	padding: 6px 15px;
-	margin: 0 10px;
-	font-size: 14px;
+	padding: 12px 35px !important;
+	margin: 0 10px !important;
+	font-size: 13px !important;
+	font-weight: 500 !important;
+	letter-spacing: 1px;
+	transition: 0.15s;
 
-	border-radius: 100px;
+	border-radius: 100px !important;
 	border: none;
 
-	display: flex;
-	align-items: center;
+	display: flex !important;
+	align-items: center !important;
 
 	// ICON BUTTON
 	svg {
-		margin: 0 10px 0 0;
+		margin: 0 10px 0 0 !important;
+		font-size: 16px !important;
+	}
+
+	// SIZE
+	&[data-thin='1'] {
+		padding: 8px 17px !important;
+		font-size: 12px !important;
 	}
 
 	// BUTTON COLORS
 	&[data-color='primary'] {
-		background-color: $color-primary;
+		background-color: $color-primary !important;
+		&:hover {
+			background-color: $color-primary-transp !important;
+		}
 	}
 
 	&[data-color='primary-transp'] {
-		background-color: $color-primary-transp;
+		background-color: $color-primary-transp !important;
+		&:hover {
+			background-color: $color-primary !important;
+		}
 	}
 
 	&[data-color='secondary'] {
-		background-color: $color-secondary;
+		background-color: $color-secondary !important;
+		&:hover {
+			background-color: $color-secondary-transp !important;
+		}
 	}
 
 	&[data-color='secondary-transp'] {
-		background-color: $color-secondary-transp;
+		background-color: $color-secondary-transp !important;
+		&:hover {
+			background-color: $color-secondary !important;
+		}
 	}
 
 	&[data-color='none'] {
-		background-color: transparent;
+		background-color: transparent !important;
 	}
 
 	&[data-txt-color='light'] {
-		color: white;
+		color: white !important;
 	}
 
 	&[data-txt-color='dark'] {
-		color: $primary-black;
+		color: $primary-black !important;
 	}
 
 	&[data-color='primary'],
 	&[data-color='primary-transp'],
 	&[data-color='secondary'],
 	&[data-color='secondary-transp'] {
-		color: white;
+		color: white !important;
 	}
 }

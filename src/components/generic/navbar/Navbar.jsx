@@ -49,7 +49,7 @@ export default function Navbar() {
 				<Link to='/about'>About Us</Link>
 			</div>
 			<div className={style.RightSide}>
-				<Button icon={'el:leaf'} color='secondary'>
+				<Button thin icon={'el:leaf'} color='secondary'>
 					Get Estimate
 				</Button>
 				<Button icon={'carbon:phone-voice-filled'} color='none'>

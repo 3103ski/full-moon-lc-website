@@ -1,16 +1,11 @@
+//•••••••••••••••••••
+// --> ROW FLEX
+//•••••••••••••••••••
+
+// --> Row Align
 @mixin flex-start {
 	display: flex !important;
 	align-items: flex-start;
-}
-
-@mixin flex-center {
-	display: flex !important;
-	align-items: center;
-}
-@mixin flex-center-center {
-	display: flex !important;
-	align-items: center;
-	justify-content: center;
 }
 
 @mixin flex-end {
@@ -18,27 +13,46 @@
 	align-items: flex-end;
 }
 
-@mixin flex-col-start {
-	@include flex-start;
-	flex-direction: column;
+@mixin flex-center {
+	display: flex !important;
+	align-items: center;
 }
 
-@mixin flex-col-center {
-	@include flex-col-center;
+// -->  Content Centered Fully
+@mixin flex-center-center {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+
+//•••••••••••••••••••
+// --> COLUMN FLEX
+//•••••••••••••••••••
+
+// --> Column Align
+@mixin flex-col-start {
+	display: flex !important;
 	flex-direction: column;
+	justify-content: flex-start;
 }
 
 @mixin flex-col-end {
-	@include flex-col-end;
+	display: flex !important;
 	flex-direction: column;
+	justify-content: flex-end;
 }
 
-@mixin flex-center-row {
-	@include flex-center;
+@mixin flex-col-center {
+	display: flex !important;
+	flex-direction: column;
 	justify-content: center;
 }
 
-@mixin flex-center-col {
-	@include flex-col-center;
-	justify-content: center;
+// Content Centered Fully
+
+@mixin flex-col-center-center {
+	display: flex !important;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }

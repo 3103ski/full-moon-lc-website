@@ -1,14 +1,26 @@
 import React from 'react';
-
 import { Icon } from '@iconify/react';
 
+import { Button } from 'semantic-ui-react';
 import style from './button.module.scss';
 
-export default function Button({ icon = null, color = 'primary', txtcolor = 'light', children }) {
+export default function CustomButton({
+	icon = null,
+	color = 'primary',
+	thin = null,
+	txtcolor = 'light',
+	children,
+	...rest
+}) {
 	return (
-		<button data-color={color} data-txt-color={txtcolor} className={style.Button}>
+		<Button
+			data-color={color}
+			data-txt-color={txtcolor}
+			data-thin={thin ? '1' : '0'}
+			className={style.Button}
+			{...rest}>
 			{icon ? <Icon icon={icon} /> : null}
 			{children}
-		</button>
+		</Button>
 	);
 }

@@ -1,7 +1,7 @@
 @import '../../../sass/';
 
 .Wrapper {
-	position: absolute;
+	position: fixed;
 	margin: 0;
 	padding: 0 10px;
 	z-index: 1000;
@@ -44,7 +44,7 @@
 	}
 
 	.RightSide {
-		display: flex;
+		@include flex-center;
 	}
 }
 
