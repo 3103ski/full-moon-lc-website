@@ -1,9 +1,13 @@
+// --> React
 import React from 'react';
+
+// --> Project Imports
+import { LearnLawnCareSection } from '../../components';
 
 export default function AboutPage() {
 	return (
-		<div>
-			<h1>About Page</h1>
-		</div>
+		<>
+			<LearnLawnCareSection />
+		</>
 	);
 }

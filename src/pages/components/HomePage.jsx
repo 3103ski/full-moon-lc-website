@@ -7,7 +7,7 @@ export default function HomePage() {
 		<>
 			<HomeLandingSection />
 			<ProfLawnCareSection />
-			<LearnLawnCareSection />
+			<LearnLawnCareSection picture />
 		</>
 	);
 }

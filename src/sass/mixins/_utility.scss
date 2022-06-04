@@ -75,8 +75,8 @@
 }
 
 @mixin center-cover-bg {
-	background-size: cover;
-	background-position: center;
+	background-size: cover !important;
+	background-position: center !important;
 }
 
 @mixin reset-text-margins {

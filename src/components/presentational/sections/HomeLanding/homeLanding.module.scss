@@ -18,6 +18,7 @@
 		@include flex-col-center-center;
 		position: relative;
 		z-index: 2;
+		@include no-select;
 
 		img {
 			width: 100%;

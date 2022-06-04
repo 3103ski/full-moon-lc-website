@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 // --> Local Styling
-import style from './cardLink.module.scss';
+import style from './articleCard.module.scss';
 
 export default function CardLink({ backgroundImage, title, summary, linkText, to = '/' }) {
 	return (

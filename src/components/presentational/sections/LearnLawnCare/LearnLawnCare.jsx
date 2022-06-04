@@ -7,16 +7,20 @@ import { Container } from 'semantic-ui-react';
 
 // --> Project Imports
 import { placeholderMowing, placeholderTileGrass } from '../../../../assets';
-import { Button, CardLink } from '../../../../components/';
+import { Button, CardLink } from '../../../../components';
 import { ARTICLES } from '../../../../routes';
 
 // --> Styling
 import style from './learnLawnCare.module.scss';
 
-export default function LearnLawnCareSection() {
+export default function LearnLawnCareSection({ picture = false }) {
+	const backgroundPic = picture ? `url(${placeholderMowing})` : '';
 	return (
-		<section className={style.SectionLearnLawn} style={{ backgroundImage: `url(${placeholderMowing})` }}>
-			<div className={style.ImageOverlay} />
+		<section
+			className={style.SectionLearnLawn}
+			data-picture={picture ? 1 : 0}
+			style={{ backgroundImage: backgroundPic }}>
+			<div className={style.Overlay} />
 			<Container className={style.Content}>
 				<h1 className={style.Title}>LEARN ABOUT LAWN CARE</h1>
 				<h3 className={style.Sub}>Find out tips that can save you money & keep your property looking fresh!</h3>
