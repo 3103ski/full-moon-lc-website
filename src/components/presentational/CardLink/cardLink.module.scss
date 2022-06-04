@@ -1,0 +1,129 @@
+@import '../../../sass';
+
+.Wrapper {
+	@include center-cover-bg;
+
+	border-radius: 20px;
+	position: relative;
+	margin: 10px;
+	overflow: hidden;
+
+	.Overlay {
+		@include bg-overlay-light;
+		border-radius: inherit;
+		z-index: 1;
+	}
+
+	&:hover {
+		@include hover-cursor;
+		.Inner {
+			margin-top: 0 !important;
+		}
+
+		.Overlay {
+			@include bg-overlay-2;
+		}
+	}
+
+	.Inner {
+		@include flex-col-start;
+		box-sizing: border-box;
+		position: inherit;
+		z-index: 2;
+		height: 100%;
+		transition: 0.16s;
+		margin-top: 100% !important;
+
+		.Title,
+		.Summary {
+			color: white;
+		}
+
+		.Title {
+			position: absolute;
+			top: -60px !important;
+			left: 20px;
+		}
+
+		.Summary {
+			font-weight: 300;
+		}
+
+		.LinkWrapper {
+			@include flex-center;
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			color: white;
+
+			p {
+				font-size: 1.3rem;
+			}
+
+			svg {
+				margin-left: 10px;
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	// --> MOBILE
+	@media only screen and (max-width: 767px) {
+		width: 400px;
+		height: 400px;
+
+		.Inner {
+			padding: 30px 25px;
+
+			.Title {
+				font-size: 3rem;
+				margin-bottom: 10px !important;
+			}
+
+			.Summary {
+				font-size: 2rem;
+				line-height: 2.1rem;
+			}
+		}
+	}
+
+	// --> TABLET
+	@media only screen and (min-width: 768px) {
+		width: 300px;
+		height: 300px;
+
+		.Inner {
+			padding: 20px;
+
+			.Title {
+				font-size: 2.5rem;
+				margin-bottom: 10px !important;
+			}
+
+			.Summary {
+				font-size: 1.6rem;
+				line-height: 1.8rem;
+			}
+		}
+	}
+
+	// --> COMPUTER & ABOVE
+	@media only screen and (min-width: 991px) {
+		width: 330px;
+		height: 330px;
+
+		.Inner {
+			padding: 20px;
+
+			.Title {
+				font-size: 2.7rem;
+				margin-bottom: 8px !important;
+			}
+
+			.Summary {
+				font-size: 1.8rem;
+				line-height: 2rem;
+			}
+		}
+	}
+}

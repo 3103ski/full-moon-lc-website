@@ -73,3 +73,20 @@
 		cursor: pointer;
 	}
 }
+
+@mixin center-cover-bg {
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin reset-text-margins {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		margin: 0 !important;
+	}
+}

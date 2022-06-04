@@ -1,14 +1,19 @@
+// --> React
 import React from 'react';
 
+// --> Packages
 import { Container, Grid } from 'semantic-ui-react';
+
+// --> Project Imports
 import { Button } from '../../../../components';
 import { placeholderWorker, mascotThumRight1000 } from '../../../../assets';
 
+// --> Local Styling
 import style from './profLawnCare.module.scss';
 
 export default function ProfLawnCareSection() {
 	return (
-		<Container fluid className={style.Outer}>
+		<Container fluid className={style.Outer} as={'section'}>
 			<Container className={style.Inner}>
 				<div className={`${style.CircleOne} ${style.Circle}`} />
 				<div className={`${style.CircleTwo} ${style.Circle}`} />

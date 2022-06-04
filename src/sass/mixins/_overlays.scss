@@ -1,0 +1,26 @@
+@mixin overlay-shared {
+	position: absolute !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+@mixin bg-overlay-1 {
+	@include overlay-shared();
+	background: linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.21) 0%,
+			rgba(255, 255, 255, 0.11) 0.01%,
+			rgba(34, 34, 34, 0.47) 98.02%
+		),
+		linear-gradient(0deg, rgba(76, 113, 149, 0.47), rgba(76, 113, 149, 0.47));
+}
+
+@mixin bg-overlay-2 {
+	@include overlay-shared();
+	background: linear-gradient(0deg, rgba(34, 34, 34, 0.54), rgba(61, 61, 61, 0.5));
+}
+
+@mixin bg-overlay-light {
+	@include overlay-shared();
+	background: linear-gradient(0deg, rgba(88, 88, 88, 0.4), rgba(88, 88, 88, 0.4)),
+		linear-gradient(0deg, rgba(255, 201, 185, 0.45), rgba(255, 201, 185, 0.45));
+}

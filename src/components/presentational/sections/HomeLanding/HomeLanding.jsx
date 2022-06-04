@@ -1,20 +1,21 @@
+// --> React
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// --> Packages
 import { Container } from 'semantic-ui-react';
 
-// assets
+// --> Project Imports
 import { placeholderLawn, banner1000 } from '../../../../assets';
-
-// Components
+import { OUR_WORK } from '../../../../routes';
 import { Button } from '../../../../components';
 
-// style
+// --> Local Styling
 import style from './homeLanding.module.scss';
 
 export default function HomeLandingSection() {
 	return (
-		<div className={style.Container} style={{ backgroundImage: `url(${placeholderLawn})` }}>
+		<section fluid className={style.SectionWrapper} style={{ backgroundImage: `url(${placeholderLawn})` }}>
 			<Container>
 				<div className={style.Wrapper}>
 					<img src={banner1000} alt='Full Moon Banner' />
@@ -23,13 +24,13 @@ export default function HomeLandingSection() {
 						<Button color='secondary-transp' icon={'el:leaf'}>
 							Get Estimate
 						</Button>
-						<Button as={Link} to='/work' color='secondary-transp' icon={'mdi:mower-bag'}>
+						<Button as={Link} to={OUR_WORK} color='secondary-transp' icon={'mdi:mower-bag'}>
 							Our Work
 						</Button>
 					</div>
 				</div>
 			</Container>
 			<div className={style.Overlay} />
-		</div>
+		</section>
 	);
 }

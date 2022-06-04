@@ -3,17 +3,13 @@
 .Outer {
 	position: relative;
 	overflow: hidden;
-	width: 100%;
 
 	.Inner {
-		position: relative;
+		position: inherit;
 
 		.Column {
-			display: flex !important;
-			flex-direction: column !important;
-			justify-content: flex-start !important;
-
-			padding-top: 150px;
+			@include flex-col-start;
+			padding-top: 130px;
 			padding-bottom: 150px;
 
 			@media only screen and (max-width: 990px) {
@@ -22,15 +18,13 @@
 			}
 
 			.Content {
-				width: 100% !important;
+				@include reset-text-margins;
 
 				h1,
 				h3,
 				p {
 					color: $primary-black;
 					text-align: right !important;
-					width: 100%;
-					margin: 0 !important;
 				}
 
 				h1 {

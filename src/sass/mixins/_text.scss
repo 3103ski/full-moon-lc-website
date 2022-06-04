@@ -23,6 +23,31 @@
 	}
 }
 
+@mixin p-summary {
+	font-weight: 300 !important;
+
+	// Mobile
+	@media only screen and (max-width: 767px) {
+		font-size: 4vw !important;
+		line-height: 4.2vw !important;
+	}
+	// Tablet
+	@media only screen and (min-width: 768px) {
+		font-size: 2vw !important;
+		line-height: 2.3vw !important;
+	}
+	// Computer
+	@media only screen and (min-width: 991px) {
+		font-size: 1.2rem !important;
+		line-height: 1.4rem !important;
+	}
+	// Extra large
+	@media only screen and (min-width: 1400px) {
+		font-size: 1.4rem !important;
+		line-height: 1.8rem !important;
+	}
+}
+
 @mixin sub-default {
 	font-size: 2rem !important;
 	font-weight: 300 !important;
@@ -31,8 +56,10 @@
 
 	// Mobile
 	@media only screen and (max-width: 767px) {
-		font-size: 1.75rem !important;
-		line-height: 2rem !important;
+		font-size: 2rem !important;
+		line-height: 2.4rem !important;
+		font-weight: 500 !important;
+		letter-spacing: 2px;
 	}
 	// Tablet
 	@media only screen and (min-width: 768px) {
@@ -73,5 +100,59 @@
 	@media only screen and (min-width: 1400px) {
 		font-size: 3.2rem !important;
 		line-height: 3.5rem !important;
+	}
+}
+
+@mixin banner-txt-default {
+	font-weight: 400;
+	letter-spacing: 2px;
+
+	// Mobile
+	@media only screen and (max-width: 767px) {
+		padding: 20px;
+		font-size: 4.7rem !important;
+		line-height: 4.8rem !important;
+	}
+	// Tablet
+	@media only screen and (min-width: 768px) {
+		font-size: 5.3vw !important;
+		line-height: 5.6vw !important;
+	}
+	// Computer
+	@media only screen and (min-width: 991px) {
+		font-size: 4.8vw !important;
+		line-height: 5vw !important;
+	}
+	// Extra large
+	@media only screen and (min-width: 1400px) {
+		font-size: 4.7rem !important;
+		line-height: 4.8rem !important;
+		letter-spacing: 3px;
+	}
+}
+
+@mixin title-bold {
+	font-weight: 500 !important;
+	letter-spacing: 1px;
+
+	// Mobile
+	@media only screen and (max-width: 767px) {
+		font-size: 3rem !important;
+		line-height: 2.7rem !important;
+	}
+	// Tablet
+	@media only screen and (min-width: 768px) {
+		font-size: 2.9vw !important;
+		line-height: 3.2vw !important;
+	}
+	// Computer
+	@media only screen and (min-width: 991px) {
+		font-size: 2.8vw !important;
+		line-height: 2.9vw !important;
+	}
+	// Extra large
+	@media only screen and (min-width: 1400px) {
+		font-size: 2.2rem !important;
+		line-height: 2.4rem !important;
 	}
 }

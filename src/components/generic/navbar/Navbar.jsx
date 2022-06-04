@@ -1,12 +1,18 @@
+// React
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Packages
 import { Icon } from '@iconify/react';
 
+// Project Imports
 import { banner500 } from '../../../assets';
 import { Button } from '../../../components';
+import { HOME, VIDEOS, ARTICLES, OUR_WORK, ABOUT_US } from '../../../routes';
 
+// Styling
 import style from './navbar.module.scss';
+
 export default function Navbar() {
 	function DropMenu({ label = 'Menu', children }) {
 		return (
@@ -30,23 +36,23 @@ export default function Navbar() {
 
 	return (
 		<nav className={style.Wrapper}>
-			<Link to='/' className={style.LogoWrapper}>
+			<Link to={HOME} className={style.LogoWrapper}>
 				<img src={banner500} alt='Navbar logo' />
 			</Link>
 			<div className={style.Center}>
-				<Link to='/'>Home</Link>
+				<Link to={HOME}>Home</Link>
 				<DropMenu label='Services'>
-					<DropLink to='/videos'>Landscaping</DropLink>
-					<DropLink to='/articles'>Mowing</DropLink>
-					<DropLink to='/work'>Gardening</DropLink>
-					<DropLink to='/work'>Property Cleanup</DropLink>
+					<DropLink to={VIDEOS}>Landscaping</DropLink>
+					<DropLink to={VIDEOS}>Mowing</DropLink>
+					<DropLink to={VIDEOS}>Gardening</DropLink>
+					<DropLink to={VIDEOS}>Property Cleanup</DropLink>
 				</DropMenu>
 				<DropMenu label='Explore'>
-					<DropLink to='/videos'>Videos</DropLink>
-					<DropLink to='/articles'>Articles</DropLink>
-					<DropLink to='/work'>Our Work</DropLink>
+					<DropLink to={VIDEOS}>Videos</DropLink>
+					<DropLink to={ARTICLES}>Articles</DropLink>
+					<DropLink to={OUR_WORK}>Our Work</DropLink>
 				</DropMenu>
-				<Link to='/about'>About Us</Link>
+				<Link to={ABOUT_US}>About Us</Link>
 			</div>
 			<div className={style.RightSide}>
 				<Button thin icon={'el:leaf'} color='secondary'>

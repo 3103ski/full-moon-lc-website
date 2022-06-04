@@ -1,0 +1,49 @@
+@import '../../../../sass/';
+
+.SectionLearnLawn {
+	@include flex-center-center;
+	@include center-cover-bg;
+
+	height: 100vh;
+	position: relative;
+
+	@media only screen and (max-width: 767px) {
+		height: unset !important;
+	}
+
+	.ImageOverlay {
+		@include bg-overlay-2;
+		z-index: 1;
+	}
+
+	.Content {
+		@include reset-text-margins;
+		@include flex-col-center-center;
+		padding: 40px 0;
+
+		position: inherit;
+		z-index: 10;
+
+		.Title,
+		.Sub {
+			color: white;
+			text-align: center;
+		}
+
+		.Title {
+			@include banner-txt-default;
+		}
+
+		.Sub {
+			@include sub-default;
+			padding: 10px 30px;
+		}
+
+		.Tiles {
+			@include flex-center-center;
+			flex-wrap: wrap;
+			margin-bottom: 10px;
+			width: 100%;
+		}
+	}
+}

@@ -10,7 +10,7 @@
 	background-color: $color-primary-transp;
 	display: flex;
 	align-items: center;
-	box-sizing: border-box;
+	box-sizing: border-box !important;
 
 	.LogoWrapper {
 		width: 280px;

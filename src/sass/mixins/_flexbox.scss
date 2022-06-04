@@ -32,27 +32,27 @@
 // --> Column Align
 @mixin flex-col-start {
 	display: flex !important;
-	flex-direction: column;
-	justify-content: flex-start;
+	flex-direction: column !important;
+	justify-content: flex-start !important;
 }
 
 @mixin flex-col-end {
 	display: flex !important;
-	flex-direction: column;
-	justify-content: flex-end;
+	flex-direction: column !important;
+	justify-content: flex-end !important;
 }
 
 @mixin flex-col-center {
 	display: flex !important;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: column !important;
+	justify-content: center !important;
 }
 
 // Content Centered Fully
 
 @mixin flex-col-center-center {
 	display: flex !important;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+	flex-direction: column !important;
+	justify-content: flex-start !important;
+	align-items: center !important;
 }

@@ -18,6 +18,9 @@ import mascotThumRight250 from './mascot_thumbup_right_250.png';
 // PLACEHOLDERS
 import placeholderLawn from './placeholders/ph-lawn.jpg';
 import placeholderWorker from './placeholders/ph-worker.jpg';
+import placeholderMowing from './placeholders/ph-mowing.jpg';
+
+import placeholderTileGrass from './placeholders/ph-tile-grass.jpg';
 
 export {
 	banner250,
@@ -31,4 +34,4 @@ export {
 	mascotThumRight1000,
 };
 
-export { placeholderLawn, placeholderWorker };
+export { placeholderLawn, placeholderWorker, placeholderMowing, placeholderTileGrass };
