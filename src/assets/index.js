@@ -8,4 +8,9 @@ import mascotOne250 from './mascot_thumbup_250.png';
 import mascotOne500 from './mascot_thumbup_500.png';
 import mascotOne1000 from './mascot_thumbup_1000.png';
 
+// PLACEHOLDERS
+import placeholderLawn from './placeholders/ph-lawn.jpg';
+
 export { banner250, banner500, banner1000, mascotOne250, mascotOne500, mascotOne1000 };
+
+export { placeholderLawn };

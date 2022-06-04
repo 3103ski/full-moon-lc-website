@@ -1,9 +1,11 @@
 import React from 'react';
 
+import { HomeLandingSection } from '../../components';
+
 export default function HomePage() {
 	return (
 		<div>
-			<h1>Home Page</h1>
+			<HomeLandingSection />
 		</div>
 	);
 }

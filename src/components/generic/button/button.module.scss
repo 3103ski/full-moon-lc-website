@@ -1,0 +1,54 @@
+@import '../../../sass/';
+
+.Button {
+	padding: 6px 15px;
+	margin: 0 10px;
+	font-size: 14px;
+
+	border-radius: 100px;
+	border: none;
+
+	display: flex;
+	align-items: center;
+
+	// ICON BUTTON
+	svg {
+		margin: 0 10px 0 0;
+	}
+
+	// BUTTON COLORS
+	&[data-color='primary'] {
+		background-color: $color-primary;
+	}
+
+	&[data-color='primary-transp'] {
+		background-color: $color-primary-transp;
+	}
+
+	&[data-color='secondary'] {
+		background-color: $color-secondary;
+	}
+
+	&[data-color='secondary-transp'] {
+		background-color: $color-secondary-transp;
+	}
+
+	&[data-color='none'] {
+		background-color: transparent;
+	}
+
+	&[data-txt-color='light'] {
+		color: white;
+	}
+
+	&[data-txt-color='dark'] {
+		color: $primary-black;
+	}
+
+	&[data-color='primary'],
+	&[data-color='primary-transp'],
+	&[data-color='secondary'],
+	&[data-color='secondary-transp'] {
+		color: white;
+	}
+}

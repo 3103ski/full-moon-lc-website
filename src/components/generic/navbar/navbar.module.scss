@@ -1,0 +1,115 @@
+@import '../../../sass/';
+
+.Wrapper {
+	position: absolute;
+	margin: 0;
+	padding: 0 10px;
+	z-index: 1000;
+	width: 100vw;
+	height: 94px;
+	background-color: $color-primary-transp;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+
+	.LogoWrapper {
+		width: 280px;
+
+		img {
+			width: 100%;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	.Center {
+		margin: 0 auto;
+		display: flex;
+		height: 100%;
+		align-items: center;
+
+		a {
+			margin: 0 10px;
+			color: white;
+			text-decoration: none;
+			transition-timing-function: ease-in-out;
+			transition: 0.1s;
+
+			&:hover {
+				color: rgb(214, 214, 214);
+			}
+		}
+	}
+
+	.RightSide {
+		display: flex;
+	}
+}
+
+.DropMenu {
+	position: relative;
+	height: 100%;
+
+	.DropLabel {
+		@include flex-center;
+		height: inherit;
+		margin: 0 10px;
+		color: white;
+
+		svg {
+			margin-left: 5px;
+		}
+	}
+
+	@keyframes showMenu {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0px);
+		}
+	}
+
+	.DropWrapper {
+		background-color: $color-secondary-transp;
+		position: absolute;
+		top: 100%;
+		flex-direction: column;
+		border-bottom-left-radius: 13px;
+		border-bottom-right-radius: 13px;
+		display: none;
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	&:hover {
+		cursor: pointer;
+
+		.DropWrapper {
+			animation: showMenu;
+			animation-fill-mode: forwards;
+			animation-duration: 0.25s;
+			display: flex;
+		}
+	}
+
+	.DropLink {
+		position: relative;
+		width: 150px;
+		padding: 14px 18px;
+
+		margin: 0 !important;
+
+		&:hover {
+			background-color: $color-secondary;
+		}
+
+		&:last-of-type {
+			margin-bottom: 12px !important;
+		}
+	}
+}

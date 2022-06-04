@@ -1,0 +1,46 @@
+//•••••••••••••••••••
+// Util Colors
+//•••••••••••••••••••
+
+// PRIMARY
+$color-primary: #3B7D58;
+$color-primary-pale: #4C956C;
+$color-primary-transp: rgba(44, 110, 73, 0.68);
+
+// SECONDARY
+$color-secondary: rgba(214, 140, 69, 1);
+$color-secondary-pale: rgba(233, 194, 157, 1);
+$color-secondary-transp: rgba(214, 140, 69, 0.75);
+
+// SHADES
+$primary-black: #585858;
+$passive-white: #fff;
+
+$primary-grey: rgb(100, 100, 100);
+$primary-grey-hover: rgba(100, 100, 100, 0.5);
+
+$passive-grey: rgba(192, 192, 192, 0.644);
+$passive-grey-hover: rgba(192, 192, 192, 0.4);
+
+$pale-grey: #d6d6d645;
+$pale-grey-two: #e0e0e029;
+
+// GENERICS
+$color-red: rgba(246, 49, 80, 0.8);
+$color-red-hover: rgba(238, 20, 20, 0.8);
+
+$color-green: #4ebf62;
+$color-green-hover: rgb(35, 184, 40);
+
+$color-ratingstar: #ffc225;
+
+// SOCIAL BRAND COLORS
+$color-spotify: #1db954;
+$color-facebook: #3b5998;
+$color-google: #eaeaea;
+$color-yelp: rgba(196, 18, 0, 0.82);
+
+//•••••••••••••••••••
+// Shadows     <-- Shouldn't be here ?? 
+//•••••••••••••••••••
+$hover-inset: inset 0px 0px 5px $passive-grey-hover;
