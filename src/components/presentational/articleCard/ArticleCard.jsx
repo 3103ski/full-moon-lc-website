@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 // --> Packages
 import { Icon } from '@iconify/react';
 
+// --> Project Imports
+import { ARROW_RIGHT } from '../../../iconify';
+
 // --> Local Styling
 import style from './articleCard.module.scss';
 
@@ -19,7 +22,7 @@ export default function CardLink({ backgroundImage, title, summary, linkText, to
 					<p className={style.Summary}>{summary}</p>
 					<div className={style.LinkWrapper}>
 						<p>{linkText}</p>
-						<Icon icon={'bi:arrow-right-circle-fill'} />
+						<Icon icon={ARROW_RIGHT} />
 					</div>
 				</div>
 			</article>

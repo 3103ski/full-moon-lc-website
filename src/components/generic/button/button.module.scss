@@ -14,6 +14,11 @@
 	display: flex !important;
 	align-items: center !important;
 
+	// UTIL STYLE
+	&[data-self-center='1'] {
+		margin: 0 auto !important;
+	}
+
 	// ICON BUTTON
 	svg {
 		margin: 0 10px 0 0 !important;
@@ -58,6 +63,12 @@
 	&[data-color='none'] {
 		background-color: transparent !important;
 	}
+
+	&[data-color='yelp'] {
+		background-color: $color-yelp !important;
+	}
+
+	// BUTTON TEXT COLOR
 
 	&[data-txt-color='light'] {
 		color: white !important;

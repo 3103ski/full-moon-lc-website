@@ -1,6 +1,12 @@
 import React from 'react';
 
-import { HomeLandingSection, ProfLawnCareSection, LearnLawnCareSection, ServicesSection } from '../../components';
+import {
+	HomeLandingSection,
+	ProfLawnCareSection,
+	LearnLawnCareSection,
+	ServicesSection,
+	HappyClientsSection,
+} from '../../components';
 
 export default function HomePage() {
 	return (
@@ -9,6 +15,7 @@ export default function HomePage() {
 			<ProfLawnCareSection />
 			<LearnLawnCareSection picture />
 			<ServicesSection />
+			<HappyClientsSection />
 		</>
 	);
 }

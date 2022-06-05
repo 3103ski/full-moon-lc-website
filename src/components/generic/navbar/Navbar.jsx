@@ -7,6 +7,7 @@ import { Icon } from '@iconify/react';
 
 // Project Imports
 import { banner500 } from '../../../assets';
+import { LEAF, CARROT_DOWN, PHONE } from '../../../iconify';
 import { Button } from '../../../components';
 import { HOME, VIDEOS, ARTICLES, OUR_WORK, ABOUT_US } from '../../../routes';
 
@@ -19,7 +20,7 @@ export default function Navbar() {
 			<div className={style.DropMenu}>
 				<div className={style.DropLabel}>
 					{label}
-					<Icon icon='ant-design:caret-down-outlined' />
+					<Icon icon={CARROT_DOWN} />
 				</div>
 				<div className={style.DropWrapper}>{children}</div>
 			</div>
@@ -55,10 +56,10 @@ export default function Navbar() {
 				<Link to={ABOUT_US}>About Us</Link>
 			</div>
 			<div className={style.RightSide}>
-				<Button thin icon={'el:leaf'} color='secondary'>
+				<Button thin icon={LEAF} color='secondary'>
 					Get Estimate
 				</Button>
-				<Button icon={'carbon:phone-voice-filled'} color='none'>
+				<Button icon={PHONE} color='none'>
 					1 (888) 555 - 5555
 				</Button>
 			</div>

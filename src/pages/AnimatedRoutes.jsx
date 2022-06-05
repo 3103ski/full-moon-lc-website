@@ -2,7 +2,10 @@
 import React from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
-// Page Imports
+// Packages
+import { AnimatePresence } from 'framer-motion';
+
+// Project Imports
 import {
 	AboutPage,
 	ArticleTemplatePage,
@@ -13,8 +16,6 @@ import {
 	VideosPage,
 	WorkTemplatePage,
 } from './components/';
-
-import { AnimatePresence } from 'framer-motion';
 
 export default function AnimatedRoutes() {
 	const location = useLocation();

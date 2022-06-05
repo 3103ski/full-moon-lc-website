@@ -1,8 +1,11 @@
-export { default as AboutPage } from './AboutPage.jsx';
-export { default as ArticleTemplatePage } from './ArticleTemplatePage.jsx';
-export { default as BrowseArticlesPage } from './BrowseArticlesPage.jsx';
-export { default as ExploreWorkPage } from './ExploreWorkPage.jsx';
-export { default as HomePage } from './HomePage.jsx';
-export { default as ServiceTemplatePage } from './ServiceTemplatePage.jsx';
-export { default as VideosPage } from './VideosPage.jsx';
-export { default as WorkTemplatePage } from './WorkTemplatePage.jsx';
+// --> Pages
+export { default as AboutPage } from './Page_About.jsx';
+export { default as BrowseArticlesPage } from './Page_BrowseArticles.jsx';
+export { default as ExploreWorkPage } from './Page_ExploreWork.jsx';
+export { default as HomePage } from './Page_Home.jsx';
+export { default as VideosPage } from './Page_Videos.jsx';
+
+// --> Templates
+export { default as ArticleTemplatePage } from './Template_Article.jsx';
+export { default as WorkTemplatePage } from './Template_Work.jsx';
+export { default as ServiceTemplatePage } from './Template_Service.jsx';

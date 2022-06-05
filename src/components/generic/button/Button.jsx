@@ -5,10 +5,11 @@ import { Button } from 'semantic-ui-react';
 import style from './button.module.scss';
 
 export default function CustomButton({
-	icon = null,
 	color = 'primary',
-	thin = null,
 	txtcolor = 'light',
+	icon = null,
+	thin = null,
+	selfCenter = null,
 	children,
 	...rest
 }) {
@@ -17,6 +18,7 @@ export default function CustomButton({
 			data-color={color}
 			data-txt-color={txtcolor}
 			data-thin={thin ? '1' : '0'}
+			data-self-center={selfCenter ? 1 : 0}
 			className={style.Button}
 			{...rest}>
 			{icon ? <Icon icon={icon} /> : null}

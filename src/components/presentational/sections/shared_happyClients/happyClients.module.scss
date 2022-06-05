@@ -1,0 +1,64 @@
+@import '../../../../sass/';
+
+.SectionWrapper {
+	@include center-cover-bg;
+	position: relative;
+	// min-height: 50vh;
+
+	.Overlay {
+		@include overlay-dark-brand;
+	}
+
+	.Inner {
+		padding: 0px 0;
+		position: relative;
+
+		.Grid {
+			position: relative;
+			padding: 60px 0;
+			max-width: 1000px;
+			margin: 0 auto;
+			height: 100% !important;
+		}
+
+		.Title h1 {
+			margin: 0;
+			color: white;
+		}
+
+		.Title h1:first-of-type {
+			@include body-hdr-default;
+			font-weight: 500;
+			margin-bottom: -10px;
+		}
+
+		.Title h1:last-of-type {
+			@include banner-txt-default;
+			font-weight: 900;
+		}
+
+		.ReviewsWrapper {
+			padding: 30px 0;
+		}
+	}
+
+	.MascotGraphic {
+		// Default
+		width: 300px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		// Mobile
+		@media only screen and (max-width: 767px) {
+			right: -120px;
+			transform: scaleX(-1);
+		}
+
+		// Tablet
+		@media only screen and (min-width: 768px) and (max-width: 991px) {
+			right: -90px;
+			transform: scaleX(-1);
+		}
+	}
+}

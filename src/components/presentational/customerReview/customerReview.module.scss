@@ -1,0 +1,54 @@
+@import '../../../sass/';
+
+.ReviewWrapper {
+	@include flex-center;
+
+	.Left {
+		@include flex-col-center-center;
+
+		img {
+			width: 100px;
+			border-radius: 100%;
+		}
+
+		.RatingWrapper {
+			width: 100px;
+			padding: 10px;
+			@include flex-center-center;
+			svg {
+				color: $color-ratingstar;
+			}
+		}
+	}
+
+	.Right {
+		position: relative;
+		color: white;
+		padding: 10px 15px;
+
+		p {
+			margin: 0;
+			&:first-of-type {
+				@include p-default;
+				font-weight: 500 !important;
+			}
+
+			&:last-child {
+				@include p-summary;
+				text-align: right;
+				margin-right: 20%;
+			}
+		}
+	}
+
+	// MOBILE
+	@media only screen and (max-width: 767px) {
+		@include flex-col-center-center;
+
+		.Left {
+			width: 100%;
+			align-items: flex-start !important;
+			padding-left: 15px;
+		}
+	}
+}
