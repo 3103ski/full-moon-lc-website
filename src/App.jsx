@@ -2,7 +2,7 @@ import './app.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 // Components
-import { Navbar } from './components';
+import { Navbar, Footer } from './components';
 
 // Pages
 import { AnimatedRoutes } from './pages';
@@ -13,6 +13,7 @@ function App() {
 			<Router>
 				<Navbar />
 				<AnimatedRoutes />
+				<Footer />
 			</Router>
 		</div>
 	);

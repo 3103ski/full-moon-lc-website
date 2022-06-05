@@ -5,9 +5,9 @@ import React from 'react';
 import { Container, Grid } from 'semantic-ui-react';
 
 // Project Imports
-import { mascotArmsCrossedCutoff1000, backgroundFamily } from '../../../../assets';
-import { Button, CustomerReview } from '../../../../components';
-import { YELP } from '../../../../iconify';
+import { mascotArmsCrossedCutoff1000, backgroundFamily } from '../../../assets';
+import { Button, CustomerReview } from '../../../components';
+import { YELP } from '../../../iconify';
 
 // Local Styling
 import style from './happyClients.module.scss';

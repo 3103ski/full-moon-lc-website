@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 
 // --> Project Imports
-import { placeholderMowing, placeholderTileGrass } from '../../../../assets';
-import { Button, CardLink } from '../../../../components';
-import { ARTICLES } from '../../../../routes';
+import { placeholderMowing, placeholderTileGrass } from '../../../assets';
+import { Button, CardLink } from '../../../components';
+import { ARTICLES } from '../../../routes';
 
 // --> Styling
 import style from './learnLawnCare.module.scss';
@@ -24,9 +24,9 @@ export default function LearnLawnCareSection({ picture = false }) {
 			<Container className={style.Content}>
 				<h1 className={style.Title}>LEARN ABOUT LAWN CARE</h1>
 				<h3 className={style.Sub}>Find out tips that can save you money & keep your property looking fresh!</h3>
-				<div className={style.Tiles}>
+				<div className={style.TilesWrapper}>
 					<CardLink
-						to='/articles'
+						to={`${ARTICLES}/8173623`}
 						title='Grass Health'
 						linkText='Read Article'
 						backgroundImage={placeholderTileGrass}
@@ -34,7 +34,7 @@ export default function LearnLawnCareSection({ picture = false }) {
 					/>
 
 					<CardLink
-						to='/articles'
+						to={`${ARTICLES}/8173623`}
 						title='Grass Health'
 						linkText='Read Article'
 						backgroundImage={placeholderTileGrass}

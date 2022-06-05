@@ -1,0 +1,72 @@
+@import '../../../sass/';
+
+.Wrapper {
+	@include flex-center-center;
+	margin: 0 4px;
+
+	&,
+	svg {
+		transition: 0.17s;
+	}
+
+	//••••••••••
+	// SIZING
+	//••••••••••
+	&[data-size='small'],
+	&[data-size='sm'] {
+		$sm: 20px;
+		width: $sm;
+		height: $sm;
+		svg {
+			font-size: calc(#{$sm} - 4px);
+		}
+	}
+
+	&[data-size='default'] {
+		$de: 30px;
+		width: $de;
+		height: $de;
+		svg {
+			font-size: calc(#{$de} - 4px);
+		}
+	}
+
+	&[data-size='large'],
+	&[data-size='lg'] {
+		$lg: 40px;
+		width: $lg;
+		height: $lg;
+		svg {
+			font-size: calc(#{$lg} - 4px);
+		}
+	}
+
+	//••••••••••••••
+	// COLORS
+	//••••••••••••••
+	&[data-color='light'] {
+		svg {
+			color: white !important;
+		}
+	}
+
+	&[data-color='primary'] {
+		svg {
+			color: $color-primary !important;
+		}
+	}
+
+	&[data-color='secondary'] {
+		svg {
+			color: $color-secondary !important;
+		}
+	}
+
+	&:hover {
+		cursor: pointer;
+		svg {
+			color: $color-secondary !important;
+		}
+		transform: scale(1.04);
+	}
+}

@@ -1,9 +1,8 @@
-@import '../../../../sass/';
+@import '../../../sass/';
 
 .SectionWrapper {
 	@include center-cover-bg;
 	position: relative;
-	// min-height: 50vh;
 
 	.Overlay {
 		@include overlay-dark-brand;

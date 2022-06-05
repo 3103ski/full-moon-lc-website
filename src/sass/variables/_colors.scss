@@ -3,9 +3,15 @@
 //•••••••••••••••••••
 
 // PRIMARY
-$color-primary: #3B7D58;
-$color-primary-pale: #4C956C;
+$color-primary: #3b7d58;
+$color-primary-pale: #4c956c;
 $color-primary-transp: rgba(44, 110, 73, 0.68);
+
+// PRIMARY DARK
+$color-primary-dark: #367b55;
+
+// PRIMARY ALT
+$color-primary-alt: #4c956c;
 
 // SECONDARY
 $color-secondary: rgba(214, 140, 69, 1);
@@ -41,6 +47,6 @@ $color-google: #eaeaea;
 $color-yelp: rgba(196, 18, 0, 0.82);
 
 //•••••••••••••••••••
-// Shadows     <-- Shouldn't be here ?? 
+// Shadows     <-- Shouldn't be here ??
 //•••••••••••••••••••
 $hover-inset: inset 0px 0px 5px $passive-grey-hover;

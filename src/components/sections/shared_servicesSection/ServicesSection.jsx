@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { CardLink, Button } from '../../../../components';
-import { VIDEOS } from '../../../../routes';
+import { CardLink, Button } from '../../../components';
+import { VIDEOS } from '../../../routes';
 import {
 	curveGraphicTopLG,
 	mascotCleanup1000,
@@ -16,7 +16,7 @@ import {
 	serviceTileLandscaping,
 	serviceTileMowing,
 	stockHome,
-} from '../../../../assets';
+} from '../../../assets';
 
 // --> Local Styling
 import style from './servicesSection.module.scss';
@@ -43,10 +43,12 @@ export default function ServicesSection() {
 							</p>
 
 							<div className={style.ButtonsWrapper}>
-								<Button as={Link} to={VIDEOS} icon={'ci:youtube'}>
+								<Button space={'10x'} as={Link} to={VIDEOS} icon={'ci:youtube'}>
 									Videos
 								</Button>
-								<Button icon={'el:leaf'}>Request Quote</Button>
+								<Button space={'10x'} icon={'el:leaf'}>
+									Request Quote
+								</Button>
 							</div>
 						</Grid.Column>
 						<Grid.Column only='computer' computer={7}>

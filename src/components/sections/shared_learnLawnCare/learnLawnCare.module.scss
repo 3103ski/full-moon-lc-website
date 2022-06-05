@@ -1,4 +1,4 @@
-@import '../../../../sass/';
+@import '../../../sass/';
 
 .SectionLearnLawn {
 	@include flex-center-center;
@@ -46,7 +46,7 @@
 			padding: 10px 30px;
 		}
 
-		.Tiles {
+		.TilesWrapper {
 			@include flex-center-center;
 			flex-wrap: wrap;
 			margin-bottom: 10px;

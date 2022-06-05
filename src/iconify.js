@@ -1,4 +1,7 @@
 export const YELP = `cib:yelp`;
+export const FACEBOOK = `entypo-social:facebook`;
+export const INSTAGRAM = `akar-icons:instagram-fill`;
+export const YOUTUBE = `akar-icons:youtube-fill`;
 
 export const LEAF = `el:leaf`;
 export const MOWER = ``;

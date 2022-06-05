@@ -9,12 +9,14 @@ export default function CustomButton({
 	txtcolor = 'light',
 	icon = null,
 	thin = null,
+	space = '',
 	selfCenter = null,
 	children,
 	...rest
 }) {
 	return (
 		<Button
+			data-space={space}
 			data-color={color}
 			data-txt-color={txtcolor}
 			data-thin={thin ? '1' : '0'}

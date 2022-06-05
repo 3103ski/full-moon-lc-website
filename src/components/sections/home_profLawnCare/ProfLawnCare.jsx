@@ -5,8 +5,8 @@ import React from 'react';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { Button } from '../../../../components';
-import { placeholderWorker, mascotThumRight1000 } from '../../../../assets';
+import { Button } from '../../../components';
+import { placeholderWorker, mascotThumRight1000 } from '../../../assets';
 
 // --> Local Styling
 import style from './profLawnCare.module.scss';

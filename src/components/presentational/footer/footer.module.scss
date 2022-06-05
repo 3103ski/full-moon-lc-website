@@ -1,0 +1,76 @@
+@import '../../../sass/';
+
+.FooterWrapper {
+	@include flex-col-center-center;
+	padding: 0 !important;
+	width: 100vw;
+	color: white;
+
+	.Grid {
+		margin: 0 !important;
+	}
+
+	.Top,
+	.Bottom {
+		width: 100%;
+	}
+
+	.Top {
+		background-color: $color-primary-alt;
+		padding: 30px 0;
+
+		h3 {
+			@include sub-default;
+			font-weight: 700 !important;
+		}
+
+		h3,
+		p {
+			margin: 0 !important;
+		}
+
+		p {
+			@include p-summary;
+			padding-top: 8px;
+
+			@media only screen and (max-width: 767px) {
+				margin-bottom: 15px !important;
+			}
+		}
+	}
+
+	.Bottom {
+		background-color: $color-primary-dark;
+		padding: 10px 0 20px 0;
+
+		.FooterBrand {
+			.Logo {
+				max-width: 300px !important;
+			}
+			@media only screen and (max-width: 767px) {
+				@include flex-center-center;
+			}
+			@media only screen and (min-width: 768px) {
+				@include flex-start;
+			}
+		}
+
+		p {
+			@include p-summary;
+			margin-top: 14px;
+		}
+
+		.SocialIconWrapper {
+			@include flex-center-center;
+		}
+
+		.InfoWrapper {
+			@media only screen and (max-width: 767px) {
+				@include flex-center-center;
+			}
+			@media only screen and (min-width: 768px) {
+				@include flex-end;
+			}
+		}
+	}
+}

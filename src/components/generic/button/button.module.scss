@@ -1,11 +1,40 @@
 @import '../../../sass/';
 
 .Button {
+	@include flex-center-center;
 	padding: 12px 35px !important;
-	margin: 0 10px !important;
+
+	//•••••••••
+	// BUTTON MARGIN
+	//•••••••••
+
+	margin: 0 !important;
+	&[data-space='10xy'] {
+		margin: 10px !important;
+	}
+	&[data-space='10x'] {
+		margin: 0 10px !important;
+	}
+	&[data-space='10y'] {
+		margin: 10px 0 !important;
+	}
+
+	&[data-space='15x'] {
+		margin: 0 15px !important;
+	}
+
+	&[data-space='20x'] {
+		margin: 0 20px !important;
+	}
+
+	&[data-space='25x'] {
+		margin: 0 25px !important;
+	}
+
 	font-size: 13px !important;
 	font-weight: 500 !important;
 	letter-spacing: 1px;
+
 	transition: 0.15s;
 
 	border-radius: 100px !important;
@@ -16,7 +45,8 @@
 
 	// UTIL STYLE
 	&[data-self-center='1'] {
-		margin: 0 auto !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
 	}
 
 	// ICON BUTTON
