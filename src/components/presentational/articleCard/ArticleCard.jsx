@@ -15,6 +15,7 @@ export default function CardLink({ backgroundImage, title, summary, linkText, to
 				<div className={style.Overlay} />
 				<div className={style.Inner}>
 					<h3 className={style.Title}>{title}</h3>
+					<h3 className={style.TitleInner}>{title}</h3>
 					<p className={style.Summary}>{summary}</p>
 					<div className={style.LinkWrapper}>
 						<p>{linkText}</p>

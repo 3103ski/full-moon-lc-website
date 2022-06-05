@@ -1,0 +1,98 @@
+@import '../../../../sass/';
+
+.SectionWrapper {
+	position: relative;
+	width: 100vw;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+
+	.TopGraphic {
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.SectionInner {
+		position: inherit;
+		z-index: 2;
+		padding: 130px 0 200px 0;
+
+		.SectionDetails {
+			max-width: 900px;
+			margin: 0 auto;
+
+			.Title {
+				position: relative;
+			}
+
+			.Title h1 {
+				@include body-hdr-default;
+				margin: 0;
+			}
+
+			.Title h1:first-of-type {
+				color: $primary-black;
+			}
+
+			.Title h1:last-of-type {
+				color: $color-secondary;
+			}
+
+			.Description {
+				@include p-summary;
+				padding: 10px 10px 25px 10px;
+			}
+
+			.ButtonsWrapper {
+				@include flex-center;
+			}
+
+			// Mascot Service Graphic
+			.ServiceGraphic {
+				width: 80%;
+				opacity: 0.35;
+			}
+		}
+
+		.TilesWrapper {
+			@include flex-center-center;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			max-width: 800px;
+		}
+
+		// --> RESPONSIVE
+
+		.ServiceGraphicMobile {
+			position: absolute;
+			width: 220px;
+			transform: scaleX(-1);
+			bottom: 0;
+			right: 0;
+		}
+
+		@media only screen and (max-width: 767px) {
+			padding: 14vw 0 200px 0;
+		}
+		@media only screen and (min-width: 768px) {
+			.ServiceGraphicMobile {
+				position: absolute;
+				width: 300px;
+			}
+		}
+		@media only screen and (min-width: 991px) {
+			padding: 9vw 0 200px 0;
+
+			.ServiceGraphicMobile {
+				display: none;
+			}
+		}
+		@media only screen and (min-width: 1200px) {
+			padding: 12vw 0 200px 0;
+		}
+		@media only screen and (min-width: 1400px) {
+			padding: 200px 0;
+		}
+	}
+}

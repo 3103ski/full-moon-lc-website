@@ -9,3 +9,4 @@ export { default as CardLink } from './presentational/articleCard/ArticleCard.js
 export { default as HomeLandingSection } from './presentational/sections/homeLanding/HomeLanding.jsx';
 export { default as ProfLawnCareSection } from './presentational/sections/profLawnCare/ProfLawnCare.jsx';
 export { default as LearnLawnCareSection } from './presentational/sections/learnLawnCare/LearnLawnCare.jsx';
+export { default as ServicesSection } from './presentational/sections/servicesSection/ServicesSection.jsx';

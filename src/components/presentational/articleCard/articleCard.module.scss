@@ -9,7 +9,7 @@
 	overflow: hidden;
 
 	.Overlay {
-		@include bg-overlay-light;
+		@include bg-overlay-2;
 		border-radius: inherit;
 		z-index: 1;
 	}
@@ -18,10 +18,6 @@
 		@include hover-cursor;
 		.Inner {
 			margin-top: 0 !important;
-		}
-
-		.Overlay {
-			@include bg-overlay-2;
 		}
 	}
 
@@ -35,7 +31,8 @@
 		margin-top: 100% !important;
 
 		.Title,
-		.Summary {
+		.Summary,
+		.TitleInner {
 			color: white;
 		}
 
@@ -58,6 +55,7 @@
 
 			p {
 				font-size: 1.3rem;
+				margin: 0;
 			}
 
 			svg {
