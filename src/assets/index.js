@@ -31,6 +31,7 @@ import mascotCleanup1000 from './mascot_cleanup_1000.png';
 // --> Background
 import curveGraphicTopLG from './graphic_curve_top_lg.png';
 import backgroundFamily from './background_stock_family.jpg';
+import backgroundMowing from './backgound_stock_mowing.jpg';
 
 // --> GENERIC SERVICE PHOTOS
 import serviceTileLandscaping from './tiles_service_landscaping.jpg';
@@ -59,6 +60,7 @@ import placeholderProfilePic from './placeholders/ph-profile-pic.jpg';
 //••••••••••••••••••••••••••
 export {
 	backgroundFamily,
+	backgroundMowing,
 	banner250,
 	banner500,
 	banner1000,

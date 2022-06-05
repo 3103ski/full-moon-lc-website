@@ -1,4 +1,9 @@
 //••••••••••
+// Util
+//••••••••••
+export { default as TopScroll } from './util/TopScroll.jsx';
+
+//••••••••••
 // GENERIC
 //••••••••••
 export { default as Button } from './generic/button/Button.jsx';
@@ -25,3 +30,7 @@ export { default as HappyClientsSection } from './sections/shared_happyClients/H
 // Home Sections
 export { default as HomeLandingSection } from './sections/home_landing/HomeLanding.jsx';
 export { default as ProfLawnCareSection } from './sections/home_profLawnCare/ProfLawnCare.jsx';
+
+// About Sections
+export { default as AboutHeaderSection } from './sections/about_header/AboutHeader.jsx';
+export { default as AboutBioSection } from './sections/about_bio/AboutBioSection.jsx';

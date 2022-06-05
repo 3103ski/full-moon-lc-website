@@ -36,6 +36,11 @@
 		linear-gradient(0deg, rgba(255, 201, 185, 0.45), rgba(255, 201, 185, 0.45));
 }
 
+@mixin overlay-dark {
+	@include overlay-shared();
+	background-color: rgba(47, 47, 47, 0.48);
+}
+
 @mixin overlay-dark-brand {
 	@include overlay-shared();
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.45)),

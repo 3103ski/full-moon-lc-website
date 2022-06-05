@@ -1,5 +1,6 @@
 // --> React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --> Packages
 import { Container, Grid } from 'semantic-ui-react';
@@ -7,6 +8,7 @@ import { Container, Grid } from 'semantic-ui-react';
 // --> Project Imports
 import { Button } from '../../../components';
 import { placeholderWorker, mascotThumRight1000 } from '../../../assets';
+import { ABOUT_US } from '../../../routes';
 
 // --> Local Styling
 import style from './profLawnCare.module.scss';
@@ -30,7 +32,9 @@ export default function ProfLawnCareSection() {
 									veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
 									voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
 								</p>
-								<Button>About Us</Button>
+								<Link to={ABOUT_US}>
+									<Button>About Us</Button>
+								</Link>
 							</div>
 							<img src={mascotThumRight1000} alt='Full Moon Mascot' className={style.MascotGraphic} />
 						</Grid.Column>

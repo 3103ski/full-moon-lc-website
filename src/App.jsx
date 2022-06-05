@@ -9,10 +9,12 @@ import { AnimatedRoutes } from './pages';
 
 function App() {
 	return (
-		<div className='App'>
+		<div className='App' id='app'>
 			<Router>
 				<Navbar />
-				<AnimatedRoutes />
+				<div id='view-container'>
+					<AnimatedRoutes />
+				</div>
 				<Footer />
 			</Router>
 		</div>

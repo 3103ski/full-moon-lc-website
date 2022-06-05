@@ -1,0 +1,44 @@
+@import '../../../sass/';
+
+.HeaderWrapper {
+	@include center-cover-bg;
+	@include flex-center;
+	min-height: 600px;
+	position: relative;
+	.Overlay {
+		@include overlay-dark;
+	}
+	.Inner {
+		@include flex-col-center-center;
+		position: inherit;
+		z-index: 2;
+		margin-top: 30px;
+
+		img {
+			width: 100%;
+			max-width: 1000px;
+		}
+
+		h3 {
+			@include body-hdr-default;
+			color: white;
+			font-weight: 700 !important;
+			letter-spacing: 2px !important;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.ButtonWrapper {
+			@include flex-center;
+
+			width: 100%;
+
+			button:first-of-type {
+				margin-left: auto !important;
+			}
+			button:last-of-type {
+				margin-right: auto !important;
+			}
+		}
+	}
+}

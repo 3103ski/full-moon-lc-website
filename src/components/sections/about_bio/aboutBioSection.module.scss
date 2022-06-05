@@ -1,0 +1,22 @@
+@import '../../../sass/';
+
+.SectionWrapper {
+	@include flex-col-start;
+	padding: 35px 0 50px 0;
+
+	text-align: center;
+
+	h1 {
+		@include sub-default;
+	}
+
+	p {
+		@include p-default;
+		padding: 0 5%;
+		margin-bottom: 20px;
+
+		&:last-of-type {
+			margin-bottom: 45px !important;
+		}
+	}
+}

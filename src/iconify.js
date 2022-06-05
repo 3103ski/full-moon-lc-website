@@ -4,7 +4,7 @@ export const INSTAGRAM = `akar-icons:instagram-fill`;
 export const YOUTUBE = `akar-icons:youtube-fill`;
 
 export const LEAF = `el:leaf`;
-export const MOWER = ``;
+export const MOWER = `mdi:mower-bag`;
 export const PHONE = `carbon:phone-voice-filled`;
 
 export const ARROW_RIGHT = `bi:arrow-right-circle-fill`;
