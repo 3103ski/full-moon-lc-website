@@ -1,0 +1,56 @@
+@import '../../../sass/';
+
+.HeaderSection {
+	@include flex-col-center;
+	position: relative;
+
+	.Overlay {
+		position: inherit;
+		@include overlay-dark;
+	}
+
+	.Inner {
+		position: inherit;
+		z-index: 10;
+		color: white;
+	}
+
+	// Background Positioning
+	&[data-bg-pos='center'] {
+		@include center-cover-bg;
+	}
+
+	&[data-bg-pos='bottom'] {
+		@include bottom-cover-bg;
+	}
+
+	&[data-bg-pos='top'] {
+		@include top-cover-bg;
+	}
+
+	// Header Sizing
+	&[data-size='short'] {
+		min-height: 200px;
+	}
+	&[data-size='med'] {
+		min-height: 350px;
+	}
+	&[data-size='lg'] {
+		min-height: 500px;
+	}
+	&[data-size='full'] {
+		height: 100vh;
+	}
+
+	// Header Content
+	.Title {
+		@include body-hdr-default;
+		margin: 0;
+		margin-top: 50px;
+	}
+
+	.Sub {
+		@include sub-default;
+		margin: 0;
+	}
+}

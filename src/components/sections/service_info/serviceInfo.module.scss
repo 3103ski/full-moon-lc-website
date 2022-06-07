@@ -1,0 +1,31 @@
+@import '../../../sass/';
+
+.SectionWrapper {
+	position: relative;
+	padding: 80px 0 250px 0;
+
+	.Title,
+	.Sub {
+		text-align: center;
+	}
+
+	.Title {
+		@include body-hdr-default;
+		margin: 0;
+	}
+
+	.Sub {
+		@include sub-default;
+		color: $color-secondary;
+		margin: 0;
+	}
+
+	.Body {
+		p {
+			@include p-default;
+			&:last-of-type {
+				margin-bottom: 80px;
+			}
+		}
+	}
+}

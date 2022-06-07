@@ -1,0 +1,14 @@
+.Graphic {
+	width: 100%;
+	left: 0;
+	position: absolute;
+	z-index: 1;
+
+	&[data-pos='top'] {
+		top: 0;
+	}
+
+	&[data-pos='bottom'] {
+		bottom: 0;
+	}
+}

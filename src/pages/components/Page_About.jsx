@@ -7,17 +7,19 @@ import {
 	HappyClientsSection,
 	AboutHeaderSection,
 	AboutBioSection,
-	TopScroll,
+	Footer,
 } from '../../components';
+
+import MotionWrapper from '../AnimateWrapper.jsx';
 
 export default function AboutPage() {
 	return (
-		<>
+		<MotionWrapper>
 			<AboutHeaderSection />
 			<AboutBioSection />s
 			<HappyClientsSection />
 			<LearnLawnCareSection />
-			<TopScroll />
-		</>
+			<Footer />
+		</MotionWrapper>
 	);
 }

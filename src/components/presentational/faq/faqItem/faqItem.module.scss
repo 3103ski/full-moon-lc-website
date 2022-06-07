@@ -1,0 +1,34 @@
+@import '../../../../sass/';
+
+.QuestionWrapper {
+	@include hover-cursor;
+	@include flex-start;
+	transition: 0.2s;
+	width: 100%;
+	margin-bottom: 18px;
+
+	svg {
+		margin-top: 2px !important;
+	}
+
+	.Question {
+		@include p-summary;
+		padding-left: 10px;
+		width: 100%;
+	}
+
+	&:hover {
+		transform: scale(1.035);
+		opacity: 0.85;
+	}
+}
+
+.Answer {
+	@include p-default;
+	padding: 10px 10px 35px 10px;
+}
+
+.ItemContainer {
+	@include flex-col-start;
+	width: 100%;
+}

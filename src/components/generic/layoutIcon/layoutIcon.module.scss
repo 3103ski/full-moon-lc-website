@@ -1,0 +1,26 @@
+@import '../../../sass/';
+
+.Wrapper {
+	@include flex-center-center;
+
+	&[data-color='primary'] {
+		svg {
+			color: $color-primary;
+		}
+	}
+	&[data-color='secondary'] {
+		svg {
+			color: $color-secondary;
+		}
+	}
+	&[data-color='black'] {
+		svg {
+			color: $primary-black;
+		}
+	}
+	&[data-color='white'] {
+		svg {
+			color: white;
+		}
+	}
+}

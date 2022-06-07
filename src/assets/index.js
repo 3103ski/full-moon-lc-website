@@ -28,10 +28,15 @@ import mascotCleanup1000 from './mascot_cleanup_1000.png';
 // --> LAYOUT
 //•••••••••••••••••••••••••
 
-// --> Background
+// --> Background Graphics
 import curveGraphicTopLG from './graphic_curve_top_lg.png';
+import curveGraphicBottomLG from './graphic_curve_bottom_lg.png';
+
+// --> Background Images
 import backgroundFamily from './background_stock_family.jpg';
 import backgroundMowing from './backgound_stock_mowing.jpg';
+import backgroundHouse from './background_stock_home.jpg';
+import backgroundWorker from './background_worker.jpg';
 
 // --> GENERIC SERVICE PHOTOS
 import serviceTileLandscaping from './tiles_service_landscaping.jpg';
@@ -52,6 +57,8 @@ import placeholderWorker from './placeholders/ph-worker.jpg';
 import placeholderMowing from './placeholders/ph-mowing.jpg';
 import placeholderTileGrass from './placeholders/ph-tile-grass.jpg';
 import placeholderProfilePic from './placeholders/ph-profile-pic.jpg';
+import placeholderArticleHeader from './placeholders/ph-background-grass.jpg';
+import placeholderBlowingLeaves from './placeholders/ph-blowing-leaves.jpg';
 
 //••••••••••••••••••••••••••
 //••••••••••••••••••••••••••
@@ -60,10 +67,13 @@ import placeholderProfilePic from './placeholders/ph-profile-pic.jpg';
 //••••••••••••••••••••••••••
 export {
 	backgroundFamily,
+	backgroundHouse,
 	backgroundMowing,
+	backgroundWorker,
 	banner250,
 	banner500,
 	banner1000,
+	curveGraphicBottomLG,
 	curveGraphicTopLG,
 	mascotArmsCrossed1000,
 	mascotArmsCrossedCutoff1000,
@@ -83,4 +93,12 @@ export {
 	stockHouse2,
 };
 
-export { placeholderLawn, placeholderWorker, placeholderMowing, placeholderTileGrass, placeholderProfilePic };
+export {
+	placeholderArticleHeader,
+	placeholderBlowingLeaves,
+	placeholderLawn,
+	placeholderWorker,
+	placeholderMowing,
+	placeholderTileGrass,
+	placeholderProfilePic,
+};

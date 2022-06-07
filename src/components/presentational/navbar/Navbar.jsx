@@ -9,7 +9,7 @@ import { Icon } from '@iconify/react';
 import { banner500 } from '../../../assets';
 import { LEAF, CARROT_DOWN, PHONE } from '../../../iconify';
 import { Button } from '../../../components';
-import { HOME, VIDEOS, ARTICLES, OUR_WORK, ABOUT_US } from '../../../routes';
+import { HOME, VIDEOS, ARTICLES, OUR_WORK, ABOUT_US, SERVICE } from '../../../routes';
 
 // Styling
 import style from './navbar.module.scss';
@@ -41,12 +41,11 @@ export default function Navbar() {
 				<img src={banner500} alt='Navbar logo' />
 			</Link>
 			<div className={style.Center}>
-				<Link to={HOME}>Home</Link>
 				<DropMenu label='Services'>
-					<DropLink to={VIDEOS}>Landscaping</DropLink>
-					<DropLink to={VIDEOS}>Mowing</DropLink>
-					<DropLink to={VIDEOS}>Gardening</DropLink>
-					<DropLink to={VIDEOS}>Property Cleanup</DropLink>
+					<DropLink to={`${SERVICE}/landscaping`}>Landscaping</DropLink>
+					<DropLink to={`${SERVICE}/mowing`}>Mowing</DropLink>
+					<DropLink to={`${SERVICE}/gardening`}>Gardening</DropLink>
+					<DropLink to={`${SERVICE}/property-cleanup`}>Property Cleanup</DropLink>
 				</DropMenu>
 				<DropMenu label='Explore'>
 					<DropLink to={VIDEOS}>Videos</DropLink>

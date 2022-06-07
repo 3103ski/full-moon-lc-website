@@ -6,6 +6,7 @@ export const YOUTUBE = `akar-icons:youtube-fill`;
 export const LEAF = `el:leaf`;
 export const MOWER = `mdi:mower-bag`;
 export const PHONE = `carbon:phone-voice-filled`;
+export const MONEY = `bxs:dollar-circle`;
 
 export const ARROW_RIGHT = `bi:arrow-right-circle-fill`;
 export const CARROT_DOWN = `ant-design:caret-down-outlined`;

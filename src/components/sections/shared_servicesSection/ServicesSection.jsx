@@ -6,10 +6,9 @@ import { Link } from 'react-router-dom';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { CardLink, Button } from '../../../components';
-import { VIDEOS } from '../../../routes';
+import { CardLink, Button, CurveGraphic } from '../../../components';
+import { SERVICE, VIDEOS } from '../../../routes';
 import {
-	curveGraphicTopLG,
 	mascotCleanup1000,
 	serviceTileCleanup,
 	serviceTileGardens,
@@ -24,7 +23,7 @@ import style from './servicesSection.module.scss';
 export default function ServicesSection() {
 	return (
 		<section className={style.SectionWrapper} style={{ backgroundImage: `url(${stockHome})` }}>
-			<img className={style.TopGraphic} src={curveGraphicTopLG} alt='Curvey Layout Graphic' />
+			<CurveGraphic pos='top' />
 			<Container className={style.SectionInner}>
 				<Grid className={style.SectionDetails}>
 					<Grid.Row>
@@ -63,28 +62,28 @@ export default function ServicesSection() {
 
 				<div className={style.TilesWrapper}>
 					<CardLink
-						to='/articles'
+						to={`${SERVICE}/lanscaping`}
 						title='Landscapes'
 						linkText='Learn More'
 						backgroundImage={serviceTileLandscaping}
 						summary='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque '
 					/>
 					<CardLink
-						to='/articles'
+						to={`${SERVICE}/mowing`}
 						title='Mowing'
 						linkText='Learn More'
 						backgroundImage={serviceTileMowing}
 						summary='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque '
 					/>
 					<CardLink
-						to='/articles'
+						to={`${SERVICE}/property-cleanup`}
 						title='Cleanup'
 						linkText='Learn More'
 						backgroundImage={serviceTileCleanup}
 						summary='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque '
 					/>
 					<CardLink
-						to='/articles'
+						to={`${SERVICE}/gardening`}
 						title='Gardens'
 						linkText='Learn More'
 						backgroundImage={serviceTileGardens}

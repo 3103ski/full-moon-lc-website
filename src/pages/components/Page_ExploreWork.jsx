@@ -1,9 +1,17 @@
+// --> React
 import React from 'react';
+
+// --> Project Imports
+import { PageHeader, Footer } from '../../components';
+import { backgroundWorker } from '../../assets';
+
+import MotionWrapper from '../AnimateWrapper.jsx';
 
 export default function ExploreWorkPage() {
 	return (
-		<div>
-			<h1>ExploreWork Page</h1>
-		</div>
+		<MotionWrapper>
+			<PageHeader title='Explore Our Work' image={backgroundWorker} imgPos='top' />
+			<Footer />
+		</MotionWrapper>
 	);
 }
