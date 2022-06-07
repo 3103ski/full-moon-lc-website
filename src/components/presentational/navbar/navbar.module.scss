@@ -97,6 +97,13 @@
 		}
 	}
 
+	&:focus {
+		opacity: 0.3;
+		.DropWrapper {
+			display: none !important;
+		}
+	}
+
 	.DropLink {
 		position: relative;
 		width: 150px;
