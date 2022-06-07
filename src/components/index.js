@@ -7,10 +7,11 @@ export { default as TopScroll } from './util/TopScroll.jsx';
 // GENERIC
 //••••••••••
 export { default as Button } from './generic/button/Button.jsx';
-export { default as SocialIcon } from './generic/socialIcon/SocialIcon.jsx';
-export { default as PageHeader } from './generic/pageHeader/PageHeader.jsx';
-export { default as Modal } from './generic/modal/Modal.jsx';
+export { default as Card } from './generic/card/Card.jsx';
 export { default as LayoutIcon } from './generic/layoutIcon/LayoutIcon.jsx';
+export { default as Modal } from './generic/modal/Modal.jsx';
+export { default as PageHeader } from './generic/pageHeader/PageHeader.jsx';
+export { default as SocialIcon } from './generic/socialIcon/SocialIcon.jsx';
 
 //••••••••••••••••
 // PRESENTATIONAL
@@ -44,3 +45,6 @@ export { default as AboutBioSection } from './sections/about_bio/AboutBioSection
 
 // Service Template
 export { default as ServiceInfoSection } from './sections/service_info/ServiceInfo.jsx';
+
+// Article Template
+export { default as ArticleContentSection } from './sections/article_content/ArticleContent.jsx';

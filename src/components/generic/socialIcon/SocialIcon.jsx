@@ -5,14 +5,16 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 
 // Project Imports
-import { YELP, FACEBOOK, INSTAGRAM, YOUTUBE } from '../../../iconify';
+import { YELP, FACEBOOK, INSTAGRAM, YOUTUBE, EMAIL } from '../../../iconify';
 
 // --> Local Styling
 import style from './socialIcon.module.scss';
 
-export default function SocialIcon({ type, color = 'light', size = 'default' }) {
+export default function SocialIcon({ type, color = 'light', size = 'default', margin = '10px auto' }) {
 	function icon() {
 		switch (type) {
+			case 'email':
+				return EMAIL;
 			case 'youtube':
 				return YOUTUBE;
 			case 'insta':
@@ -27,7 +29,7 @@ export default function SocialIcon({ type, color = 'light', size = 'default' }) 
 		}
 	}
 	return (
-		<div className={style.Wrapper} data-color={color} data-size={size}>
+		<div className={style.Wrapper} data-color={color} data-size={size} style={{ margin }}>
 			<Icon icon={icon()} />
 		</div>
 	);

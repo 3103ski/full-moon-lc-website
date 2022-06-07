@@ -8,6 +8,7 @@
 
 	h1 {
 		@include sub-default;
+		color: $color-secondary;
 	}
 
 	p {

@@ -1,0 +1,62 @@
+@import '../../../sass/';
+
+.SectionWrapper {
+	position: relative;
+	min-height: 500px;
+
+	.Content {
+		position: inherit;
+		z-index: 10;
+		padding: 20px 10px 300px 10px;
+
+		.Crumbs {
+			margin-bottom: 25px;
+		}
+
+		.Body {
+			p {
+				@include p-default;
+
+				&:last-of-type {
+					margin-bottom: 70px;
+				}
+			}
+		}
+	}
+
+	.MascotContainer {
+		position: inherit;
+		.Mascot {
+			position: absolute;
+			z-index: 0;
+			transform: scaleX(-1);
+
+			@media only screen and (max-width: 767px) {
+				transform: scaleX(1);
+				bottom: 0px;
+				right: 10px;
+				width: 280px;
+			}
+			@media only screen and (min-width: 768px) {
+				bottom: 10px;
+				right: 80px;
+				width: 280px;
+			}
+			@media only screen and (min-width: 991px) {
+				bottom: 40px;
+				right: 160px;
+				width: 230px;
+			}
+			@media only screen and (min-width: 1200px) {
+				bottom: 45px;
+				right: 100px;
+				width: 240px;
+			}
+			@media only screen and (min-width: 1400px) {
+				bottom: 60px;
+				right: 100px;
+				width: 250px;
+			}
+		}
+	}
+}
