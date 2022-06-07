@@ -3,6 +3,9 @@ import banner250 from './banner_250.png';
 import banner500 from './banner_500.png';
 import banner1000 from './banner_1400.png';
 
+import bannerVert_1000 from './bannerVert_1000.png';
+import bannerVert_700 from './bannerVert_700.png';
+
 //••••••••••••••••••••••
 // --> MASCOT GRAPHICS
 //••••••••••••••••••••••
@@ -73,6 +76,8 @@ export {
 	banner250,
 	banner500,
 	banner1000,
+	bannerVert_700,
+	bannerVert_1000,
 	curveGraphicBottomLG,
 	curveGraphicTopLG,
 	mascotArmsCrossed1000,
