@@ -3,12 +3,13 @@
 .Button {
 	@include flex-center-center;
 	padding: 12px 35px !important;
+	white-space: nowrap;
 
 	//•••••••••
 	// BUTTON MARGIN
 	//•••••••••
-
 	margin: 0 !important;
+
 	&[data-space='10xy'] {
 		margin: 10px !important;
 	}
@@ -63,6 +64,13 @@
 		svg {
 			margin: 0 12px 0 0 !important;
 			font-size: 16px !important;
+		}
+
+		@media only screen and (max-width: 500px) {
+			svg {
+				font-size: 5vw !important;
+			}
+			font-size: 5vw !important;
 		}
 	}
 

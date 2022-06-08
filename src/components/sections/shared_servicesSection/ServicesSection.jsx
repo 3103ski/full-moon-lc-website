@@ -50,6 +50,14 @@ export default function ServicesSection() {
 								</Button>
 							</div>
 						</Grid.Column>
+						<Grid.Column mobile={16} only='mobile'>
+							<Button fluid space={'10xy'} as={Link} to={VIDEOS} icon={'ci:youtube'}>
+								Videos
+							</Button>
+							<Button fluid space={'10xy'} icon={'el:leaf'}>
+								Request Quote
+							</Button>
+						</Grid.Column>
 						<Grid.Column only='computer' computer={7}>
 							<img
 								className={style.ServiceGraphic}

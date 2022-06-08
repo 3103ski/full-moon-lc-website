@@ -29,20 +29,39 @@
 
 				h1 {
 					@include body-hdr-default;
+
+					// Mobile - Small
+					@media only screen and (max-width: 499px) {
+						text-align: left !important;
+					}
 				}
 
 				h3 {
 					@include sub-default;
 					color: $color-secondary;
+
+					// Mobile - Small
+					@media only screen and (max-width: 499px) {
+						text-align: left !important;
+					}
 				}
 
 				p {
 					@include p-default;
 					margin-bottom: 25px !important;
+
+					@media only screen and (max-width: 499px) {
+						text-align: left !important;
+					}
 				}
 
 				button {
 					margin-left: auto !important;
+
+					@media only screen and (max-width: 500px) {
+						margin-right: auto !important;
+						margin-left: unset !important;
+					}
 				}
 			}
 		}

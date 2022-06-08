@@ -48,6 +48,10 @@
 
 			.ButtonsWrapper {
 				@include flex-center;
+
+				@media only screen and (max-width: 500px) {
+					display: none !important;
+				}
 			}
 
 			// Mascot Service Graphic
@@ -74,6 +78,13 @@
 			right: 0;
 		}
 
+		@media only screen and (max-width: 500px) {
+			.ServiceGraphicMobile {
+				width: 170px;
+				transform: scaleX(1);
+				right: -40px;
+			}
+		}
 		@media only screen and (max-width: 767px) {
 			padding: 14vw 0 200px 0;
 		}
