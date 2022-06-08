@@ -6,6 +6,8 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 // Project Imports
+import { scrollToTopOf } from '../util';
+import { HOME, ABOUT_US, OUR_WORK, VIDEOS, ARTICLES, SERVICE } from '../routes';
 import {
 	AboutPage,
 	ArticleTemplatePage,
@@ -15,23 +17,14 @@ import {
 	ServiceTemplatePage,
 	VideosPage,
 	WorkTemplatePage,
-} from './components/';
-
-import { HOME, ABOUT_US, OUR_WORK, VIDEOS, ARTICLES, SERVICE } from '../routes';
+} from './components';
 
 export default function AnimatedRoutes() {
 	const location = useLocation();
 
 	return (
-		<AnimatePresence
-			exitBeforeEnter
-			onExitComplete={() => {
-				let view = document.getElementById('app');
-				console.log('the view', view);
-				if (view) {
-					view.scrollTo(0, 0);
-				}
-			}}>
+		// DEV NOTE --> View animations can be adjusted in 'src/util/framerMotion.js' file.
+		<AnimatePresence exitBeforeEnter onExitComplete={() => scrollToTopOf('app')}>
 			<Routes location={location} key={location.pathname}>
 				<Route exact path={HOME} element={<HomePage />} />
 				<Route exact path={ABOUT_US} element={<AboutPage />} />

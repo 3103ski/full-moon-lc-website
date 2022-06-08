@@ -1,3 +1,6 @@
+//••••••••••••••••••••
+// PARAGRAPH TEXT
+//••••••••••••••••••••
 @mixin p-default {
 	font-weight: 300 !important;
 
@@ -60,42 +63,9 @@
 	}
 }
 
-@mixin sub-default {
-	font-size: 2rem !important;
-	font-weight: 300 !important;
-	letter-spacing: 1px;
-	margin-bottom: 20px !important;
-
-	// Mobile - Small
-	@media only screen and (max-width: 499px) {
-		font-size: 1.75rem !important;
-		line-height: 2rem !important;
-		text-align: left !important;
-	}
-
-	// Mobile - Large
-	@media only screen and (min-width: 500px) {
-		font-size: 2rem !important;
-		line-height: 2.4rem !important;
-		font-weight: 500 !important;
-		letter-spacing: 2px;
-	}
-	// Tablet
-	@media only screen and (min-width: 768px) {
-		font-size: 2.9vw !important;
-		line-height: 3.2vw !important;
-	}
-	// Computer
-	@media only screen and (min-width: 991px) {
-		font-size: 2vw !important;
-		line-height: 2.4vw !important;
-	}
-	// Extra large
-	@media only screen and (min-width: 1400px) {
-		font-size: 2rem !important;
-		line-height: 2.3rem !important;
-	}
-}
+//••••••••••••••••••••
+// LARGE TITLE TEXT
+//••••••••••••••••••••
 
 @mixin body-hdr-default {
 	letter-spacing: 1px;
@@ -163,6 +133,10 @@
 	}
 }
 
+//••••••••••••••••••••
+//  SUBS AND TITLES
+//••••••••••••••••••••
+
 @mixin title-bold {
 	font-weight: 500 !important;
 	letter-spacing: 1px;
@@ -170,6 +144,7 @@
 	// Mobile
 	@media only screen and (max-width: 767px) {
 		font-size: 3rem !important;
+
 		line-height: 2.7rem !important;
 	}
 	// Tablet
@@ -186,5 +161,58 @@
 	@media only screen and (min-width: 1400px) {
 		font-size: 2.2rem !important;
 		line-height: 2.4rem !important;
+	}
+}
+
+@mixin sub-default {
+	font-size: 2rem !important;
+	font-weight: 300 !important;
+	letter-spacing: 1px;
+	margin-bottom: 20px !important;
+
+	// Mobile - Small
+	@media only screen and (max-width: 499px) {
+		font-size: 1.75rem !important;
+		line-height: 2rem !important;
+		text-align: left !important;
+	}
+
+	// Mobile - Large
+	@media only screen and (min-width: 500px) {
+		font-size: 2rem !important;
+		line-height: 2.4rem !important;
+		font-weight: 500 !important;
+		letter-spacing: 2px;
+	}
+	// Tablet
+	@media only screen and (min-width: 768px) {
+		font-size: 2.9vw !important;
+		line-height: 3.2vw !important;
+	}
+	// Computer
+	@media only screen and (min-width: 991px) {
+		font-size: 2vw !important;
+		line-height: 2.4vw !important;
+	}
+	// Extra large
+	@media only screen and (min-width: 1400px) {
+		font-size: 2rem !important;
+		line-height: 2.3rem !important;
+	}
+}
+
+//••••••••••••••••••••
+// TEXT UTILITY
+//••••••••••••••••••••
+
+@mixin reset-text-margins {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		margin: 0 !important;
 	}
 }

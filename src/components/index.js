@@ -1,9 +1,4 @@
 //••••••••••
-// Util
-//••••••••••
-export { default as TopScroll } from './util/TopScroll.jsx';
-
-//••••••••••
 // GENERIC
 //••••••••••
 export { default as Button } from './generic/button/Button.jsx';

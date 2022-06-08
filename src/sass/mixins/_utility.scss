@@ -1,5 +1,44 @@
 @import '../variables/';
 
+@mixin no-select {
+	-webkit-touch-callout: none !important; /* iOS Safari */
+	-webkit-user-select: none !important; /* Safari */
+	-khtml-user-select: none !important; /* Konqueror HTML */
+	-moz-user-select: none !important; /* Old versions of Firefox */
+	-ms-user-select: none !important; /* Internet Explorer/Edge */
+	user-select: none !important; /* Non-prefixed version, currently
+										supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin remove-scrollbar {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+@mixin hover-cursor {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+@mixin center-cover-bg {
+	background-size: cover !important;
+	background-position: center !important;
+}
+
+@mixin bottom-cover-bg {
+	background-size: cover !important;
+	background-position: bottom !important;
+}
+
+@mixin top-cover-bg {
+	background-size: cover !important;
+	background-position: top !important;
+}
+
+// 		SHOULD MAYBE BE MOVED FROMT HIS FILE OR REMOVED ENTIRELY
+
 @mixin status-backgrounds {
 	p {
 		color: white !important;
@@ -50,53 +89,4 @@
 	border-top-right-radius: $large-radius !important;
 	border-bottom-left-radius: 0 !important;
 	border-bottom-right-radius: 0 !important;
-}
-
-@mixin no-select {
-	-webkit-touch-callout: none !important; /* iOS Safari */
-	-webkit-user-select: none !important; /* Safari */
-	-khtml-user-select: none !important; /* Konqueror HTML */
-	-moz-user-select: none !important; /* Old versions of Firefox */
-	-ms-user-select: none !important; /* Internet Explorer/Edge */
-	user-select: none !important; /* Non-prefixed version, currently
-										supported by Chrome, Edge, Opera and Firefox */
-}
-
-@mixin remove-scrollbar {
-	&::-webkit-scrollbar {
-		display: none;
-	}
-}
-
-@mixin hover-cursor {
-	&:hover {
-		cursor: pointer;
-	}
-}
-
-@mixin center-cover-bg {
-	background-size: cover !important;
-	background-position: center !important;
-}
-
-@mixin bottom-cover-bg {
-	background-size: cover !important;
-	background-position: bottom !important;
-}
-
-@mixin top-cover-bg {
-	background-size: cover !important;
-	background-position: top !important;
-}
-
-@mixin reset-text-margins {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p {
-		margin: 0 !important;
-	}
 }

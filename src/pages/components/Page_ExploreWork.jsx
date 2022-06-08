@@ -2,16 +2,14 @@
 import React from 'react';
 
 // --> Project Imports
-import { PageHeader, Footer } from '../../components';
+import { PageHeader } from '../../components';
 import { backgroundWorker } from '../../assets';
-
-import MotionWrapper from '../AnimateWrapper.jsx';
+import ViewWrapper from './ViewWrapper';
 
 export default function ExploreWorkPage() {
 	return (
-		<MotionWrapper>
+		<ViewWrapper>
 			<PageHeader title='Explore Our Work' image={backgroundWorker} imgPos='top' />
-			<Footer />
-		</MotionWrapper>
+		</ViewWrapper>
 	);
 }

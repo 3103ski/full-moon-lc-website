@@ -1,20 +1,17 @@
-import './app.scss';
+// --> React
 import { BrowserRouter as Router } from 'react-router-dom';
 
-// Components
+// --> Project Imports
 import { Navbar } from './components';
-
-// Pages
-import { AnimatedRoutes } from './pages';
+import { Pages } from './pages';
+import './app.scss';
 
 function App() {
 	return (
 		<div className='App' id='app'>
 			<Router>
 				<Navbar />
-				<div id='view-container'>
-					<AnimatedRoutes />
-				</div>
+				<Pages />
 			</Router>
 		</div>
 	);

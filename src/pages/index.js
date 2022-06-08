@@ -1,1 +1,2 @@
-export { default as AnimatedRoutes } from './AnimatedRoutes.jsx';
+export { default as Pages } from './Pages.jsx';
+export * from './components';

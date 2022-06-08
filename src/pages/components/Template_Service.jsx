@@ -2,14 +2,13 @@
 import React from 'react';
 
 // --> Project Imports
-import { PageHeader, ServiceInfoSection, ServicesSection, Footer } from '../../components';
+import { PageHeader, ServiceInfoSection, ServicesSection } from '../../components';
 import { placeholderBlowingLeaves } from '../../assets';
-
-import MotionWrapper from '../AnimateWrapper.jsx';
+import ViewWrapper from './ViewWrapper';
 
 export default function ServiceTemplatePage() {
 	return (
-		<MotionWrapper>
+		<ViewWrapper>
 			<PageHeader
 				size='lg'
 				title='Property Cleanup'
@@ -18,7 +17,6 @@ export default function ServiceTemplatePage() {
 			/>
 			<ServiceInfoSection />
 			<ServicesSection />
-			<Footer />
-		</MotionWrapper>
+		</ViewWrapper>
 	);
 }

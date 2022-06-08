@@ -1,25 +1,24 @@
+// --> React
 import React from 'react';
 
+// Project Imports
+import ViewWrapper from './ViewWrapper';
 import {
-	HomeLandingSection,
-	ProfLawnCareSection,
-	LearnLawnCareSection,
-	ServicesSection,
 	HappyClientsSection,
-	Footer,
+	HomeLandingSection,
+	LearnLawnCareSection,
+	ProfLawnCareSection,
+	ServicesSection,
 } from '../../components';
-
-import MotionWrapper from '../AnimateWrapper.jsx';
 
 export default function HomePage() {
 	return (
-		<MotionWrapper>
+		<ViewWrapper>
 			<HomeLandingSection />
 			<ProfLawnCareSection />
 			<LearnLawnCareSection picture />
 			<ServicesSection />
 			<HappyClientsSection />
-			<Footer />
-		</MotionWrapper>
+		</ViewWrapper>
 	);
 }

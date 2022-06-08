@@ -2,16 +2,14 @@
 import React from 'react';
 
 // --> Project Imports
-import { PageHeader, Footer } from '../../components';
+import { PageHeader } from '../../components';
 import { backgroundHouse } from '../../assets';
-
-import MotionWrapper from '../AnimateWrapper.jsx';
+import ViewWrapper from './ViewWrapper';
 
 export default function VideosPage() {
 	return (
-		<MotionWrapper>
+		<ViewWrapper>
 			<PageHeader title='Videos' sub='Watch us work & get inspired' image={backgroundHouse} imgPos='bottom' />
-			<Footer />
-		</MotionWrapper>
+		</ViewWrapper>
 	);
 }

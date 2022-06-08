@@ -50,8 +50,6 @@
 		}
 
 		.ButtonWrapper {
-			@include flex-col-center-center;
-
 			padding: 20px;
 			width: 100%;
 		}
@@ -67,15 +65,13 @@
 			}
 		}
 	}
-	// -->  Mobile Large
-	@media only screen and (min-width: 500px) {
-	}
-	// -->  Tablet
-	@media only screen and (min-width: 768px) {
-		@include flex-center-center;
 
+	@media only screen and (min-width: 768px) {
 		.Wrapper {
 			padding: 15vw 0 10vw 0 !important;
+		}
+		.ButtonWrapper {
+			@include flex-center-center;
 		}
 
 		@media only screen and (max-width: 991px) {
