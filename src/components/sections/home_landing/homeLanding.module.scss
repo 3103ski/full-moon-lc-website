@@ -6,25 +6,20 @@
 
 	position: relative;
 	width: 100vw;
-	min-height: 95vh;
+	min-height: 100vh;
 
 	.Overlay {
 		@include bg-overlay-1;
+
 		z-index: 1;
 	}
 
 	.Wrapper {
 		@include flex-col-center-center;
 		@include no-select;
+
 		position: relative;
 		z-index: 2;
-
-		@media only screen and (max-width: 700px) {
-			padding: 15vw 0 10vw 0 !important;
-		}
-		@media only screen and (max-width: 600px) {
-			padding: 19vw 0 10vw 0 !important;
-		}
 
 		img {
 			width: 100%;
@@ -35,27 +30,19 @@
 		h3 {
 			@include sub-default;
 			color: white;
-
-			@media only screen and (max-width: 500px) {
-				text-align: center !important;
-			}
 		}
 
 		.LogoDesktop {
 			@include flex-center-center;
+
 			img {
 				width: 65%;
-			}
-
-			@media only screen and (min-width: 768px) and (max-width: 991px) {
-				img {
-					width: 85%;
-				}
 			}
 		}
 
 		.LogoMobile {
 			@include flex-center-center;
+
 			img {
 				width: 65%;
 				margin: 0 auto 20px auto !important;
@@ -63,14 +50,37 @@
 		}
 
 		.ButtonWrapper {
+			@include flex-col-center-center;
+
 			padding: 20px;
 			width: 100%;
+		}
+	}
 
-			@media only screen and (max-width: 767px) {
-				@include flex-col-center-center;
+	// --> Mobile Small
+	@media only screen and (max-width: 499px) {
+		.Wrapper {
+			padding: 19vw 0 10vw 0 !important;
+
+			h3 {
+				text-align: center !important;
 			}
-			@media only screen and (min-width: 768px) {
-				@include flex-center-center;
+		}
+	}
+	// -->  Mobile Large
+	@media only screen and (min-width: 500px) {
+	}
+	// -->  Tablet
+	@media only screen and (min-width: 768px) {
+		@include flex-center-center;
+
+		.Wrapper {
+			padding: 15vw 0 10vw 0 !important;
+		}
+
+		@media only screen and (max-width: 991px) {
+			.LogoDesktop img {
+				width: 85%;
 			}
 		}
 	}

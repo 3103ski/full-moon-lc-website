@@ -19,6 +19,7 @@
 
 			.Content {
 				@include reset-text-margins;
+				z-index: 10;
 
 				h1,
 				h3,
@@ -72,6 +73,7 @@
 
 		.MascotGraphic {
 			position: absolute;
+			z-index: 1;
 			bottom: -30px;
 
 			// Mobile
