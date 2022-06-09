@@ -3,7 +3,7 @@ import React from 'react';
 
 // --> Project Imports
 import { Button, Card } from 'components';
-import { MONEY } from 'iconify';
+import { MONEY } from 'icons';
 
 // --> Component Imports
 import FAQItem from './faqItem/FAQItem.jsx';

@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { Button } from '../../../components';
-import { placeholderLawn, banner1000, bannerVert_700 } from '../../../assets';
-import { OUR_WORK } from '../../../routes';
-import { MOWER, LEAF } from '../../../iconify';
+import { Button } from 'components';
+import { placeholderLawn, banner1000, bannerVert_700 } from 'assets';
+import { OUR_WORK } from 'routes';
+import { MOWER, LEAF } from 'icons';
 
 // --> Component Imports
 import style from './homeLanding.module.scss';

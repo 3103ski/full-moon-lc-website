@@ -5,8 +5,8 @@ import React from 'react';
 import { Container } from 'semantic-ui-react';
 
 // --> Project Imports
-import { Button } from '../../../components';
-import { MOWER } from '../../../iconify';
+import { Button } from 'components';
+import { MOWER } from 'icons';
 
 // Local Styling
 import style from './aboutBioSection.module.scss';

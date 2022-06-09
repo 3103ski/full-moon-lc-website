@@ -5,8 +5,8 @@ import React from 'react';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { Button, FAQ, FAQItem, CurveGraphic } from '../../../components';
-import { MOWER } from '../../../iconify';
+import { Button, FAQ, FAQItem, CurveGraphic } from 'components';
+import { MOWER } from 'icons';
 
 // --> Component Imports
 import style from './serviceInfo.module.scss';

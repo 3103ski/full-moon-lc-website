@@ -5,9 +5,9 @@ import React from 'react';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { backgroundMowing, banner1000 } from '../../../assets';
-import { Button } from '../../../components';
-import { STAR_FILLED, YOUTUBE } from '../../../iconify';
+import { backgroundMowing, banner1000 } from 'assets';
+import { Button } from 'components';
+import { STAR_FILLED, YOUTUBE } from 'icons';
 
 // --> Component Imports
 import style from './aboutHeader.module.scss';

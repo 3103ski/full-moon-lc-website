@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 // --> Project Imports
-import { ARROW_RIGHT } from 'iconify';
+import { ARROW_RIGHT } from 'icons';
 
 // --> Component Imports
 import style from './articleCard.module.scss';

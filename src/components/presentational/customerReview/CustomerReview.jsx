@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react';
 
 // --> Project Imports
 import { placeholderProfilePic } from 'assets';
-import { STAR_FILLED } from 'iconify';
+import { STAR_FILLED } from 'icons';
 
 // --> Component Imports
 import Style from './customerReview.module.scss';

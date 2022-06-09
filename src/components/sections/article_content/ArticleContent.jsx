@@ -5,9 +5,9 @@ import React from 'react';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { Button, Card, CurveGraphic, SocialIcon } from '../../../components';
-import { MOWER } from '../../../iconify';
-import { mascotThumRight1000 } from '../../../assets';
+import { Button, Card, CurveGraphic, SocialIcon } from 'components';
+import { MOWER } from 'icons';
+import { mascotThumRight1000 } from 'assets';
 
 // --> Component Imports
 import style from './articleContent.module.scss';

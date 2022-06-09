@@ -5,7 +5,7 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 
 // Project Imports
-import { YELP, FACEBOOK, INSTAGRAM, YOUTUBE, EMAIL } from 'iconify';
+import { YELP, FACEBOOK, INSTAGRAM, YOUTUBE, EMAIL } from 'icons';
 
 // --> Component Imports
 import style from './socialIcon.module.scss';

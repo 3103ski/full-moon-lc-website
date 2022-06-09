@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react';
 
 // --> Project Imports
 import { banner500 } from 'assets';
-import { LEAF, CARROT_DOWN, PHONE } from 'iconify';
+import { LEAF, CARROT_DOWN, PHONE } from 'icons';
 import { Button } from 'components';
 import { HOME, VIDEOS, ARTICLES, OUR_WORK, ABOUT_US, SERVICE } from 'routes';
 

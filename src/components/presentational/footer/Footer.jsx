@@ -8,7 +8,7 @@ import { Container, Grid } from 'semantic-ui-react';
 // --> Project Imports
 import { banner500 } from 'assets';
 import { Button, SocialIcon } from 'components';
-import { LEAF } from 'iconify';
+import { LEAF } from 'icons';
 import { HOME } from 'routes';
 
 // --> Component Imports

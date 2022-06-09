@@ -1,34 +1,54 @@
 // --> React
 import React from 'react';
-import { Link } from 'react-router-dom';
-
-import { motion } from 'framer-motion';
 
 // --> Project Imports
-import { motion_variants_nav } from 'util';
-import { SERVICE } from 'routes';
+import { SERVICE, ABOUT_US, VIDEOS, OUR_WORK, HOME, ARTICLES } from 'routes';
 
 // --> Components Imports
+import Drawer from './drawer/Drawer';
+import Link from './link/Link.jsx';
 import Style from './mobileNav.module.scss';
-import Toggle from './toggle/Toggle';
+import Toggle from './toggle/Toggle.jsx';
 
 export default function MobileNav() {
-	const [open, toggleOpen] = React.useState(false);
+	const [open, toggleOpen] = React.useState(true);
+
 	return (
-		<div className={Style.Mobile}>
+		<div className={Style.Container}>
 			<Toggle toggle={() => toggleOpen(!open)} open={open} />
-			<motion.nav className={Style.Wrapper} variants={motion_variants_nav.mobile}>
-				<motion.div
-					className={Style.LinkWrapper}
-					variants={motion_variants_nav.mobile}
-					animate={open === true ? 'open' : 'closed'}>
-					<Link to={`${SERVICE}/landscaping`}>Landscaping</Link>
-					<Link to={`${SERVICE}/mowing`}>Mowing</Link>
-					<Link to={`${SERVICE}/gardening`}>Gardening</Link>
-					<Link to={`${SERVICE}/property-cleanup`}>Property Cleanup</Link>
-				</motion.div>
-			</motion.nav>
-			<div className={Style.MenuToggleUnderlay} onClick={() => toggleOpen(false)} data-open={open ? 1 : 0} />
+			<Drawer open={open} toggle={toggleOpen}>
+				<Link.Container>
+					<Link toggle={toggleOpen} to={HOME}>
+						Home
+					</Link>
+					<Link.SectionLabel>Explore</Link.SectionLabel>
+					<Link toggle={toggleOpen} to={OUR_WORK}>
+						Our Work
+					</Link>
+					<Link toggle={toggleOpen} to={ARTICLES}>
+						Articles
+					</Link>
+					<Link toggle={toggleOpen} to={VIDEOS}>
+						Videos
+					</Link>
+					<Link toggle={toggleOpen} to={ABOUT_US}>
+						About Us
+					</Link>
+					<Link.SectionLabel>Services</Link.SectionLabel>
+					<Link toggle={toggleOpen} to={`${SERVICE}/landscaping`}>
+						Landscaping
+					</Link>
+					<Link toggle={toggleOpen} to={`${SERVICE}/mowing`}>
+						Mowing
+					</Link>
+					<Link toggle={toggleOpen} to={`${SERVICE}/gardening`}>
+						Gardening
+					</Link>
+					<Link toggle={toggleOpen} to={`${SERVICE}/property-cleanup`}>
+						Property Cleanup
+					</Link>
+				</Link.Container>
+			</Drawer>
 		</div>
 	);
 }

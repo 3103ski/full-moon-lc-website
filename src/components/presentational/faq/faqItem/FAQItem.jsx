@@ -3,7 +3,7 @@ import React from 'react';
 
 // --> Project Imports
 import { Modal, LayoutIcon, Button } from 'components';
-import { ARROW_RIGHT } from 'iconify';
+import { ARROW_RIGHT } from 'icons';
 
 // --> Component Imports
 import Style from './faqItem.module.scss';

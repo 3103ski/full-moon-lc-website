@@ -48,10 +48,10 @@ export function MotionViewWrapper({ children }) {
 
 export const motion_variants_nav = {
 	mobile: {
-		open: { width: 'unset' },
-		closed: { width: '0px' },
-		toggleOpen: { backgroundColor: sassVarColors.primary },
-		toggleClosed: { backgroundColor: 'transparent' },
+		drawerClosed: { x: '-100%' },
+		drawerOpen: { x: '0%' },
+		toggleClosed: { backgroundColor: sassVarColors.primaryTransp },
+		toggleOpen: { backgroundColor: 'transparent' },
 	},
 	desktop: {
 		shortNav: { height: sassVarSizes.navbar_cpu_short },
