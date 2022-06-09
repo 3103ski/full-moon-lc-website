@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .Button {
 	@include flex-center-center;
@@ -35,12 +35,9 @@
 	font-size: 15px !important;
 	font-weight: 500 !important;
 	letter-spacing: 1px;
-
 	transition: 0.15s;
-
 	border-radius: 100px !important;
 	border: none;
-
 	display: flex !important;
 	align-items: center !important;
 
@@ -66,40 +63,41 @@
 			font-size: 16px !important;
 		}
 
-		@media only screen and (max-width: 500px) {
-			svg {
-				font-size: 5vw !important;
-			}
-			font-size: 5vw !important;
-		}
+		// @media #{map-get($media, mobile-sm)} {
+		// 	font-size: 5vw !important;
+
+		// 	svg {
+		// 		font-size: 5vw !important;
+		// 	}
+		// }
 	}
 
 	// BUTTON COLORS
 	&[data-color='primary'] {
-		background-color: $color-primary !important;
+		background-color: map-get($colors, primary) !important;
 		&:hover {
-			background-color: $color-primary-transp !important;
+			background-color: map-get($colors, primaryTransp) !important;
 		}
 	}
 
-	&[data-color='primary-transp'] {
-		background-color: $color-primary-transp !important;
+	&[data-color='primaryTransp'] {
+		background-color: map-get($colors, primaryTransp) !important;
 		&:hover {
-			background-color: $color-primary !important;
+			background-color: map-get($colors, primary) !important;
 		}
 	}
 
 	&[data-color='secondary'] {
-		background-color: $color-secondary !important;
+		background-color: map-get($colors, secondary) !important;
 		&:hover {
-			background-color: $color-secondary-transp !important;
+			background-color: map-get($colors, secondaryTransp) !important;
 		}
 	}
 
-	&[data-color='secondary-transp'] {
-		background-color: $color-secondary-transp !important;
+	&[data-color='secondaryTransp'] {
+		background-color: map-get($colors, secondaryTransp) !important;
 		&:hover {
-			background-color: $color-secondary !important;
+			background-color: map-get($colors, secondary) !important;
 		}
 	}
 
@@ -108,7 +106,7 @@
 	}
 
 	&[data-color='yelp'] {
-		background-color: $color-yelp !important;
+		background-color: map-get($colors, yelp) !important;
 	}
 
 	// BUTTON TEXT COLOR
@@ -118,13 +116,13 @@
 	}
 
 	&[data-txt-color='dark'] {
-		color: $primary-black !important;
+		color: map-get($colors, primaryBlack) !important;
 	}
 
 	&[data-color='primary'],
-	&[data-color='primary-transp'],
+	&[data-color='primaryTransp'],
 	&[data-color='secondary'],
-	&[data-color='secondary-transp'] {
+	&[data-color='secondaryTransp'] {
 		color: white !important;
 	}
 }

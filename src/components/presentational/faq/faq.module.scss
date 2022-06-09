@@ -1,14 +1,14 @@
-@import '../../../sass/';
+@import 'sass';
 
 .Wrapper {
 	width: 100%;
 	margin: 0 10px;
-	border: 2px solid $color-primary;
+	border: 2px solid map-get($colors, primary);
 	border-radius: $small-radius;
 
 	.Header {
 		padding: 12px 5px;
-		background-color: $color-primary;
+		background-color: map-get($colors, primary);
 		border-top-left-radius: calc(#{$small-radius - 5px});
 		border-top-right-radius: calc(#{$small-radius - 5px});
 

@@ -4,7 +4,7 @@ import React from 'react';
 // --> Packages
 import { Modal as SUIModal, Header } from 'semantic-ui-react';
 
-// --> Local Styling
+// --> Component Imports
 import style from './modal.module.scss';
 
 export default function Modal({ title, body, isOpen, callback, children }) {

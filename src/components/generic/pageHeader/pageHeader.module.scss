@@ -1,12 +1,12 @@
-@import '../../../sass/';
+@import 'sass';
 
 .HeaderSection {
 	@include flex-col-center;
 	position: relative;
 
 	.Overlay {
-		position: inherit;
 		@include overlay-dark;
+		position: inherit;
 	}
 
 	.Inner {

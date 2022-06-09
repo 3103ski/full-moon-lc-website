@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .Wrapper {
 	@include flex-center-center;
@@ -16,6 +16,7 @@
 		$sm: 20px;
 		width: $sm;
 		height: $sm;
+
 		svg {
 			font-size: calc(#{$sm} - 4px);
 		}
@@ -25,6 +26,7 @@
 		$de: 30px;
 		width: $de;
 		height: $de;
+
 		svg {
 			font-size: calc(#{$de} - 4px);
 		}
@@ -51,21 +53,22 @@
 
 	&[data-color='primary'] {
 		svg {
-			color: $color-primary !important;
+			color: map-get($colors, primary) !important;
 		}
 	}
 
 	&[data-color='secondary'] {
 		svg {
-			color: $color-secondary !important;
+			color: map-get($colors, secondary) !important;
 		}
 	}
 
 	&:hover {
 		cursor: pointer;
-		svg {
-			color: $color-secondary !important;
-		}
 		transform: scale(1.04);
+
+		svg {
+			color: map-get($colors, secondary) !important;
+		}
 	}
 }

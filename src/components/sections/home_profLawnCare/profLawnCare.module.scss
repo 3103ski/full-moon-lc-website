@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .Outer {
 	position: relative;
@@ -12,7 +12,7 @@
 			padding-top: 130px;
 			padding-bottom: 150px;
 
-			@media only screen and (max-width: 990px) {
+			@media #{map-get($media, tablet-max)} {
 				padding-top: 50px;
 				padding-bottom: 400px !important;
 			}
@@ -24,7 +24,7 @@
 				h1,
 				h3,
 				p {
-					color: $primary-black;
+					color: map-get($colors, primaryBlack);
 					text-align: right !important;
 				}
 
@@ -32,34 +32,30 @@
 					@include body-hdr-default;
 
 					// Mobile - Small
-					@media only screen and (max-width: 499px) {
-						text-align: left !important;
-					}
 				}
 
 				h3 {
 					@include sub-default;
-					color: $color-secondary;
-
-					// Mobile - Small
-					@media only screen and (max-width: 499px) {
-						text-align: left !important;
-					}
+					color: map-get($colors, secondary);
 				}
 
 				p {
 					@include p-default;
 					margin-bottom: 25px !important;
-
-					@media only screen and (max-width: 499px) {
-						text-align: left !important;
-					}
 				}
 
 				button {
 					margin-left: auto !important;
+				}
 
-					@media only screen and (max-width: 500px) {
+				@media #{map-get($media, mobile-sm)} {
+					p,
+					h1,
+					h3 {
+						text-align: left !important;
+					}
+
+					button {
 						margin-right: auto !important;
 						margin-left: unset !important;
 					}
@@ -76,24 +72,19 @@
 			z-index: 1;
 			bottom: -30px;
 
-			// Mobile
-			@media only screen and (max-width: 767px) {
+			@media #{map-get($media, mobile)} {
 				width: 330px;
 			}
-			// Tablet
-			@media only screen and (min-width: 768px) {
+			@media #{map-get($media, tablet)} {
 				width: 340px !important;
 			}
-			// Computer
-			@media only screen and (min-width: 991px) {
+			@media #{map-get($media, cpu-sm)} {
 				width: 22vw !important;
 			}
-			// Large Computer
-			@media only screen and (min-width: 1201px) {
+			@media #{map-get($media, cpu-m)} {
 				width: 24vw !important;
 			}
-			// Extra large
-			@media only screen and (min-width: 1400px) {
+			@media #{map-get($media, widescreen)} {
 				width: 310px !important;
 			}
 		}
@@ -126,16 +117,16 @@
 			top: -80px;
 			right: -250px;
 			z-index: 10;
-			background-color: $color-primary-pale;
+			background-color: map-get($colors, primary)-pale;
 		}
 		.CircleTwo {
 			bottom: -120px;
 			right: -320px;
 			z-index: 9;
-			background-color: $color-secondary-pale;
+			background-color: map-get($colors, secondary)-pale;
 		}
 
-		@media only screen and (max-width: 990px) {
+		@media #{map-get($media, tablet-max)} {
 			.CircleOne,
 			.CircleTwo {
 				display: none;

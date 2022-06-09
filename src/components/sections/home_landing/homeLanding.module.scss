@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .SectionWrapper {
 	@include flex-center-center;
@@ -55,8 +55,7 @@
 		}
 	}
 
-	// --> Mobile Small
-	@media only screen and (max-width: 499px) {
+	@media #{map-get($media, mobile)} {
 		.Wrapper {
 			padding: 19vw 0 10vw 0 !important;
 
@@ -66,18 +65,18 @@
 		}
 	}
 
-	@media only screen and (min-width: 768px) {
+	@media #{map-get($media, tablet-min)} {
 		.Wrapper {
 			padding: 15vw 0 10vw 0 !important;
 		}
 		.ButtonWrapper {
 			@include flex-center-center;
 		}
+	}
 
-		@media only screen and (max-width: 991px) {
-			.LogoDesktop img {
-				width: 85%;
-			}
+	@media #{map-get($media, tablet)} {
+		.LogoDesktop img {
+			width: 85% !important;
 		}
 	}
 }

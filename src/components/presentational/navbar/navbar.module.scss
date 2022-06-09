@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .Wrapper {
 	position: fixed;
@@ -7,7 +7,7 @@
 	z-index: 1000;
 	width: 100vw;
 	height: 94px;
-	background-color: $color-primary-transp;
+	background-color: map-get($colors, primary)-transp;
 	display: flex;
 	align-items: center;
 	box-sizing: border-box !important;
@@ -75,7 +75,7 @@
 	}
 
 	.DropWrapper {
-		background-color: $color-secondary-transp;
+		background-color: map-get($colors, secondary)-transp;
 		position: absolute;
 		top: 100%;
 		flex-direction: column;
@@ -112,7 +112,7 @@
 		margin: 0 !important;
 
 		&:hover {
-			background-color: $color-secondary;
+			background-color: map-get($colors, secondary);
 		}
 
 		&:last-of-type {

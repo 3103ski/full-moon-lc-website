@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Footer } from '../../components';
-import { MotionViewWrapper } from '../../util';
+import { Footer } from 'components';
+import { MotionViewWrapper } from 'util';
 
 export default function ViewWrapper({ children }) {
 	return (

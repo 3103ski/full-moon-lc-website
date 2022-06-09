@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .FooterWrapper {
 	@include flex-col-center-center;
@@ -16,41 +16,43 @@
 	}
 
 	.Top {
-		background-color: $color-primary-alt;
+		background-color: map-get($colors, primaryAlt);
 		padding: 30px 0;
+
+		p {
+			@include p-summary;
+			padding-top: 8px;
+
+			@media #{map-get($media, tablet-max)} {
+				margin-bottom: 15px !important;
+			}
+		}
 
 		h3 {
 			@include sub-default;
 			font-weight: 700 !important;
 		}
 
-		h3,
-		p {
+		p,
+		h3 {
 			margin: 0 !important;
-		}
-
-		p {
-			@include p-summary;
-			padding-top: 8px;
-
-			@media only screen and (max-width: 767px) {
-				margin-bottom: 15px !important;
-			}
 		}
 	}
 
 	.Bottom {
-		background-color: $color-primary-dark;
+		background-color: map-get($colors, primaryDark);
 		padding: 10px 0 20px 0;
 
 		.FooterBrand {
 			.Logo {
 				max-width: 300px !important;
 			}
-			@media only screen and (max-width: 767px) {
+
+			@media #{map-get($media, mobile)} {
 				@include flex-center-center;
 			}
-			@media only screen and (min-width: 768px) {
+
+			@media #{map-get($media, tablet-min)} {
 				@include flex-start;
 			}
 		}
@@ -65,10 +67,11 @@
 		}
 
 		.InfoWrapper {
-			@media only screen and (max-width: 767px) {
+			@media #{map-get($media, mobile)} {
 				@include flex-center-center;
 			}
-			@media only screen and (min-width: 768px) {
+
+			@media #{map-get($media, tablet-max)} {
 				@include flex-end;
 			}
 		}

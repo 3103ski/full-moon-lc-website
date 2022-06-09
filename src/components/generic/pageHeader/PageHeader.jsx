@@ -4,7 +4,7 @@ import React from 'react';
 // --> Packages
 import { Container } from 'semantic-ui-react';
 
-// --> Local Styling
+// --> Component Imports
 import style from './pageHeader.module.scss';
 
 export default function PageHeader({

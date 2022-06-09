@@ -9,7 +9,7 @@ import { Button, Card, CurveGraphic, SocialIcon } from '../../../components';
 import { MOWER } from '../../../iconify';
 import { mascotThumRight1000 } from '../../../assets';
 
-// --> Local Styling
+// --> Component Imports
 import style from './articleContent.module.scss';
 
 export default function ArticleContentSection() {

@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 // --> Project Imports
-import { ARROW_RIGHT } from '../../../iconify';
+import { ARROW_RIGHT } from 'iconify';
 
-// --> Local Styling
+// --> Component Imports
 import style from './articleCard.module.scss';
 
 export default function CardLink({ backgroundImage, title, summary, linkText, to = '/' }) {

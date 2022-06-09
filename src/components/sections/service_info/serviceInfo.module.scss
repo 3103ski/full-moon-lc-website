@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .SectionWrapper {
 	position: relative;
@@ -16,7 +16,7 @@
 
 	.Sub {
 		@include sub-default;
-		color: $color-secondary;
+		color: map-get($colors, secondary);
 		margin: 0;
 	}
 

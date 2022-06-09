@@ -1,32 +1,32 @@
+@import '../variables/';
+
 //••••••••••••••••••••
 // PARAGRAPH TEXT
 //••••••••••••••••••••
 @mixin p-default {
 	font-weight: 300 !important;
 
-	// Mobile - Small
-	@media only screen and (max-width: 499px) {
+	@media #{map-get($media, mobile-sm)} {
 		font-size: 5.8vw !important;
 		line-height: 6.75vw !important;
 	}
 
-	// Mobile - Large
-	@media only screen and (min-width: 500px) {
+	@media #{map-get($media, mobile-lg)} {
 		font-size: 1.3rem !important;
 		line-height: 1.7rem !important;
 	}
-	// Tablet
-	@media only screen and (min-width: 768px) {
+
+	@media #{map-get($media, tablet)} {
 		font-size: 1.5rem !important;
 		line-height: 2rem !important;
 	}
-	// Computer
-	@media only screen and (min-width: 991px) {
+
+	@media #{map-get($media, cpu)} {
 		font-size: 1.5rem !important;
 		line-height: 2rem !important;
 	}
 	// Extra large
-	@media only screen and (min-width: 1400px) {
+	@media #{map-get($media, widescreen)} {
 		font-size: 1.8rem !important;
 		line-height: 2.2rem !important;
 	}
@@ -35,29 +35,27 @@
 @mixin p-summary {
 	font-weight: 300 !important;
 
-	// Mobile - Small
-	@media only screen and (max-width: 499px) {
+	@media #{map-get($media, mobile-sm)} {
 		font-size: 6.3vw !important;
 		line-height: 6.5vw !important;
 	}
 
-	// Mobile - Large
-	@media only screen and (min-width: 500px) {
+	@media #{map-get($media, mobile-lg)} {
 		font-size: 4vw !important;
 		line-height: 4.2vw !important;
 	}
-	// Tablet
-	@media only screen and (min-width: 768px) {
+
+	@media #{map-get($media, tablet)} {
 		font-size: 2vw !important;
 		line-height: 2.3vw !important;
 	}
-	// Computer
-	@media only screen and (min-width: 991px) {
+
+	@media #{map-get($media, cpu)} {
 		font-size: 1.2rem !important;
 		line-height: 1.4rem !important;
 	}
-	// Extra large
-	@media only screen and (min-width: 1400px) {
+
+	@media #{map-get($media, widescreen)} {
 		font-size: 1.4rem !important;
 		line-height: 1.8rem !important;
 	}
@@ -70,29 +68,28 @@
 @mixin body-hdr-default {
 	letter-spacing: 1px;
 
-	// Mobile - Small
-	@media only screen and (max-width: 499px) {
+	@media #{map-get($media, mobile-sm)} {
 		font-size: 2rem !important;
 		line-height: 2.3rem !important;
 		text-align: left !important;
 	}
-	// Mobile - Large
-	@media only screen and (min-width: 500px) {
+
+	@media #{map-get($media, mobile-lg)} {
 		font-size: 2.8rem !important;
 		line-height: 3rem !important;
 	}
-	// Tablet
-	@media only screen and (min-width: 768px) {
+
+	@media #{map-get($media, tablet)} {
 		font-size: 4.7vw !important;
 		line-height: 4.8vw !important;
 	}
-	// Computer
-	@media only screen and (min-width: 991px) {
+
+	@media #{map-get($media, cpu)} {
 		font-size: 3.4vw !important;
 		line-height: 3.5vw !important;
 	}
-	// Extra large
-	@media only screen and (min-width: 1400px) {
+
+	@media #{map-get($media, widescreen)} {
 		font-size: 3.2rem !important;
 		line-height: 3.5rem !important;
 	}
@@ -102,31 +99,29 @@
 	font-weight: 400;
 	letter-spacing: 2px;
 
-	// Mobile - Small
-	@media only screen and (max-width: 499px) {
+	@media #{map-get($media, mobile-sm)} {
 		padding: 20px;
 		font-size: 3rem !important;
 		line-height: 3.6rem !important;
 	}
 
-	// Mobile - Large
-	@media only screen and (min-width: 500px) {
+	@media #{map-get($media, mobile-lg)} {
 		padding: 20px;
 		font-size: 4.7rem !important;
 		line-height: 4.8rem !important;
 	}
-	// Tablet
-	@media only screen and (min-width: 768px) {
+
+	@media #{map-get($media, tablet)} {
 		font-size: 5.3vw !important;
 		line-height: 5.6vw !important;
 	}
-	// Computer
-	@media only screen and (min-width: 991px) {
+
+	@media #{map-get($media, cpu)} {
 		font-size: 4.8vw !important;
 		line-height: 5vw !important;
 	}
-	// Extra large
-	@media only screen and (min-width: 1400px) {
+
+	@media #{map-get($media, widescreen)} {
 		font-size: 4.7rem !important;
 		line-height: 4.8rem !important;
 		letter-spacing: 3px;
@@ -141,24 +136,22 @@
 	font-weight: 500 !important;
 	letter-spacing: 1px;
 
-	// Mobile
-	@media only screen and (max-width: 767px) {
+	@media #{map-get($media, mobile)} {
 		font-size: 3rem !important;
-
 		line-height: 2.7rem !important;
 	}
-	// Tablet
-	@media only screen and (min-width: 768px) {
+
+	@media #{map-get($media, tablet)} {
 		font-size: 2.9vw !important;
 		line-height: 3.2vw !important;
 	}
-	// Computer
-	@media only screen and (min-width: 991px) {
+
+	@media #{map-get($media, cpu)} {
 		font-size: 2.8vw !important;
 		line-height: 2.9vw !important;
 	}
-	// Extra large
-	@media only screen and (min-width: 1400px) {
+
+	@media #{map-get($media, widescreen)} {
 		font-size: 2.2rem !important;
 		line-height: 2.4rem !important;
 	}
@@ -170,32 +163,30 @@
 	letter-spacing: 1px;
 	margin-bottom: 20px !important;
 
-	// Mobile - Small
-	@media only screen and (max-width: 499px) {
+	@media #{map-get($media, mobile-sm)} {
 		font-size: 1.75rem !important;
 		line-height: 2rem !important;
 		text-align: left !important;
 	}
 
-	// Mobile - Large
-	@media only screen and (min-width: 500px) {
+	@media #{map-get($media, mobile-lg)} {
 		font-size: 2rem !important;
 		line-height: 2.4rem !important;
 		font-weight: 500 !important;
 		letter-spacing: 2px;
 	}
-	// Tablet
-	@media only screen and (min-width: 768px) {
+
+	@media #{map-get($media, tablet)} {
 		font-size: 2.9vw !important;
 		line-height: 3.2vw !important;
 	}
-	// Computer
-	@media only screen and (min-width: 991px) {
+
+	@media #{map-get($media, cpu)} {
 		font-size: 2vw !important;
 		line-height: 2.4vw !important;
 	}
-	// Extra large
-	@media only screen and (min-width: 1400px) {
+
+	@media #{map-get($media, widescreen)} {
 		font-size: 2rem !important;
 		line-height: 2.3rem !important;
 	}

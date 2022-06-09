@@ -10,7 +10,7 @@ import { Button } from '../../../components';
 import { placeholderWorker, mascotThumRight1000 } from '../../../assets';
 import { ABOUT_US } from '../../../routes';
 
-// --> Local Styling
+// --> Component Imports
 import style from './profLawnCare.module.scss';
 
 export default function ProfLawnCareSection() {

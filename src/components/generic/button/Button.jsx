@@ -1,7 +1,11 @@
+// --> React
 import React from 'react';
-import { Icon } from '@iconify/react';
 
+// --> Packages
+import { Icon } from '@iconify/react';
 import { Button } from 'semantic-ui-react';
+
+// --> Component Imports
 import style from './button.module.scss';
 
 export default function CustomButton({

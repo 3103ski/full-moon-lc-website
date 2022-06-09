@@ -4,7 +4,7 @@ import React from 'react';
 // --> Packages
 import { Icon } from '@iconify/react';
 
-// --> Local Styling
+// --> Component Imports
 import style from './layoutIcon.module.scss';
 
 export default function LayoutIcon({ icon = '', width = 30, color = 'black' }) {

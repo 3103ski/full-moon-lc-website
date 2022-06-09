@@ -5,9 +5,9 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 
 // Project Imports
-import { YELP, FACEBOOK, INSTAGRAM, YOUTUBE, EMAIL } from '../../../iconify';
+import { YELP, FACEBOOK, INSTAGRAM, YOUTUBE, EMAIL } from 'iconify';
 
-// --> Local Styling
+// --> Component Imports
 import style from './socialIcon.module.scss';
 
 export default function SocialIcon({ type, color = 'light', size = 'default', margin = '10px auto' }) {

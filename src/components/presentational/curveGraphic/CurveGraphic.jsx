@@ -2,9 +2,9 @@
 import React from 'react';
 
 // --> Project Imports
-import { curveGraphicBottomLG, curveGraphicTopLG } from '../../../assets';
+import { curveGraphicBottomLG, curveGraphicTopLG } from 'assets';
 
-// --> Local Styling
+// --> Component Imports
 import style from './curveGraphic.module.scss';
 
 export default function BGCurve({ pos = 'top' }) {

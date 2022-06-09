@@ -1,52 +1,30 @@
-//•••••••••••••••••••
-// Util Colors
-//•••••••••••••••••••
+$colors: (
+	// --> Theme
+	primary: #3b7d58,
+	primaryPale: #4c956c,
+	primaryTransp: #2c6e49d1,
+	primaryDark: #367b55,
+	primaryAlt: #5a9d77,
+	secondary: #d68c45,
+	secondaryPale: #e9c29d,
+	secondaryTransp: #d68c45bf,
+	// --> Generics
+	colorRed: #f63150cc,
+	colorRedHover: #ee1414cc,
+	colorGreen: #4ebf62,
+	colorGreenHover: #23b828,
+	ratingYellow: #ffc225,
+	// --> Shades
+	primaryBlack: #585858,
+	// --> Brands
+	spotify: #1db954,
+	facebook: #3b5998,
+	google: #eaeaea,
+	yelp: #c41200d1
+);
 
-// PRIMARY
-$color-primary: #3b7d58;
-$color-primary-pale: #4c956c;
-$color-primary-transp: rgba(44, 110, 73, 0.82);
-
-// PRIMARY DARK
-$color-primary-dark: #367b55;
-
-// PRIMARY ALT
-$color-primary-alt: rgba(90, 157, 119, 1);
-
-// SECONDARY
-$color-secondary: rgba(214, 140, 69, 1);
-$color-secondary-pale: rgba(233, 194, 157, 1);
-$color-secondary-transp: rgba(214, 140, 69, 0.75);
-
-// SHADES
-$primary-black: #585858;
-$passive-white: #fff;
-
-$primary-grey: rgb(100, 100, 100);
-$primary-grey-hover: rgba(100, 100, 100, 0.5);
-
-$passive-grey: rgba(192, 192, 192, 0.644);
-$passive-grey-hover: rgba(192, 192, 192, 0.4);
-
-$pale-grey: #d6d6d645;
-$pale-grey-two: #e0e0e029;
-
-// GENERICS
-$color-red: rgba(246, 49, 80, 0.8);
-$color-red-hover: rgba(238, 20, 20, 0.8);
-
-$color-green: #4ebf62;
-$color-green-hover: rgb(35, 184, 40);
-
-$color-ratingstar: #ffc225;
-
-// SOCIAL BRAND COLORS
-$color-spotify: #1db954;
-$color-facebook: #3b5998;
-$color-google: #eaeaea;
-$color-yelp: rgba(196, 18, 0, 0.82);
-
-//•••••••••••••••••••
-// Shadows     <-- Shouldn't be here ??
-//•••••••••••••••••••
-$hover-inset: inset 0px 0px 5px $passive-grey-hover;
+@each $colorName, $color in $colors {
+	:export {
+		#{$colorName}: #{map-get($colors, #{$colorName})};
+	}
+}

@@ -6,8 +6,8 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 // Project Imports
-import { scrollToTopOf } from '../util';
-import { HOME, ABOUT_US, OUR_WORK, VIDEOS, ARTICLES, SERVICE } from '../routes';
+import { scrollToTopOf } from 'util';
+import { HOME, ABOUT_US, OUR_WORK, VIDEOS, ARTICLES, SERVICE } from 'routes';
 import {
 	AboutPage,
 	ArticleTemplatePage,

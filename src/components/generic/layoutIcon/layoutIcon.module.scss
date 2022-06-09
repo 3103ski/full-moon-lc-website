@@ -1,21 +1,21 @@
-@import '../../../sass/';
+@import 'sass';
 
 .Wrapper {
 	@include flex-center-center;
 
 	&[data-color='primary'] {
 		svg {
-			color: $color-primary;
+			color: map-get($colors, primary);
 		}
 	}
 	&[data-color='secondary'] {
 		svg {
-			color: $color-secondary;
+			color: map-get($colors, secondary);
 		}
 	}
 	&[data-color='black'] {
 		svg {
-			color: $primary-black;
+			color: map-get($colors, primaryBlack);
 		}
 	}
 	&[data-color='white'] {

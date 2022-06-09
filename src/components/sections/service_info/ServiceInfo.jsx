@@ -8,7 +8,7 @@ import { Container, Grid } from 'semantic-ui-react';
 import { Button, FAQ, FAQItem, CurveGraphic } from '../../../components';
 import { MOWER } from '../../../iconify';
 
-// --> Local Styling
+// --> Component Imports
 import style from './serviceInfo.module.scss';
 
 export default function ServiceInfoSection() {

@@ -1,0 +1,53 @@
+@import 'sass';
+
+.Mobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	.Wrapper {
+		z-index: 101;
+		top: 0;
+		left: 0;
+		height: 100vh !important;
+		overflow: hidden;
+
+		.LinkWrapper {
+			@include flex-col-center;
+			padding: 75px 0;
+			overflow: hidden;
+
+			a {
+				@include sub-default;
+				color: white;
+				padding: 5px 30px;
+			}
+		}
+	}
+
+	.MenuToggleUnderlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100vw;
+		height: 100vh;
+
+		z-index: 90;
+		transition: 0.18s;
+
+		&[data-open='1'] {
+			display: flex;
+			opacity: 1;
+		}
+
+		&[data-open='0'] {
+			display: none;
+			opacity: 0;
+		}
+	}
+
+	@media #{map-get($media, cpu-min)} {
+		display: none !important;
+	}
+}

@@ -17,17 +17,18 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-// REQUIRED FOR SCROLL TO TOP COMPONENT TO WORK
-
 body {
 	overflow: hidden;
 }
 
 .App {
+	//----------------------------------------------------------
+	// DEV NOTE :: REQUIRED FOR SCROLL TO TOP FUNCTION TO WORK
+	//----------------------------------------------------------
 	@include remove-scrollbar;
-
 	height: 100vh;
 	width: 100vw;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	//----------------------------------------------------------
 }

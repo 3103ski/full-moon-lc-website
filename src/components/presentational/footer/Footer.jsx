@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { banner500 } from '../../../assets';
-import { Button, SocialIcon } from '../../../components';
-import { LEAF } from '../../../iconify';
-import { HOME } from '../../../routes';
+import { banner500 } from 'assets';
+import { Button, SocialIcon } from 'components';
+import { LEAF } from 'iconify';
+import { HOME } from 'routes';
 
-// --> Local Styling
+// --> Component Imports
 import style from './footer.module.scss';
 
 export default function Footer() {

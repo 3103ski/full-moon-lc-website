@@ -11,12 +11,12 @@ import { placeholderLawn, banner1000, bannerVert_700 } from '../../../assets';
 import { OUR_WORK } from '../../../routes';
 import { MOWER, LEAF } from '../../../iconify';
 
-// --> Local Styling
+// --> Component Imports
 import style from './homeLanding.module.scss';
 
 export default function HomeLandingSection() {
 	return (
-		<header fluid className={style.SectionWrapper} style={{ backgroundImage: `url(${placeholderLawn})` }}>
+		<header className={style.SectionWrapper} style={{ backgroundImage: `url(${placeholderLawn})` }}>
 			<Container>
 				<Grid className={style.Wrapper}>
 					<Grid.Row>
@@ -36,10 +36,10 @@ export default function HomeLandingSection() {
 						{/* BUTTONS ABOVE MOBILE */}
 						<Grid.Column textAlign='center' tablet={16} computer={16} only='tablet computer'>
 							<div className={style.ButtonWrapper}>
-								<Button space='10x' color='secondary-transp' icon={LEAF}>
+								<Button space='10x' color='secondaryTransp' icon={LEAF}>
 									Get Estimate
 								</Button>
-								<Button space='10x' as={Link} to={OUR_WORK} color='secondary-transp' icon={MOWER}>
+								<Button space='10x' as={Link} to={OUR_WORK} color='secondaryTransp' icon={MOWER}>
 									Our Work
 								</Button>
 							</div>
@@ -48,16 +48,10 @@ export default function HomeLandingSection() {
 						{/* MOBILE BUTTONS */}
 						<Grid.Column textAlign='center' mobile={16} only='mobile'>
 							<div className={style.ButtonWrapper}>
-								<Button fluid space='10xy' color='secondary-transp' icon={LEAF}>
+								<Button fluid space='10xy' color='secondaryTransp' icon={LEAF}>
 									Get Estimate
 								</Button>
-								<Button
-									fluid
-									space='10xy'
-									color='secondary-transp'
-									as={Link}
-									to={OUR_WORK}
-									icon={MOWER}>
+								<Button fluid space='10xy' color='secondaryTransp' as={Link} to={OUR_WORK} icon={MOWER}>
 									Our Work
 								</Button>
 							</div>

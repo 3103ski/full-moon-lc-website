@@ -1,2 +1,19 @@
 @import 'variables';
 @import 'mixins';
+
+/**       @media BREAKPOINTS GUIDE
+    -------------------------------------
+    --> mobile-sm    || 0px - 499px
+    --> mobile       || 0px - 767px
+    --> mobile-lg    || 500px - 767px
+    --> tablet-max   || 0px - 990px
+    --> tablet       || 768px - 990px
+    --> cpu-sm       || 991px - 1199px
+    --> cpu          || 991px - 1399px
+    --> cpu-m        || 1200px - 1399px
+    --> tablet-min   || 768px +
+    --> cpu-min      || 991px +
+    --> cpu-lg       || 1200px +
+    --> widescreen   || 1400px +
+    -------------------------------------
+*/

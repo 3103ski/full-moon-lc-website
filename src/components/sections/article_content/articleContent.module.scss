@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .SectionWrapper {
 	position: relative;
@@ -31,28 +31,32 @@
 			z-index: 0;
 			transform: scaleX(-1);
 
-			@media only screen and (max-width: 767px) {
+			@media #{map-get($media, mobile)} {
 				transform: scaleX(1);
 				bottom: 0px;
 				right: 10px;
 				width: 280px;
 			}
-			@media only screen and (min-width: 768px) {
+
+			@media #{map-get($media, tablet)} {
 				bottom: 10px;
 				right: 80px;
 				width: 280px;
 			}
-			@media only screen and (min-width: 991px) {
+
+			@media #{map-get($media, cpu-sm)} {
 				bottom: 40px;
 				right: 160px;
 				width: 230px;
 			}
-			@media only screen and (min-width: 1200px) {
+
+			@media #{map-get($media, cpu-m)} {
 				bottom: 45px;
 				right: 100px;
 				width: 240px;
 			}
-			@media only screen and (min-width: 1400px) {
+
+			@media #{map-get($media, widescreen)} {
 				bottom: 60px;
 				right: 100px;
 				width: 250px;

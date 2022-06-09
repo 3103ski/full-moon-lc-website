@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .SectionLearnLawn {
 	@include flex-center-center;
@@ -6,16 +6,6 @@
 
 	position: relative;
 	min-height: 80vh;
-
-	.Title,
-	.Sub {
-		color: $primary-black;
-		text-align: center;
-	}
-
-	@media only screen and (max-width: 767px) {
-		height: unset !important;
-	}
 
 	&[data-picture='1'] {
 		height: 100vh;
@@ -28,6 +18,12 @@
 			color: white;
 			text-align: center;
 		}
+	}
+
+	.Title,
+	.Sub {
+		color: map-get($colors, primaryBlack);
+		text-align: center;
 	}
 
 	.Content {
@@ -53,5 +49,9 @@
 			margin-bottom: 10px;
 			width: 100%;
 		}
+	}
+
+	@media #{map-get($media, mobile)} {
+		height: unset !important;
 	}
 }

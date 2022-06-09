@@ -1,17 +1,17 @@
-// React
+// --> React
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Packages
+// --> Packages
 import { Icon } from '@iconify/react';
 
-// Project Imports
-import { banner500 } from '../../../assets';
-import { LEAF, CARROT_DOWN, PHONE } from '../../../iconify';
-import { Button } from '../../../components';
-import { HOME, VIDEOS, ARTICLES, OUR_WORK, ABOUT_US, SERVICE } from '../../../routes';
+// --> Project Imports
+import { banner500 } from 'assets';
+import { LEAF, CARROT_DOWN, PHONE } from 'iconify';
+import { Button } from 'components';
+import { HOME, VIDEOS, ARTICLES, OUR_WORK, ABOUT_US, SERVICE } from 'routes';
 
-// Styling
+// --> Component Imports
 import style from './navbar.module.scss';
 
 export default function Navbar() {

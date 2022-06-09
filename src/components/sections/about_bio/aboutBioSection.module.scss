@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .SectionWrapper {
 	@include flex-col-start;
@@ -8,7 +8,7 @@
 
 	h1 {
 		@include sub-default;
-		color: $color-secondary;
+		color: map-get($colors, secondary);
 	}
 
 	p {

@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .ReviewWrapper {
 	@include flex-center;
@@ -12,11 +12,12 @@
 		}
 
 		.RatingWrapper {
+			@include flex-center-center;
 			width: 100px;
 			padding: 10px;
-			@include flex-center-center;
+
 			svg {
-				color: $color-ratingstar;
+				color: map-get($colors, ratingYellow);
 			}
 		}
 	}
@@ -28,6 +29,7 @@
 
 		p {
 			margin: 0;
+
 			&:first-of-type {
 				@include p-default;
 				font-weight: 500 !important;
@@ -41,8 +43,7 @@
 		}
 	}
 
-	// MOBILE
-	@media only screen and (max-width: 767px) {
+	@media #{map-get($media, mobile)} {
 		@include flex-col-center-center;
 
 		.Left {

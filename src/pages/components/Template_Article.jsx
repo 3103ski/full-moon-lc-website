@@ -2,8 +2,8 @@
 import React from 'react';
 
 // --> Project Imports
-import { PageHeader, ArticleContentSection } from '../../components';
-import { placeholderArticleHeader } from '../../assets';
+import { PageHeader, ArticleContentSection } from 'components';
+import { placeholderArticleHeader } from 'assets';
 import ViewWrapper from './ViewWrapper';
 
 export default function ArticleTemplatePage() {

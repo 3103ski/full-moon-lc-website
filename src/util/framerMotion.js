@@ -4,6 +4,10 @@ import React from 'react';
 // --> Packages
 import { motion } from 'framer-motion';
 
+// --> SASS
+import sassVarSizes from '../sass/variables/_sizes.scss';
+import sassVarColors from '../sass/variables/_colors.scss';
+
 //••••••••••••••••••••••••••••••••••••
 // *** Variants --> Views
 //••••••••••••••••••••••••••••••••••••
@@ -39,5 +43,18 @@ export function MotionViewWrapper({ children }) {
 }
 
 //••••••••••••••••••••••••••••••••••••
-// *** Variants --> Animations
+// *** Variants --> NavBar
 //••••••••••••••••••••••••••••••••••••
+
+export const motion_variants_nav = {
+	mobile: {
+		open: { width: 'unset' },
+		closed: { width: '0px' },
+		toggleOpen: { backgroundColor: sassVarColors.primary },
+		toggleClosed: { backgroundColor: 'transparent' },
+	},
+	desktop: {
+		shortNav: { height: sassVarSizes.navbar_cpu_short },
+		tallNav: { height: sassVarSizes.navbar_cpu_tall },
+	},
+};

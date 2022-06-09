@@ -2,8 +2,8 @@
 import React from 'react';
 
 // --> Project Imports
-import { PageHeader, ServiceInfoSection, ServicesSection } from '../../components';
-import { placeholderBlowingLeaves } from '../../assets';
+import { PageHeader, ServiceInfoSection, ServicesSection } from 'components';
+import { placeholderBlowingLeaves } from 'assets';
 import ViewWrapper from './ViewWrapper';
 
 export default function ServiceTemplatePage() {

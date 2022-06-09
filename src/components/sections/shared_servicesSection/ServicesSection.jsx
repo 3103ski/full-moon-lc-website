@@ -17,7 +17,7 @@ import {
 	stockHome,
 } from '../../../assets';
 
-// --> Local Styling
+// --> Component Imports
 import style from './servicesSection.module.scss';
 
 export default function ServicesSection() {

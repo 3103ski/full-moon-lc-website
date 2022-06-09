@@ -2,8 +2,10 @@
 import React from 'react';
 
 // --> Project Imports
-import { Button, Card } from '../../../components';
-import { MONEY } from '../../../iconify';
+import { Button, Card } from 'components';
+import { MONEY } from 'iconify';
+
+// --> Component Imports
 import FAQItem from './faqItem/FAQItem.jsx';
 
 export default function FAQ({ children }) {

@@ -2,8 +2,8 @@
 import React from 'react';
 
 // --> Project Imports
-import { PageHeader } from '../../components';
-import { backgroundHouse } from '../../assets';
+import { PageHeader } from 'components';
+import { backgroundHouse } from 'assets';
 import ViewWrapper from './ViewWrapper';
 
 export default function VideosPage() {

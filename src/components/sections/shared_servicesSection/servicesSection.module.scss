@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .SectionWrapper {
 	position: relative;
@@ -20,6 +20,22 @@
 		z-index: 2;
 		padding: 130px 0 200px 0;
 
+		@media #{map-get($media, mobile-lg)} {
+			padding: 14vw 0 200px 0;
+		}
+
+		@media #{map-get($media, cpu-sm)} {
+			padding: 9vw 0 200px 0;
+		}
+
+		@media #{map-get($media, cpu-m)} {
+			padding: 12vw 0 200px 0;
+		}
+
+		@media #{map-get($media, widescreen)} {
+			padding: 200px 0;
+		}
+
 		.SectionDetails {
 			max-width: 900px;
 			margin: 0 auto;
@@ -34,11 +50,11 @@
 			}
 
 			.Title h1:first-of-type {
-				color: $primary-black;
+				color: map-get($colors, primaryBlack);
 			}
 
 			.Title h1:last-of-type {
-				color: $color-secondary;
+				color: map-get($colors, secondary);
 			}
 
 			.Description {
@@ -49,7 +65,7 @@
 			.ButtonsWrapper {
 				@include flex-center;
 
-				@media only screen and (max-width: 500px) {
+				@media #{map-get($media, mobile-sm)} {
 					display: none !important;
 				}
 			}
@@ -68,44 +84,27 @@
 			max-width: 800px;
 		}
 
-		// --> RESPONSIVE
-
 		.ServiceGraphicMobile {
 			position: absolute;
 			width: 220px;
 			transform: scaleX(-1);
 			bottom: 0;
 			right: 0;
-		}
 
-		@media only screen and (max-width: 500px) {
-			.ServiceGraphicMobile {
+			@media #{map-get($media, mobile-sm)} {
 				width: 170px;
 				transform: scaleX(1);
 				right: -40px;
 			}
-		}
-		@media only screen and (max-width: 767px) {
-			padding: 14vw 0 200px 0;
-		}
-		@media only screen and (min-width: 768px) {
-			.ServiceGraphicMobile {
+
+			@media #{map-get($media, tablet)} {
 				position: absolute;
 				width: 300px;
 			}
-		}
-		@media only screen and (min-width: 991px) {
-			padding: 9vw 0 200px 0;
 
-			.ServiceGraphicMobile {
+			@media #{map-get($media, cpu-sm)} {
 				display: none;
 			}
-		}
-		@media only screen and (min-width: 1200px) {
-			padding: 12vw 0 200px 0;
-		}
-		@media only screen and (min-width: 1400px) {
-			padding: 200px 0;
 		}
 	}
 }

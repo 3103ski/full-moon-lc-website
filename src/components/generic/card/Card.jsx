@@ -1,7 +1,7 @@
 // --> React
 import React from 'react';
 
-// --> Local Styling
+// --> Component Imports
 import style from './card.module.scss';
 
 export default function Card({ title, flow = 'col', children }) {

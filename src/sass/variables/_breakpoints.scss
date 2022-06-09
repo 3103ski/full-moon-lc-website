@@ -1,0 +1,39 @@
+$bp-mobile-lg: 500px;
+$bp-tablet: 768px;
+$bp-computer: 991px;
+$bp-computer-lg: 1200px;
+$bp-widescreen: 1400px;
+
+$breakpoints: (
+	mobile-sm-top: #{$bp-mobile-lg - 1},
+	mobile-lg-bottom: $bp-mobile-lg,
+	mobile-lg-top: #{$bp-tablet - 1},
+	tablet-bottom: $bp-tablet,
+	tablet-top: #{$bp-computer - 1},
+	cpu-sm-bottom: $bp-computer,
+	cpu-sm-top: #{$bp-computer-lg - 1},
+	cpu-m-bottom: $bp-computer-lg,
+	cpu-m-top: #{$bp-widescreen - 1},
+	widescreen: $bp-widescreen,
+);
+
+$media-prefix: 'only screen and ';
+$media: (
+	tablet-max: '#{$media-prefix}(max-width: #{map-get($breakpoints, tablet-top)})',
+	tablet-min: '#{$media-prefix}(min-width: #{map-get($breakpoints, tablet-bottom)})',
+	mobile-sm: '#{$media-prefix}(max-width: #{map-get($breakpoints, mobile-sm-top)})',
+	mobile-lg:
+		'#{$media-prefix}(min-width: #{map-get($breakpoints, mobile-lg-bottom)}) and (max-width: #{map-get($breakpoints, mobile-lg-top)})',
+	tablet:
+		'#{$media-prefix}(min-width: #{map-get($breakpoints, tablet-bottom)}) and (max-width: #{map-get($breakpoints, tablet-top)})',
+	mobile: '#{$media-prefix}(max-width: #{map-get($breakpoints, mobile-lg-top)})',
+	cpu-min: '#{$media-prefix}(min-width: #{map-get($breakpoints, cpu-sm-bottom)})',
+	cpu:
+		'#{$media-prefix}(min-width: #{map-get($breakpoints, cpu-sm-bottom)}) and (max-width: #{map-get($breakpoints, cpu-m-top)})',
+	cpu-sm:
+		'#{$media-prefix}(min-width: #{map-get($breakpoints, cpu-sm-bottom)}) and (max-width: #{map-get($breakpoints, cpu-sm-top)})',
+	cpu-m:
+		'#{$media-prefix}(min-width: #{map-get($breakpoints, cpu-m-bottom)}) and (max-width: #{map-get($breakpoints, cpu-m-top)})',
+	cpu-lg: '#{$media-prefix}(min-width: #{map-get($breakpoints, cpu-m-bottom)})',
+	widescreen: '#{$media-prefix}(min-width: #{map-get($breakpoints, widescreen)})',
+);

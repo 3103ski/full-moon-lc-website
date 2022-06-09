@@ -1,4 +1,4 @@
-@import '../../../sass/';
+@import 'sass';
 
 .SectionWrapper {
 	@include center-cover-bg;
@@ -50,13 +50,13 @@
 		right: 0;
 
 		// Mobile
-		@media only screen and (max-width: 767px) {
+		@media #{map-get($media, mobile)} {
 			right: -140px;
 			transform: scaleX(-1);
 		}
 
 		// Tablet
-		@media only screen and (min-width: 768px) and (max-width: 991px) {
+		@media #{map-get($media, tablet)} {
 			right: -90px;
 			transform: scaleX(-1);
 		}
