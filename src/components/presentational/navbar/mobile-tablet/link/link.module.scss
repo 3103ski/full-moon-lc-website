@@ -26,6 +26,6 @@
 	color: white;
 
 	&:hover {
-		color: map-get($colors, secondary);
+		color: map-get($colors, color_secondary);
 	}
 }

@@ -9,7 +9,6 @@ import { Icon } from '@iconify/react';
 // --> Project Imports
 import { CARROT_DOWN } from 'icons';
 import { motion_variants_nav } from 'util';
-import colors from '../../../../../../sass/variables/_colors.scss';
 
 // --> Component Imports
 import Style from './dropMenu.module.scss';
@@ -21,7 +20,7 @@ export default function DropMenu({ links = [], children }) {
 		<motion.div
 			className={Style.DropMenuContainer}
 			variants={motion_variants_nav.desktop}
-			style={{ backgroundColor: isHovering ? colors.primaryTransp : 'transparent' }}
+			style={{ backgroundColor: isHovering ? Style.primaryTransp : 'rgba(0,0,0,0)' }}
 			onHoverStart={() => toggleIsHovering(true)}
 			onHoverEnd={() => toggleIsHovering(false)}>
 			<div className={Style.DropMenuLabel}>

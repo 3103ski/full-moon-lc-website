@@ -71,30 +71,30 @@
 
 	// BUTTON COLORS
 	&[data-color='primary'] {
-		background-color: map-get($colors, primary) !important;
+		background-color: map-get($colors, color_primary) !important;
 		&:hover {
-			background-color: map-get($colors, primaryTransp) !important;
+			background-color: map-get($colors, color_primaryTransp) !important;
 		}
 	}
 
 	&[data-color='primaryTransp'] {
-		background-color: map-get($colors, primaryTransp) !important;
+		background-color: map-get($colors, color_primaryTransp) !important;
 		&:hover {
-			background-color: map-get($colors, primary) !important;
+			background-color: map-get($colors, color_primary) !important;
 		}
 	}
 
 	&[data-color='secondary'] {
-		background-color: map-get($colors, secondary) !important;
+		background-color: map-get($colors, color_secondary) !important;
 		&:hover {
-			background-color: map-get($colors, secondaryTransp) !important;
+			background-color: map-get($colors, color_secondaryTransp) !important;
 		}
 	}
 
 	&[data-color='secondaryTransp'] {
-		background-color: map-get($colors, secondaryTransp) !important;
+		background-color: map-get($colors, color_secondaryTransp) !important;
 		&:hover {
-			background-color: map-get($colors, secondary) !important;
+			background-color: map-get($colors, color_secondary) !important;
 		}
 	}
 
@@ -103,7 +103,7 @@
 	}
 
 	&[data-color='yelp'] {
-		background-color: map-get($colors, yelp) !important;
+		background-color: map-get($colors, color_yelp) !important;
 	}
 
 	// BUTTON TEXT COLOR
@@ -113,7 +113,7 @@
 	}
 
 	&[data-txt-color='dark'] {
-		color: map-get($colors, primaryBlack) !important;
+		color: map-get($colors, color_primaryBlack) !important;
 	}
 
 	&[data-color='primary'],

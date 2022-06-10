@@ -3,14 +3,14 @@
 .Wrapper {
 	width: 100%;
 	margin: 0 10px;
-	border: 2px solid map-get($colors, primary);
-	border-radius: $small-radius;
+	border: 2px solid map-get($colors, color_primary);
+	border-radius: $borders_small_radius;
 
 	.Header {
 		padding: 12px 5px;
-		background-color: map-get($colors, primary);
-		border-top-left-radius: calc(#{$small-radius - 5px});
-		border-top-right-radius: calc(#{$small-radius - 5px});
+		background-color: map-get($colors, color_primary);
+		border-top-left-radius: calc(#{$borders_small_radius - 5px});
+		border-top-right-radius: calc(#{$borders_small_radius - 5px});
 
 		h3 {
 			text-align: center;

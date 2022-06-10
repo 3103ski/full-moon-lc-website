@@ -33,7 +33,7 @@ export default function HomeLandingSection() {
 							<h3>The Right Services. The Right Price.</h3>
 						</Grid.Column>
 
-						{/* BUTTONS ABOVE MOBILE */}
+						{/* TABLET + COMPUTER BUTTONS  */}
 						<Grid.Column textAlign='center' tablet={16} computer={16} only='tablet computer'>
 							<div className={style.ButtonWrapper}>
 								<Button space='10x' color='secondaryTransp' icon={LEAF}>

@@ -65,7 +65,7 @@
 		}
 	}
 
-	@media #{map-get($media, mobile-sm)} {
+	@media #{map-get($media, mobile_sm)} {
 		width: 300px;
 		height: unset;
 
@@ -85,7 +85,7 @@
 		}
 	}
 
-	@media #{map-get($media, mobile-lg)} {
+	@media #{map-get($media, mobile_lg)} {
 		width: 300px;
 		height: 300px;
 
@@ -123,7 +123,7 @@
 		}
 	}
 
-	@media #{map-get($media, cpu-min)} {
+	@media #{map-get($media, cpu_min)} {
 		width: 330px;
 		height: 330px;
 

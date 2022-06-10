@@ -9,7 +9,7 @@
 		@include flex-center;
 		top: 0;
 		left: 0;
-		background-color: map-get($colors, primaryTransp);
+		background-color: map-get($colors, color_primaryTransp);
 
 		.CenterLinks,
 		.RightLinks {
@@ -27,7 +27,7 @@
 		}
 	}
 
-	@media #{map-get($media, tablet-max)} {
+	@media #{map-get($media, tablet_max)} {
 		display: none !important;
 	}
 }

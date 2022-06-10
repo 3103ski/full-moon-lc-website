@@ -1,12 +1,11 @@
-$toggle-size: 60px;
-
-$nav-sizes: (
-	cpu-short: 75px,
-	cpu-tall: 110px,
-	mobile-toggle-size: $toggle-size,
+$sizes: (
+	sizes_nav_dt_short: 75px,
+	sizes_nav_dt_tall: 110px,
+	sizes_nav_m_toggle: 60px,
 );
 
-:export {
-	navbar_cpu_short: #{map-get($nav-sizes, cpu-short)};
-	navbar_cpu_tall: #{map-get($nav-sizes, cpu-tall)};
+@each $size-label, $size in $sizes {
+	:export {
+		#{$size-label}: #{map-get($sizes, #{$size-label})};
+	}
 }

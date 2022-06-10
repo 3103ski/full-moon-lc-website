@@ -5,8 +5,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // --> SASS
-import sassVarSizes from '../sass/variables/_sizes.scss';
-import sassVarColors from '../sass/variables/_colors.scss';
+import Sass from '../sass/index.scss';
 
 /**
  * This project uses Framer Motion package to help with animating React components.
@@ -55,19 +54,19 @@ export const motion_variants_nav = {
 	mobile: {
 		drawerClosed: { x: '-100%' },
 		drawerOpen: { x: '0%' },
-		toggleClosed: { backgroundColor: sassVarColors.primaryTransp },
+		toggleClosed: { backgroundColor: Sass.color_primaryTransp },
 		toggleOpen: { backgroundColor: 'rgba(0,0,0,0)' },
 	},
 	desktop: {
-		shortNav: { height: sassVarSizes.navbar_cpu_short },
-		tallNav: { height: sassVarSizes.navbar_cpu_tall },
+		shortNav: { height: Sass.sizes_nav_dt_short },
+		tallNav: { height: Sass.sizes_nav_dt_tall },
 		brandNoScroll: { width: '20vw' },
 		brandScroll: { width: '12vw' },
 		onBrandHover: { scale: 1.075 },
 		dropOpen: { display: 'flex', opacity: 1, top: '100%' },
 		dropClosed: { display: 'none', opacity: 0, top: '120%' },
 		rootLinkHover: {
-			backgroundColor: sassVarColors.primaryTransp,
+			backgroundColor: Sass.color_primaryTransp,
 			transition: { ease: 'easeIn', damping: 0 },
 		},
 	},

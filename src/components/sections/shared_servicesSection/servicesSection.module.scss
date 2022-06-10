@@ -20,15 +20,15 @@
 		z-index: 2;
 		padding: 130px 0 200px 0;
 
-		@media #{map-get($media, mobile-lg)} {
+		@media #{map-get($media, mobile_lg)} {
 			padding: 14vw 0 200px 0;
 		}
 
-		@media #{map-get($media, cpu-sm)} {
+		@media #{map-get($media, cpu_sm)} {
 			padding: 9vw 0 200px 0;
 		}
 
-		@media #{map-get($media, cpu-m)} {
+		@media #{map-get($media, cpu_m)} {
 			padding: 12vw 0 200px 0;
 		}
 
@@ -50,11 +50,11 @@
 			}
 
 			.Title h1:first-of-type {
-				color: map-get($colors, primaryBlack);
+				color: map-get($colors, color_primaryBlack);
 			}
 
 			.Title h1:last-of-type {
-				color: map-get($colors, secondary);
+				color: map-get($colors, color_secondary);
 			}
 
 			.Description {
@@ -91,7 +91,7 @@
 			bottom: 0;
 			right: 0;
 
-			@media #{map-get($media, mobile-sm)} {
+			@media #{map-get($media, mobile_sm)} {
 				width: 170px;
 				transform: scaleX(1);
 				right: -40px;
@@ -102,7 +102,7 @@
 				width: 300px;
 			}
 
-			@media #{map-get($media, cpu-min)} {
+			@media #{map-get($media, cpu_min)} {
 				display: none;
 			}
 		}

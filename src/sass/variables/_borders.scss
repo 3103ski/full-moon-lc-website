@@ -1,3 +1,11 @@
-$small-radius: 25px;
-$large-radius: 50px;
-$avatar-radius: 100%;
+$borders: (
+	borders_small_radius: 25px,
+	borders_large_radius: 50px,
+	borders_avatar_radius: 100%,
+);
+
+@each $border-key, $border in $borders {
+	:export {
+		#{$border-key}: #{map-get($borders, #{$border-key})};
+	}
+}

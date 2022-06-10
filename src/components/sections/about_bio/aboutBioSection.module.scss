@@ -8,7 +8,7 @@
 
 	h1 {
 		@include sub-default;
-		color: map-get($colors, secondary);
+		color: map-get($colors, color_secondary);
 	}
 
 	p {

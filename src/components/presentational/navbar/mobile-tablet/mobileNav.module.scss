@@ -26,7 +26,7 @@
 
 .Container,
 .ContactWrapper {
-	@media #{map-get($media, cpu-min)} {
+	@media #{map-get($media, cpu_min)} {
 		display: none !important;
 	}
 }

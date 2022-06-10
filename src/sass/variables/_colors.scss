@@ -1,26 +1,26 @@
 $colors: (
 	// --> Theme
-	primary: #3b7d58,
-	primaryPale: #4c956c,
-	primaryTransp: #2c6e49d1,
-	primaryDark: #367b55,
-	primaryAlt: #5a9d77,
-	secondary: #d68c45,
-	secondaryPale: #e9c29d,
-	secondaryTransp: #d68c45bf,
+	color_primary: #3b7d58,
+	color_primaryPale: #4c956c,
+	color_primaryTransp: #2c6e49d1,
+	color_primaryDark: #367b55,
+	color_primaryAlt: #5a9d77,
+	color_secondary: #d68c45,
+	color_secondaryPale: #e9c29d,
+	color_secondaryTransp: #d68c45bf,
 	// --> Generics
-	colorRed: #f63150cc,
-	colorRedHover: #ee1414cc,
-	colorGreen: #4ebf62,
-	colorGreenHover: #23b828,
-	ratingYellow: #ffc225,
+	color_red: #f63150cc,
+	color_redHover: #ee1414cc,
+	color_green: #4ebf62,
+	color_greenHover: #23b828,
+	color_ratingYellow: #ffc225,
 	// --> Shades
-	primaryBlack: #585858,
+	color_primaryBlack: #585858,
 	// --> Brands
-	spotify: #1db954,
-	facebook: #3b5998,
-	google: #eaeaea,
-	yelp: #c41200d1
+	color_spotify: #1db954,
+	color_facebook: #3b5998,
+	color_google: #eaeaea,
+	color_yelp: #c41200d1
 );
 
 @each $colorName, $color in $colors {

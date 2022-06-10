@@ -32,9 +32,9 @@
 		padding: 10px 0px 20px 0px;
 		flex-direction: column;
 		left: 0;
-		background-color: map-get($colors, secondaryTransp);
-		border-bottom-left-radius: $small-radius;
-		border-bottom-right-radius: $small-radius;
+		background-color: map-get($colors, color_secondaryTransp);
+		border-bottom-left-radius: map-get($borders, borders_small_radius);
+		border-bottom-right-radius: map-get($borders, borders_small_radius);
 
 		.DropLink {
 			@include p-summary;
@@ -44,7 +44,7 @@
 			transition: 0.17s;
 
 			&:hover {
-				background-color: map-get($colors, secondary);
+				background-color: map-get($colors, color_secondary);
 			}
 		}
 	}

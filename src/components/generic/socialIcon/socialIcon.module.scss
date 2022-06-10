@@ -53,13 +53,13 @@
 
 	&[data-color='primary'] {
 		svg {
-			color: map-get($colors, primary) !important;
+			color: map-get($colors, color_primary) !important;
 		}
 	}
 
 	&[data-color='secondary'] {
 		svg {
-			color: map-get($colors, secondary) !important;
+			color: map-get($colors, color_secondary) !important;
 		}
 	}
 
@@ -68,7 +68,7 @@
 		transform: scale(1.04);
 
 		svg {
-			color: map-get($colors, secondary) !important;
+			color: map-get($colors, color_secondary) !important;
 		}
 	}
 }

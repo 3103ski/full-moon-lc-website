@@ -22,7 +22,7 @@
 
 	.Title,
 	.Sub {
-		color: map-get($colors, primaryBlack);
+		color: map-get($colors, color_primaryBlack);
 		text-align: center;
 	}
 

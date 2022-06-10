@@ -65,7 +65,7 @@
 		}
 	}
 
-	@media #{map-get($media, tablet-min)} {
+	@media #{map-get($media, tablet_min)} {
 		.Wrapper {
 			padding: 15vw 0 10vw 0 !important;
 		}

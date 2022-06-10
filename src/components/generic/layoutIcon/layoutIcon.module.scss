@@ -5,17 +5,17 @@
 
 	&[data-color='primary'] {
 		svg {
-			color: map-get($colors, primary);
+			color: map-get($colors, color_primary);
 		}
 	}
 	&[data-color='secondary'] {
 		svg {
-			color: map-get($colors, secondary);
+			color: map-get($colors, color_secondary);
 		}
 	}
 	&[data-color='black'] {
 		svg {
-			color: map-get($colors, primaryBlack);
+			color: map-get($colors, color_primaryBlack);
 		}
 	}
 	&[data-color='white'] {

@@ -7,6 +7,8 @@ import { Container } from 'semantic-ui-react';
 // --> Component Imports
 import style from './pageHeader.module.scss';
 
+console.log({ style });
+
 export default function PageHeader({
 	title = 'Enter A Title',
 	size = 'med',
