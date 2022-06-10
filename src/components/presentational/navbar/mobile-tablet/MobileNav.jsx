@@ -22,12 +22,9 @@ export default function MobileNav() {
 				className={Style.ContactWrapper}
 				data-contact-open={contactOpen ? 1 : 0}
 				data-toggle-open={open ? 1 : 0}>
-				<Button
-					space='10x'
-					icon={LEAF}
-					onClick={() => toggleContactOpen(true)}
-					color='secondary'
-					onlyIcon></Button>
+				<Button space='10x' icon={LEAF} onClick={() => toggleContactOpen(true)} color='secondary'>
+					Get Started
+				</Button>
 				<Modal isOpen={contactOpen} title='Help Center' callback={toggleContactOpen}>
 					<Button.FluidWrapper>
 						<Button icon={LEAF} fluid space='10y'>

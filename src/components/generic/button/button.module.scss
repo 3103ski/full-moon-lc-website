@@ -3,7 +3,15 @@
 .Button {
 	@include flex-center-center;
 	padding: 12px 35px !important;
+	font-size: 15px !important;
+	font-weight: 500 !important;
+	border-radius: 100px !important;
+	display: flex !important;
+	align-items: center !important;
+	letter-spacing: 1px;
 	white-space: nowrap;
+	transition: 0.15s;
+	border: none;
 
 	//•••••••••
 	// BUTTON MARGIN
@@ -31,15 +39,6 @@
 	&[data-space='25x'] {
 		margin: 0 25px !important;
 	}
-
-	font-size: 15px !important;
-	font-weight: 500 !important;
-	letter-spacing: 1px;
-	transition: 0.15s;
-	border-radius: 100px !important;
-	border: none;
-	display: flex !important;
-	align-items: center !important;
 
 	// UTIL STYLE
 	&[data-self-center='1'] {
