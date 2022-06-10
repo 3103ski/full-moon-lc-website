@@ -6,6 +6,9 @@
 	height: 100vh;
 	width: 375px;
 	background-color: map-get($colors, primary);
+	overflow-y: scroll;
+
+	@include remove-scrollbar;
 }
 
 .Backdrop {
