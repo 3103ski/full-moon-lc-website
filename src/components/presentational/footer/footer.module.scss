@@ -43,6 +43,10 @@
 		background-color: map-get($colors, primaryDark);
 		padding: 10px 0 20px 0;
 
+		@media #{map-get($media, mobile)} {
+			padding: 10px 0 70px 0;
+		}
+
 		.FooterBrand {
 			.Logo {
 				max-width: 300px !important;
@@ -63,15 +67,15 @@
 		}
 
 		.SocialIconWrapper {
-			@include flex-center-center;
+			@include flex-center;
 		}
 
 		.InfoWrapper {
-			@media #{map-get($media, mobile)} {
+			@media #{map-get($media, tablet-max)} {
 				@include flex-center-center;
 			}
 
-			@media #{map-get($media, tablet-max)} {
+			@media #{map-get($media, cpu-min)} {
 				@include flex-end;
 			}
 		}

@@ -55,10 +55,10 @@ export default function Footer() {
 							<Grid.Column mobile={16} tablet={6} computer={6} className={style.InfoWrapper}>
 								<p>Licensed, Insured, and Bonded</p>
 								<div className={style.SocialIconWrapper}>
-									<SocialIcon type={'insta'} />
-									<SocialIcon type={'fb'} />
-									<SocialIcon type={'youtube'} />
-									<SocialIcon type={'yelp'} />
+									<SocialIcon margin='0 4px' type={'insta'} />
+									<SocialIcon margin='0 4px' type={'fb'} />
+									<SocialIcon margin='0 4px' type={'youtube'} />
+									<SocialIcon margin='0 4px' type={'yelp'} />
 								</div>
 							</Grid.Column>
 						</Grid.Row>
