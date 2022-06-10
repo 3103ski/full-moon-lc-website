@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 
 // --> Project Imports
 import { PageHeader, ArticleContentSection } from 'components';
-import { placeholderArticleHeader } from 'assets';
 import ViewWrapper from './ViewWrapper';
 import sanityClient from 'sanityClient';
 
