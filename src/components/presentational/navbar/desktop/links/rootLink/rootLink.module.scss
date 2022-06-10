@@ -3,12 +3,13 @@
 .Link {
 	@include hover-cursor;
 	@include flex-center-center;
-	@include p-summary;
 	height: 100%;
-	// transition: 0.18s;
+	transition: 0.18s;
 
-	a {
+	p {
+		@include p-summary;
 		color: white !important;
+		transition: 0.2s;
 	}
 
 	&[data-padding='1'] {
@@ -18,6 +19,10 @@
 	&[data-hover='1'] {
 		&:hover {
 			background-color: map-get($colors, color_primaryTransp);
+
+			p {
+				opacity: 0.8;
+			}
 		}
 	}
 }

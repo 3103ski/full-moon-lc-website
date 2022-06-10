@@ -20,7 +20,7 @@ export default function DropMenu({ links = [], children }) {
 		<motion.div
 			className={Style.DropMenuContainer}
 			variants={motion_variants_nav.desktop}
-			style={{ backgroundColor: isHovering ? Style.primaryTransp : 'rgba(0,0,0,0)' }}
+			style={{ backgroundColor: isHovering ? Style.color_primaryTransp : 'rgba(0,0,0,0)' }}
 			onHoverStart={() => toggleIsHovering(true)}
 			onHoverEnd={() => toggleIsHovering(false)}>
 			<div className={Style.DropMenuLabel}>

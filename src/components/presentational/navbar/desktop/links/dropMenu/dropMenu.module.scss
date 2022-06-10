@@ -9,12 +9,12 @@
 		@include flex-center-center;
 		padding: 0 12px;
 		height: inherit;
-		// transition: 0.18s;
 
 		svg,
 		p {
 			@include p-summary;
 			color: white;
+			transition: 0.17s;
 		}
 
 		p {
@@ -24,6 +24,14 @@
 		svg {
 			margin-left: 5px;
 			margin-top: 4px;
+		}
+	}
+	&:hover {
+		.DropMenuLabel {
+			svg,
+			p {
+				opacity: 0.8;
+			}
 		}
 	}
 
