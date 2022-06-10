@@ -142,3 +142,10 @@
 		}
 	}
 }
+
+.CardGroup {
+	@include flex-center-center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 800px;
+}

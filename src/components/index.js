@@ -18,7 +18,7 @@ export { default as CurveGraphic } from './presentational/curveGraphic/CurveGrap
 export { default as FAQ } from './presentational/faq/FAQ.jsx';
 export { default as FAQItem } from './presentational/faq/faqItem/FAQItem.jsx';
 
-export { default as CardLink } from './presentational/articleCard/ArticleCard.jsx';
+export { default as ArticleCard } from './presentational/articleCard/ArticleCard.jsx';
 export { default as CustomerReview } from './presentational//customerReview/CustomerReview.jsx';
 
 //•••••••••••••••••
@@ -41,5 +41,6 @@ export { default as AboutBioSection } from './sections/about_bio/AboutBioSection
 // Service Template
 export { default as ServiceInfoSection } from './sections/service_info/ServiceInfo.jsx';
 
-// Article Template
+// Article Pages
 export { default as ArticleContentSection } from './sections/article_content/ArticleContent.jsx';
+export { default as BrowseArticlesSection } from './sections/articles_browse/BrowseArticles.jsx';

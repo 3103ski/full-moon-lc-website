@@ -9,6 +9,26 @@ export default {
 			type: 'string',
 		},
 		{
+			name: 'subtitle',
+			title: 'Subtitle',
+			type: 'string',
+			maxLength: 100,
+			options: {
+				maxLength: 100,
+				source: 'subtitle',
+			},
+		},
+		{
+			name: 'shortSummary',
+			title: 'Short Summary',
+			type: 'string',
+			maxLength: 100,
+			options: {
+				maxLength: 100,
+				source: 'shortSummary',
+			},
+		},
+		{
 			name: 'slug',
 			title: 'Slug',
 			type: 'slug',
@@ -35,7 +55,7 @@ export default {
 			name: 'categories',
 			title: 'Categories',
 			type: 'array',
-			of: [{ type: 'reference', to: { type: 'category' } }],
+			of: [{ type: 'reference', to: { type: 'tag' } }],
 		},
 		{
 			name: 'publishedAt',

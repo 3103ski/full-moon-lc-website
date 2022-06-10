@@ -7,7 +7,7 @@ import { Container } from 'semantic-ui-react';
 
 // --> Project Imports
 import { placeholderMowing, placeholderTileGrass } from '../../../assets';
-import { Button, CardLink } from '../../../components';
+import { Button, ArticleCard } from '../../../components';
 import { ARTICLES } from '../../../routes';
 
 // --> Styling
@@ -24,8 +24,9 @@ export default function LearnLawnCareSection({ picture = false }) {
 			<Container className={style.Content}>
 				<h1 className={style.Title}>LEARN ABOUT LAWN CARE</h1>
 				<h3 className={style.Sub}>Find out tips that can save you money & keep your property looking fresh!</h3>
-				<div className={style.TilesWrapper}>
-					<CardLink
+
+				<ArticleCard.CardGroup>
+					<ArticleCard
 						to={`${ARTICLES}/8173623`}
 						title='Grass Health'
 						linkText='Read Article'
@@ -33,14 +34,15 @@ export default function LearnLawnCareSection({ picture = false }) {
 						summary='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque '
 					/>
 
-					<CardLink
+					<ArticleCard
 						to={`${ARTICLES}/8173623`}
 						title='Grass Health'
 						linkText='Read Article'
 						backgroundImage={placeholderTileGrass}
 						summary='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque '
 					/>
-				</div>
+				</ArticleCard.CardGroup>
+
 				<Button as={Link} to={ARTICLES} color='secondary'>
 					Browse All Articles
 				</Button>

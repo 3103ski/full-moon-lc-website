@@ -30,7 +30,7 @@ export default function AnimatedRoutes() {
 				<Route exact path={ABOUT_US} element={<AboutPage />} />
 				<Route path={`${SERVICE}/:service`} element={<ServiceTemplatePage />} />
 				<Route exact path={ARTICLES} element={<BrowseArticlesPage />} />
-				<Route path={`${ARTICLES}/:articleId`} element={<ArticleTemplatePage />} />
+				<Route path={`${ARTICLES}/:slug`} element={<ArticleTemplatePage />} />
 				<Route exact path={VIDEOS} element={<VideosPage />} />
 				<Route exact path={OUR_WORK} element={<ExploreWorkPage />} />
 				<Route path={`${OUR_WORK}/:projectId`} element={<WorkTemplatePage />} />

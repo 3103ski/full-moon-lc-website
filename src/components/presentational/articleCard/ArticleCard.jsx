@@ -11,7 +11,7 @@ import { ARROW_RIGHT } from 'icons';
 // --> Component Imports
 import style from './articleCard.module.scss';
 
-export default function CardLink({ backgroundImage, title, summary, linkText, to = '/' }) {
+export default function ArticleCard({ backgroundImage, title, summary, linkText, to = '/' }) {
 	return (
 		<Link to={to}>
 			<article className={style.Wrapper} style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -29,3 +29,5 @@ export default function CardLink({ backgroundImage, title, summary, linkText, to
 		</Link>
 	);
 }
+
+ArticleCard.CardGroup = ({ children }) => <div className={style.CardGroup}>{children}</div>;

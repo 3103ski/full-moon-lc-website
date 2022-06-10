@@ -2,8 +2,11 @@
 import React from 'react';
 
 // --> Project Imports
-import { PageHeader } from 'components/';
+import { PageHeader, BrowseArticlesSection } from 'components';
+
 import { backgroundHouse } from 'assets';
+
+// --> Component Imports
 import ViewWrapper from './ViewWrapper';
 
 export default function BrowseArticlesPage() {
@@ -15,6 +18,7 @@ export default function BrowseArticlesPage() {
 				image={backgroundHouse}
 				imgPos='bottom'
 			/>
+			<BrowseArticlesSection />
 		</ViewWrapper>
 	);
 }

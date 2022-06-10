@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
-import { CardLink, Button, CurveGraphic } from '../../../components';
+import { ArticleCard, Button, CurveGraphic } from '../../../components';
 import { SERVICE, VIDEOS } from '../../../routes';
 import {
 	mascotCleanup1000,
@@ -70,36 +70,36 @@ export default function ServicesSection() {
 					</Grid.Row>
 				</Grid>
 
-				<div className={style.TilesWrapper}>
-					<CardLink
+				<ArticleCard.CardGroup>
+					<ArticleCard
 						to={`${SERVICE}/lanscaping`}
 						title='Landscapes'
 						linkText='Learn More'
 						backgroundImage={serviceTileLandscaping}
 						summary='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque '
 					/>
-					<CardLink
+					<ArticleCard
 						to={`${SERVICE}/mowing`}
 						title='Mowing'
 						linkText='Learn More'
 						backgroundImage={serviceTileMowing}
 						summary='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque '
 					/>
-					<CardLink
+					<ArticleCard
 						to={`${SERVICE}/property-cleanup`}
 						title='Cleanup'
 						linkText='Learn More'
 						backgroundImage={serviceTileCleanup}
 						summary='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque '
 					/>
-					<CardLink
+					<ArticleCard
 						to={`${SERVICE}/gardening`}
 						title='Gardens'
 						linkText='Learn More'
 						backgroundImage={serviceTileGardens}
 						summary='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque '
 					/>
-				</div>
+				</ArticleCard.CardGroup>
 			</Container>
 		</section>
 	);
