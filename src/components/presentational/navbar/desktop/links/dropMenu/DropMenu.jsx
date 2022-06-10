@@ -32,8 +32,11 @@ export default function DropMenu({ links = [], children }) {
 				className={Style.DropLinksWrapper}
 				variants={motion_variants_nav.desktop}
 				animate={isHovering ? 'dropOpen' : 'dropClosed'}>
-				{links.map((link) => (
-					<DropMenu.Link to={link.to} onClick={() => toggleIsHovering(false)}>
+				{links.map((link, i) => (
+					<DropMenu.Link
+						key={`${i}__DropLink__${link.label}`}
+						to={link.to}
+						onClick={() => toggleIsHovering(false)}>
 						{link.label}
 					</DropMenu.Link>
 				))}

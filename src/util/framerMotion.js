@@ -56,7 +56,7 @@ export const motion_variants_nav = {
 		drawerClosed: { x: '-100%' },
 		drawerOpen: { x: '0%' },
 		toggleClosed: { backgroundColor: sassVarColors.primaryTransp },
-		toggleOpen: { backgroundColor: 'transparent' },
+		toggleOpen: { backgroundColor: 'rgba(0,0,0,0)' },
 	},
 	desktop: {
 		shortNav: { height: sassVarSizes.navbar_cpu_short },
