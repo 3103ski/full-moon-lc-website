@@ -10,6 +10,8 @@ import bannerVert_700 from './bannerVert_700.png';
 // --> MASCOT GRAPHICS
 //••••••••••••••••••••••
 
+import mascotDisc from './fmlc512x512.png';
+
 // --> Thumbs Up (face left)
 import mascotOne250 from './mascot_thumbup_250.png';
 import mascotOne500 from './mascot_thumbup_500.png';
@@ -83,6 +85,7 @@ export {
 	mascotArmsCrossed1000,
 	mascotArmsCrossedCutoff1000,
 	mascotCleanup1000,
+	mascotDisc,
 	mascotOne250,
 	mascotOne500,
 	mascotOne1000,

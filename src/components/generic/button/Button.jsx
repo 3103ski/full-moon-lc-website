@@ -13,6 +13,7 @@ export default function Button({
 	txtcolor = 'light',
 	icon = null,
 	thin = null,
+	onlyIcon = null,
 	space = '',
 	selfCenter = null,
 	children,
@@ -22,6 +23,7 @@ export default function Button({
 		<SUIButton
 			data-space={space}
 			data-color={color}
+			data-only-icon={onlyIcon ? 1 : 0}
 			data-txt-color={txtcolor}
 			data-thin={thin ? '1' : '0'}
 			data-self-center={selfCenter ? 1 : 0}

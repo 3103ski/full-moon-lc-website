@@ -62,14 +62,12 @@
 			margin: 0 12px 0 0 !important;
 			font-size: 16px !important;
 		}
+	}
 
-		// @media #{map-get($media, mobile-sm)} {
-		// 	font-size: 5vw !important;
-
-		// 	svg {
-		// 		font-size: 5vw !important;
-		// 	}
-		// }
+	&[data-only-icon='1'] {
+		svg {
+			margin: 0 !important;
+		}
 	}
 
 	// BUTTON COLORS

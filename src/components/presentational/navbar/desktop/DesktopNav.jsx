@@ -65,7 +65,7 @@ export default function DesktopNav() {
 					</RootLink>
 					<RootLink to={ABOUT_US} hover={false}>
 						<Button icon={PHONE} thin color='none'>
-							1-888-555-5555
+							Call Us Now
 						</Button>
 					</RootLink>
 				</div>
