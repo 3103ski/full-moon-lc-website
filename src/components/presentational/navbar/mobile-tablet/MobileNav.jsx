@@ -3,7 +3,7 @@ import React from 'react';
 
 // --> Project Imports
 import { SERVICE, ABOUT_US, VIDEOS, OUR_WORK, HOME, ARTICLES } from 'routes';
-import { Button, Modal, Card } from 'components';
+import { Button, Modal } from 'components';
 import { PHONE, LEAF } from 'icons';
 
 // --> Components Imports
