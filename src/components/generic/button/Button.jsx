@@ -3,12 +3,12 @@ import React from 'react';
 
 // --> Packages
 import { Icon } from '@iconify/react';
-import { Button } from 'semantic-ui-react';
+import { Button as SUIButton } from 'semantic-ui-react';
 
 // --> Component Imports
 import style from './button.module.scss';
 
-export default function CustomButton({
+export default function Button({
 	color = 'primary',
 	txtcolor = 'light',
 	icon = null,
@@ -19,7 +19,7 @@ export default function CustomButton({
 	...rest
 }) {
 	return (
-		<Button
+		<SUIButton
 			data-space={space}
 			data-color={color}
 			data-txt-color={txtcolor}
@@ -29,6 +29,8 @@ export default function CustomButton({
 			{...rest}>
 			{icon ? <Icon icon={icon} /> : null}
 			{children}
-		</Button>
+		</SUIButton>
 	);
 }
+
+Button.FluidWrapper = ({ children }) => <div style={{ width: '100%' }}>{children}</div>;

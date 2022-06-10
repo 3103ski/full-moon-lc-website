@@ -47,14 +47,14 @@ export default function HomeLandingSection() {
 
 						{/* MOBILE BUTTONS */}
 						<Grid.Column textAlign='center' mobile={16} only='mobile'>
-							<div className={style.ButtonWrapper}>
-								<Button fluid space='10xy' color='secondaryTransp' icon={LEAF}>
+							<Button.FluidWrapper>
+								<Button fluid space='10y' color='secondaryTransp' icon={LEAF}>
 									Get Estimate
 								</Button>
-								<Button fluid space='10xy' color='secondaryTransp' as={Link} to={OUR_WORK} icon={MOWER}>
+								<Button fluid color='secondaryTransp' as={Link} to={OUR_WORK} icon={MOWER}>
 									Our Work
 								</Button>
-							</div>
+							</Button.FluidWrapper>
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>

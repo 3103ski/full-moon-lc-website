@@ -9,7 +9,7 @@
 		@include flex-center-center;
 		padding: 0 12px;
 		height: inherit;
-		transition: 0.18s;
+		// transition: 0.18s;
 
 		svg,
 		p {
@@ -25,11 +25,6 @@
 			margin-left: 5px;
 			margin-top: 4px;
 		}
-	}
-	&:hover {
-		// .DropMenuLabel {
-		// 	background-color: map-get($colors, primaryTransp);
-		// }
 	}
 
 	.DropLinksWrapper {

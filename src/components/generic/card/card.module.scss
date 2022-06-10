@@ -2,9 +2,9 @@
 
 .Wrapper {
 	width: 100%;
-	margin: 0 10px;
 	border: 2px solid map-get($colors, primary);
 	border-radius: $small-radius;
+	margin: 10px auto;
 
 	.Header {
 		padding: 12px 5px;
@@ -28,5 +28,9 @@
 		&[data-flow='row'] {
 			@include flex-start;
 		}
+	}
+
+	@media #{map-get($media, mobile)} {
+		margin: 30px auto 0 auto;
 	}
 }

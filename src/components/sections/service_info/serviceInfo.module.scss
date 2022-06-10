@@ -4,6 +4,10 @@
 	position: relative;
 	padding: 80px 0 250px 0;
 
+	@media #{map-get($media, mobile)} {
+		padding: 40px 0 160px 0;
+	}
+
 	.Title,
 	.Sub {
 		text-align: center;
@@ -25,6 +29,10 @@
 			@include p-default;
 			&:last-of-type {
 				margin-bottom: 80px;
+
+				@media #{map-get($media, mobile)} {
+					margin-bottom: 40px;
+				}
 			}
 		}
 	}

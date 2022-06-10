@@ -29,12 +29,14 @@ export default function AboutHeader() {
 						</Button>
 					</Grid.Row>
 					<Grid.Row only='mobile'>
-						<Button space={'10xy'} fluid color='secondaryTransp' icon={YOUTUBE}>
-							Videos
-						</Button>
-						<Button space={'10xy'} fluid color='secondaryTransp' icon={STAR_FILLED}>
-							Reviews
-						</Button>
+						<Button.FluidWrapper>
+							<Button space={'10y'} fluid color='secondaryTransp' icon={YOUTUBE}>
+								Videos
+							</Button>
+							<Button fluid color='secondaryTransp' icon={STAR_FILLED}>
+								Reviews
+							</Button>
+						</Button.FluidWrapper>
 					</Grid.Row>
 				</Grid>
 			</Container>
