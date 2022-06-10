@@ -11,7 +11,7 @@ import Style from './mobileNav.module.scss';
 import Toggle from './toggle/Toggle.jsx';
 
 export default function MobileNav() {
-	const [open, toggleOpen] = React.useState(true);
+	const [open, toggleOpen] = React.useState(false);
 
 	return (
 		<div className={Style.Container}>

@@ -117,13 +117,13 @@
 			top: -80px;
 			right: -250px;
 			z-index: 10;
-			background-color: map-get($colors, primary)-pale;
+			background-color: map-get($colors, primaryPale);
 		}
 		.CircleTwo {
 			bottom: -120px;
 			right: -320px;
 			z-index: 9;
-			background-color: map-get($colors, secondary)-pale;
+			background-color: map-get($colors, secondaryPale);
 		}
 
 		@media #{map-get($media, tablet-max)} {

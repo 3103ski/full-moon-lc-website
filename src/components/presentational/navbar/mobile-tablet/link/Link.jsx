@@ -19,8 +19,12 @@ export default function MobileLink({ children, toggle, to, ...rest }) {
 	);
 }
 
-MobileLink.SectionLabel = ({ children }) => {
-	return <p className={Style.SectionLabel}>{children}</p>;
+MobileLink.SectionLabel = ({ children, ...rest }) => {
+	return (
+		<p className={Style.SectionLabel} {...rest}>
+			{children}
+		</p>
+	);
 };
 
 MobileLink.Container = ({ children, ...rest }) => {

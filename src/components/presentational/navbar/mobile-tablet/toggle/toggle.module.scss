@@ -1,4 +1,4 @@
-@import '../../navbar.module.scss';
+@import 'sass';
 
 .Toggle {
 	@include flex-center-center;
@@ -6,11 +6,9 @@
 
 	position: absolute;
 	z-index: 122;
-	// padding-top: 18px;
-	// padding-left: 13px;
 	padding: 24px 12px 15px 16px !important;
-	// border-radius: 100%;
 	border: none;
+	border-bottom-right-radius: 10px;
 
 	height: map-get($nav-sizes, mobile-toggle-size);
 	width: map-get($nav-sizes, mobile-toggle-size);

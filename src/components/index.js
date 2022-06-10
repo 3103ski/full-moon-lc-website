@@ -11,7 +11,7 @@ export { default as SocialIcon } from './generic/socialIcon/SocialIcon.jsx';
 //••••••••••••••••
 // PRESENTATIONAL
 //••••••••••••••••
-export { default as Navbar } from './presentational/newNavbar/Navbar.jsx';
+export { default as Navbar } from './presentational/navbar/Navbar.jsx';
 export { default as Footer } from './presentational/footer/Footer.jsx';
 export { default as CurveGraphic } from './presentational/curveGraphic/CurveGraphic.jsx';
 

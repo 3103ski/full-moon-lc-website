@@ -1,0 +1,23 @@
+@import 'sass';
+
+.Link {
+	@include hover-cursor;
+	@include flex-center-center;
+	@include p-summary;
+	height: 100%;
+	transition: 0.18s;
+
+	a {
+		color: white !important;
+	}
+
+	&[data-padding='1'] {
+		padding: 0 12px !important;
+	}
+
+	&[data-hover='1'] {
+		&:hover {
+			background-color: map-get($colors, primaryTransp);
+		}
+	}
+}

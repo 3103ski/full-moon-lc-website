@@ -1,0 +1,56 @@
+@import 'sass';
+
+.DropMenuContainer {
+	@include hover-cursor;
+	position: relative;
+	height: 100%;
+
+	.DropMenuLabel {
+		@include flex-center-center;
+		padding: 0 12px;
+		height: inherit;
+		transition: 0.18s;
+
+		svg,
+		p {
+			@include p-summary;
+			color: white;
+		}
+
+		p {
+			margin: 0 !important;
+		}
+
+		svg {
+			margin-left: 5px;
+			margin-top: 4px;
+		}
+	}
+	&:hover {
+		// .DropMenuLabel {
+		// 	background-color: map-get($colors, primaryTransp);
+		// }
+	}
+
+	.DropLinksWrapper {
+		position: absolute;
+		padding: 10px 0px 20px 0px;
+		flex-direction: column;
+		left: 0;
+		background-color: map-get($colors, secondaryTransp);
+		border-bottom-left-radius: $small-radius;
+		border-bottom-right-radius: $small-radius;
+
+		.DropLink {
+			@include p-summary;
+			color: white;
+			white-space: nowrap;
+			padding: 10px 30px !important;
+			transition: 0.17s;
+
+			&:hover {
+				background-color: map-get($colors, secondary);
+			}
+		}
+	}
+}

@@ -8,6 +8,11 @@ import { motion } from 'framer-motion';
 import sassVarSizes from '../sass/variables/_sizes.scss';
 import sassVarColors from '../sass/variables/_colors.scss';
 
+/**
+ * This project uses Framer Motion package to help with animating React components.
+ * Read docs for more info: https://www.framer.com/docs/introduction/
+ */
+
 //••••••••••••••••••••••••••••••••••••
 // *** Variants --> Views
 //••••••••••••••••••••••••••••••••••••
@@ -56,5 +61,14 @@ export const motion_variants_nav = {
 	desktop: {
 		shortNav: { height: sassVarSizes.navbar_cpu_short },
 		tallNav: { height: sassVarSizes.navbar_cpu_tall },
+		brandNoScroll: { width: '20vw' },
+		brandScroll: { width: '12vw' },
+		onBrandHover: { scale: 1.075 },
+		dropOpen: { display: 'flex', opacity: 1, top: '100%' },
+		dropClosed: { display: 'none', opacity: 0, top: '120%' },
+		rootLinkHover: {
+			backgroundColor: sassVarColors.primaryTransp,
+			transition: { ease: 'easeIn', damping: 0 },
+		},
 	},
 };

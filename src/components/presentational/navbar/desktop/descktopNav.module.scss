@@ -1,0 +1,33 @@
+@import 'sass';
+
+.Container {
+	position: fixed;
+	z-index: 120;
+	width: 100%;
+
+	.ContainerInner {
+		@include flex-center;
+		top: 0;
+		left: 0;
+		background-color: map-get($colors, primaryTransp);
+
+		.CenterLinks,
+		.RightLinks {
+			@include flex-center-center;
+			height: 100%;
+		}
+
+		.CenterLinks {
+			margin: 0 auto;
+		}
+
+		.RightLinks {
+			position: absolute;
+			right: 20px;
+		}
+	}
+
+	@media #{map-get($media, tablet-max)} {
+		display: none !important;
+	}
+}

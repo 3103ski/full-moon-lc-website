@@ -11,7 +11,6 @@ import { motion_variants_nav } from 'util';
 import Style from './drawer.module.scss';
 
 export default function Drawer({ open, toggle, children }) {
-	console.log({ open });
 	return (
 		<>
 			<motion.div

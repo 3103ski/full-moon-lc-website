@@ -1,3 +1,8 @@
+/*
+This project uses iconify api for React. Browse more icon options at:
+https://icon-sets.iconify.design
+*/
+
 // -->  Graphic Icons
 export const LEAF = `el:leaf`;
 export const MOWER = `mdi:mower-bag`;

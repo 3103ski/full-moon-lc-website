@@ -24,4 +24,8 @@
 .Link,
 .SectionLabel {
 	color: white;
+
+	&:hover {
+		color: map-get($colors, secondary);
+	}
 }
