@@ -9,6 +9,7 @@ import { motion_variants_nav } from 'util';
 import { Button } from 'components';
 import { VIDEOS, OUR_WORK, ARTICLES, SERVICE, ABOUT_US } from 'routes';
 import { LEAF, PHONE } from 'icons';
+import sanityClient from 'sanityClient';
 
 // --> Component Imports
 import NavBranding from './branding/Branding';
@@ -18,6 +19,7 @@ import Style from './descktopNav.module.scss';
 
 export default function DesktopNav() {
 	const [scrolled, setScrolled] = React.useState(false);
+	const [services, setServices] = React.useState([]);
 
 	React.useEffect(() => {
 		const appWrapper = document.getElementById('app');
@@ -30,6 +32,18 @@ export default function DesktopNav() {
 		});
 	}, [scrolled]);
 
+	React.useEffect(() => {
+		sanityClient
+			.fetch(
+				`*[_type == 'service']{
+				title,
+				slug
+			}`
+			)
+			.then((data) => setServices(data))
+			.catch(console.error);
+	});
+
 	return (
 		<div className={Style.Container}>
 			<motion.nav
@@ -38,13 +52,7 @@ export default function DesktopNav() {
 				variants={motion_variants_nav.desktop}>
 				<NavBranding scrolled={scrolled} />
 				<div className={Style.CenterLinks}>
-					<DropMenu
-						links={[
-							{ label: 'Mowing', to: `${SERVICE}/mowing` },
-							{ label: 'Property Cleanup', to: `${SERVICE}/property-cleanup` },
-							{ label: 'Landscaping', to: `${SERVICE}/landscaping` },
-							{ label: 'Gardening', to: `${SERVICE}/gardening` },
-						]}>
+					<DropMenu links={services.map((s) => ({ label: s.title, to: `${SERVICE}/${s.slug.current}` }))}>
 						Services
 					</DropMenu>
 					<DropMenu

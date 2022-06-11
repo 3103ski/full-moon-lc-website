@@ -5,9 +5,11 @@
 	@include flex-center;
 	min-height: 600px;
 	position: relative;
+
 	.Overlay {
 		@include overlay-dark;
 	}
+
 	.Inner {
 		@include flex-col-center-center;
 		position: inherit;

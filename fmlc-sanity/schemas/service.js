@@ -1,6 +1,6 @@
 export default {
-	name: 'article',
-	title: 'Articles',
+	name: 'service',
+	title: 'Services',
 	type: 'document',
 	fields: [
 		{
@@ -38,12 +38,6 @@ export default {
 			},
 		},
 		{
-			name: 'author',
-			title: 'Author',
-			type: 'reference',
-			to: { type: 'author' },
-		},
-		{
 			name: 'mainImage',
 			title: 'Main image',
 			type: 'image',
@@ -52,18 +46,17 @@ export default {
 			},
 		},
 		{
+			name: 'faqs',
+			title: 'FAQs',
+			type: 'array',
+			of: [{ type: 'reference', to: { type: 'faq' } }],
+		},
+		{
 			name: 'tags',
 			title: 'Tags',
 			type: 'array',
 			of: [{ type: 'reference', to: { type: 'tag' } }],
 		},
-		{
-			name: 'keywords',
-			title: 'Keywords',
-			type: 'array',
-			of: [{ type: 'string' }],
-		},
-
 		{
 			name: 'publishedAt',
 			title: 'Published at',

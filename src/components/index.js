@@ -19,7 +19,9 @@ export { default as FAQ } from './presentational/faq/FAQ.jsx';
 export { default as FAQItem } from './presentational/faq/faqItem/FAQItem.jsx';
 
 export { default as ArticleCard } from './presentational/articleCard/ArticleCard.jsx';
-export { default as CustomerReview } from './presentational//customerReview/CustomerReview.jsx';
+export { default as CustomerReview } from './presentational/customerReview/CustomerReview.jsx';
+
+export { default as BrowseFilters } from './presentational/browseFilters/BrowseFilters.jsx';
 
 //•••••••••••••••••
 // PAGE SECTIONS

@@ -9,7 +9,7 @@ import {
 	LearnLawnCareSection,
 	ProfLawnCareSection,
 	ServicesSection,
-} from '../../components';
+} from 'components';
 
 export default function HomePage() {
 	return (

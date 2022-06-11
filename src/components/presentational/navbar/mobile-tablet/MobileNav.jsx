@@ -5,6 +5,7 @@ import React from 'react';
 import { SERVICE, ABOUT_US, VIDEOS, OUR_WORK, HOME, ARTICLES } from 'routes';
 import { Button, Modal } from 'components';
 import { PHONE, LEAF } from 'icons';
+import sanityClient from 'sanityClient';
 
 // --> Components Imports
 import Drawer from './drawer/Drawer';
@@ -15,6 +16,19 @@ import Toggle from './toggle/Toggle.jsx';
 export default function MobileNav() {
 	const [open, toggleOpen] = React.useState(false);
 	const [contactOpen, toggleContactOpen] = React.useState(false);
+	const [serviceSlugs, setServiceSlugs] = React.useState([]);
+
+	React.useEffect(() => {
+		sanityClient
+			.fetch(
+				`*[_type == 'service']{
+					title,
+					slug
+				}`
+			)
+			.then((data) => setServiceSlugs(data))
+			.catch(console.error);
+	});
 
 	return (
 		<>
@@ -57,18 +71,14 @@ export default function MobileNav() {
 							About Us
 						</Link>
 						<Link.SectionLabel>Services</Link.SectionLabel>
-						<Link toggle={toggleOpen} to={`${SERVICE}/landscaping`}>
-							Landscaping
-						</Link>
-						<Link toggle={toggleOpen} to={`${SERVICE}/mowing`}>
-							Mowing
-						</Link>
-						<Link toggle={toggleOpen} to={`${SERVICE}/gardening`}>
-							Gardening
-						</Link>
-						<Link toggle={toggleOpen} to={`${SERVICE}/property-cleanup`}>
-							Property Cleanup
-						</Link>
+						{serviceSlugs.map((s, i) => (
+							<Link
+								key={`${s.slug.current}_${i}`}
+								toggle={toggleOpen}
+								to={`${SERVICE}/${s.slug.current}`}>
+								{s.title}
+							</Link>
+						))}
 						<Link toggle={toggleOpen} to={HOME}>
 							<Button space='10y' fluid icon={PHONE} color='secondary'>
 								Call Us Now
