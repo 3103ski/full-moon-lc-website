@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 // --> Project Imports
-import { PageHeader, ArticleContentSection } from 'components';
+import { PageHeader, ArticleContentSection, Loading } from 'components';
 import ViewWrapper from './ViewWrapper';
 import sanityClient from 'sanityClient';
 
@@ -37,7 +37,9 @@ export default function ArticleTemplatePage() {
 	console.log({ article });
 	return (
 		<ViewWrapper>
-			{article && (
+			{!article ? (
+				<Loading size='screen' />
+			) : (
 				<>
 					<PageHeader
 						title={article.title}

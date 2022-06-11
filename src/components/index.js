@@ -7,6 +7,7 @@ export { default as LayoutIcon } from './generic/layoutIcon/LayoutIcon.jsx';
 export { default as Modal } from './generic/modal/Modal.jsx';
 export { default as PageHeader } from './generic/pageHeader/PageHeader.jsx';
 export { default as SocialIcon } from './generic/socialIcon/SocialIcon.jsx';
+export { default as Loading } from './generic/loading/Loading.jsx';
 
 //••••••••••••••••
 // PRESENTATIONAL

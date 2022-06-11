@@ -5,7 +5,7 @@ import React from 'react';
 import { Container } from 'semantic-ui-react';
 
 // --> Project Imports
-import { ArticleCard, BrowseFilters } from 'components';
+import { ArticleCard, BrowseFilters, Loading } from 'components';
 import { ARTICLES } from 'routes';
 import sanityClient from 'sanityClient';
 
@@ -40,12 +40,11 @@ export default function BrowseArticles() {
 			.catch(console.error);
 	}, []);
 
-	console.log({ activeFilters });
-
-	console.log(articles);
-	return (
+	return !articles ? (
+		<Loading size='small' />
+	) : (
 		<Container className={Style.SectionWrapper}>
-			{articles && <BrowseFilters items={articles} setActiveCallback={setActiveFilters} />}
+			<BrowseFilters items={articles} setActiveCallback={setActiveFilters} />
 			<ArticleCard.CardGroup>
 				{articles &&
 					articles.map((article, i) =>

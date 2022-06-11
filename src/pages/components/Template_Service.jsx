@@ -3,7 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 // --> Project Imports
-import { PageHeader, ServiceInfoSection, ServicesSection } from 'components';
+import { PageHeader, ServiceInfoSection, ServicesSection, Loading } from 'components';
 import ViewWrapper from './ViewWrapper';
 import sanityClient from 'sanityClient';
 
@@ -40,7 +40,9 @@ export default function ServiceTemplatePage() {
 
 	return (
 		<ViewWrapper>
-			{service && (
+			{!service ? (
+				<Loading size='screen' />
+			) : (
 				<>
 					<PageHeader
 						size='lg'
