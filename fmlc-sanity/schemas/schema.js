@@ -10,26 +10,24 @@ import tag from './tag';
 import article from './article';
 import author from './author';
 import service from './service';
-import bannerArticles from './bannerArticles';
 import faq from './faq';
+
+import sectionLearnLawncare from './sectionLearnLawncare';
+import sectionProfLawnCare from './sectionProfLawnCare';
+import sectionServices from './sectionServices';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
-	// We name our schema
 	name: 'default',
-	// Then proceed to concatenate our document type
-	// to the ones provided by any plugins that are installed
 	types: schemaTypes.concat([
-		// The following are document types which will appear
-		// in the studio.
 		article,
 		service,
+		sectionProfLawnCare,
+		sectionLearnLawncare,
+		sectionServices,
 		faq,
-		bannerArticles,
 		tag,
 		author,
-		// When added to this list, object types can be used as
-		// { type: 'typename' } in other document schemas
 		blockContent,
 	]),
 });

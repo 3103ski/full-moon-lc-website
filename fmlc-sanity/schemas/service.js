@@ -7,26 +7,19 @@ export default {
 			name: 'title',
 			title: 'Title',
 			type: 'string',
+			validation: (Rule) => Rule.required().max(20),
 		},
 		{
 			name: 'subtitle',
 			title: 'Subtitle',
 			type: 'string',
-			maxLength: 100,
-			options: {
-				maxLength: 100,
-				source: 'subtitle',
-			},
+			validation: (Rule) => Rule.max(40),
 		},
 		{
 			name: 'shortSummary',
 			title: 'Short Summary',
 			type: 'string',
-			maxLength: 100,
-			options: {
-				maxLength: 100,
-				source: 'shortSummary',
-			},
+			validation: (Rule) => Rule.required().max(150),
 		},
 		{
 			name: 'slug',
@@ -41,6 +34,7 @@ export default {
 			name: 'mainImage',
 			title: 'Main image',
 			type: 'image',
+			validation: (Rule) => Rule.required(),
 			options: {
 				hotspot: true,
 			},
@@ -65,6 +59,7 @@ export default {
 		{
 			name: 'body',
 			title: 'Body',
+			validation: (Rule) => Rule.required(),
 			type: 'blockContent',
 		},
 	],

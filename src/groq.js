@@ -91,10 +91,73 @@ export function fetchArticleTemplateContent(slug) {
 	);
 }
 
+//----------------------------
+// --> Content For Sections
+//----------------------------
+
+// Get content for website services section
+export function fetchServicesSectionContent() {
+	return sanityClient.fetch(
+		`*[_type == 'sectionServices']{
+            titleTop,
+            titleBottom,
+            subtitle,
+            services {
+                serviceOne->{
+                    title,
+                    shortSummary,
+                    slug,
+                    mainImage{
+                        asset-> {
+                            url,
+                            _id
+                        }
+                    }
+                },
+                serviceTwo->{
+                    title,
+                    shortSummary,
+                    slug,
+                    mainImage{
+                        asset-> {
+                            url,
+                            _id
+                        }
+                    }
+                },
+                serviceThree->{
+                    title,
+                    shortSummary,
+                    slug,
+                    mainImage{
+                        asset-> {
+                            url,
+                            _id
+                        }
+                    }
+                },
+                serviceFour->{
+                    title,
+                    shortSummary,
+                    slug,
+                    mainImage{
+                        asset-> {
+                            url,
+                            _id
+                        }
+                    }
+                },
+            }
+        }`
+	);
+}
+
 // Get articles for Learn Lawncare section banner
 export function fetchLearnLawnCareSectionArticles() {
 	return sanityClient.fetch(
-		`*[_type == 'bannerArticles']{
+		`*[_type == 'sectionLearnLawncare']{
+            title,
+            subtitle,
             articles {
                 articleOne->{
                     title,
@@ -123,6 +186,23 @@ export function fetchLearnLawnCareSectionArticles() {
                             _id
                         }
                     }
+                }
+            }
+        }`
+	);
+}
+
+// Fetch content for 'Professional Lawn Care' Section on home page
+export function fetchProfLawncareContent() {
+	return sanityClient.fetch(
+		`*[_type == 'sectionProfLawncare']{
+            title,
+            subtitle,
+            body,
+            sectionPicture{
+                asset->{
+                    url,
+                    _id
                 }
             }
         }`

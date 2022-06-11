@@ -1,12 +1,19 @@
 export default {
-	name: 'bannerArticles',
-	title: 'Learn Lawn Care Section',
+	name: 'sectionLearnLawncare',
+	title: 'Section - Learn Lawn Care',
 	type: 'document',
 	fields: [
 		{
 			name: 'title',
-			title: 'Group Title',
+			title: 'Section Title',
 			type: 'string',
+			validation: (Rule) => Rule.required().max(30),
+		},
+		{
+			name: 'subtitle',
+			title: 'Subtitle',
+			type: 'string',
+			validation: (Rule) => Rule.required().max(80),
 		},
 		{
 			name: 'articles',

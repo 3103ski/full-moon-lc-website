@@ -94,9 +94,12 @@
 		//••••••••••••••
 
 		.CircleImage {
-			width: 100%;
 			position: relative;
+			height: 0;
+			padding-bottom: 100%;
 			z-index: 11;
+			background-size: cover;
+			position: center;
 		}
 
 		.CircleImage,
