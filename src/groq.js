@@ -16,7 +16,7 @@ import sanityClient from 'sanityClient';
 // Get service slugs for navbars
 export function fetchServiceSlugs() {
 	return sanityClient.fetch(
-		`*[_type == 'service]{
+		`*[_type == 'service']{
             title,
             slug
         }`
