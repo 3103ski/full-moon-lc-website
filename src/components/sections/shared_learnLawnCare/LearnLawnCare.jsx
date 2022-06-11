@@ -9,7 +9,7 @@ import { Container } from 'semantic-ui-react';
 import { placeholderMowing } from 'assets';
 import { Button, ArticleCard } from 'components';
 import { ARTICLES } from 'routes';
-import sanityClient from 'sanityClient';
+import { fetchLearnLawnCareSectionArticles } from 'groq';
 
 // --> Styling
 import style from './learnLawnCare.module.scss';
@@ -19,40 +19,7 @@ export default function LearnLawnCareSection({ picture = false }) {
 	const [selectedArticles, setSelectedArticles] = React.useState(null);
 
 	React.useEffect(() => {
-		sanityClient
-			.fetch(
-				`*[_type == 'bannerArticles']{
-				articles{
-					articleOne-> {
-						title,
-						slug,
-						shortSummary,
-						tags[]->{
-							title
-						},
-						mainImage {
-							asset->{
-								_id,
-								url
-							}
-						}
-					},
-					articleTwo-> {
-						title,
-						slug,
-						shortSummary,
-						tags[]->{
-							title
-						},
-						mainImage {
-							asset->{
-								_id,
-								url
-							}
-						}
-					},
-				}}`
-			)
+		fetchLearnLawnCareSectionArticles()
 			.then((data) => console.log(data.length > 0 ? setSelectedArticles(Object.values(data[0].articles)) : null))
 			.catch(console.error);
 	}, []);

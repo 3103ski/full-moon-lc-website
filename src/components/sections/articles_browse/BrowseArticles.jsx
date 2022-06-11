@@ -7,7 +7,7 @@ import { Container } from 'semantic-ui-react';
 // --> Project Imports
 import { ArticleCard, BrowseFilters, Loading } from 'components';
 import { ARTICLES } from 'routes';
-import sanityClient from 'sanityClient';
+import { fetchArticles } from 'groq';
 
 // --> Component Imports
 import Style from './browseArticles.module.scss';
@@ -17,23 +17,7 @@ export default function BrowseArticles() {
 	const [activeFilters, setActiveFilters] = React.useState([]);
 
 	React.useEffect(() => {
-		sanityClient
-			.fetch(
-				`*[_type == 'article']{
-				title,
-				slug,
-				shortSummary,
-				tags[]->{
-					title
-				},
-				mainImage {
-					asset->{
-						_id,
-						url
-					}
-				}
-			}`
-			)
+		fetchArticles()
 			.then((data) => {
 				setArticles(data);
 			})

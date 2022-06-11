@@ -5,7 +5,7 @@ import React from 'react';
 import { SERVICE, ABOUT_US, VIDEOS, OUR_WORK, HOME, ARTICLES } from 'routes';
 import { Button, Modal } from 'components';
 import { PHONE, LEAF } from 'icons';
-import sanityClient from 'sanityClient';
+import { fetchServiceSlugs } from 'groq';
 
 // --> Components Imports
 import Drawer from './drawer/Drawer';
@@ -19,13 +19,7 @@ export default function MobileNav() {
 	const [serviceSlugs, setServiceSlugs] = React.useState([]);
 
 	React.useEffect(() => {
-		sanityClient
-			.fetch(
-				`*[_type == 'service']{
-					title,
-					slug
-				}`
-			)
+		fetchServiceSlugs()
 			.then((data) => setServiceSlugs(data))
 			.catch(console.error);
 	});

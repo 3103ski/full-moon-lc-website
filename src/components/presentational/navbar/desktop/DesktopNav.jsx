@@ -9,7 +9,7 @@ import { motion_variants_nav } from 'util';
 import { Button } from 'components';
 import { VIDEOS, OUR_WORK, ARTICLES, SERVICE, ABOUT_US } from 'routes';
 import { LEAF, PHONE } from 'icons';
-import sanityClient from 'sanityClient';
+import { fetchServiceSlugs } from 'groq';
 
 // --> Component Imports
 import NavBranding from './branding/Branding';
@@ -33,13 +33,7 @@ export default function DesktopNav() {
 	}, [scrolled]);
 
 	React.useEffect(() => {
-		sanityClient
-			.fetch(
-				`*[_type == 'service']{
-				title,
-				slug
-			}`
-			)
+		fetchServiceSlugs()
 			.then((data) => setServices(data))
 			.catch(console.error);
 	});
