@@ -15,6 +15,7 @@ import faq from './faq';
 import sectionLearnLawncare from './sectionLearnLawncare';
 import sectionProfLawnCare from './sectionProfLawnCare';
 import sectionServices from './sectionServices';
+import portfolioItem from './portfolioItem';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -22,6 +23,7 @@ export default createSchema({
 	types: schemaTypes.concat([
 		article,
 		service,
+		portfolioItem,
 		sectionProfLawnCare,
 		sectionLearnLawncare,
 		sectionServices,

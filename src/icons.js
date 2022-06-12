@@ -12,6 +12,8 @@ export const MONEY = `bxs:dollar-circle`;
 // -->  Layout Icons
 export const ARROW_RIGHT = `bi:arrow-right-circle-fill`;
 export const CARROT_DOWN = `ant-design:caret-down-outlined`;
+export const LEFT_DISC = `ant-design:left-circle-filled`;
+export const RIGHT_DISC = `ant-design:right-circle-filled`;
 
 export const STAR_FILLED = `bxs:star`;
 export const STAR_HALF = `bxs:star-half`;

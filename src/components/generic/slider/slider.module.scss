@@ -1,0 +1,67 @@
+@import 'sass';
+
+.Outer {
+	position: relative;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: 0.15s;
+
+	@media #{map-get($media, mobile)} {
+		@include flex-end;
+		height: 300px !important;
+	}
+	@media #{map-get($media, tablet)} {
+		@include flex-end;
+		height: 450px !important;
+	}
+	@media #{map-get($media, cpu)} {
+		@include flex-end;
+		height: 600px !important;
+	}
+	@media #{map-get($media, widescreen)} {
+		@include flex-end;
+		height: 800px !important;
+	}
+
+	.SelectorOuter {
+		@include flex-center-center;
+		@include remove-scrollbar;
+		position: absolute;
+		width: 100%;
+		background-color: rgba(217, 217, 217, 0.72);
+		bottom: 0;
+		left: 0;
+		overflow-x: scroll;
+
+		@media #{map-get($media, mobile)} {
+			position: relative;
+		}
+
+		.SelectorInner {
+			@include flex-center;
+			@include remove-scrollbar;
+			padding: 10px;
+			height: 100%;
+			margin: 0 auto !important;
+			overflow-x: scroll;
+
+			img {
+				@include hover-cursor;
+				height: 60px;
+				margin: 0 4px;
+				transition: 0.13s;
+
+				&[data-active='1'] {
+					border: solid 3px map-get($colors, color_secondary);
+					border-radius: 4px;
+				}
+				&[data-active='0'] {
+					margin-top: 3px !important;
+					margin-bottom: 3px !important;
+				}
+			}
+		}
+	}
+}

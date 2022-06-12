@@ -46,6 +46,56 @@ export function fetchServiceTemplateContent(slug) {
 }
 
 //---------
+// --> PORTFOLIO ITEMS
+//---------
+
+// Get Full Portfolio
+export function fetchPortfolioItems() {
+	return sanityClient.fetch(
+		`*[_type == 'portfolioItem']{
+            title, 
+            shortSummary,
+            slug,
+            photos[]{
+                asset->{
+                    url,
+                    _id
+                }
+            },
+            tags[]->{
+                title
+            },
+        }`
+	);
+}
+
+// Get Specific Portfolio Item
+export function fetchPortfolioItem(slug) {
+	return sanityClient.fetch(
+		`*[slug.current == $slug][0]{
+            title, 
+            subtitle,
+            slug,
+            photos[]{
+                asset->{
+                    url,
+                    _id
+                }
+            },
+            faqs[]->{
+                question,
+                answer
+            },
+            tags[]->{
+                title
+            },
+            body
+        }`,
+		{ slug }
+	);
+}
+
+//---------
 // --> ARTICLES
 //---------
 

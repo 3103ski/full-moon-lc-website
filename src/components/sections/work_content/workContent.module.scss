@@ -1,0 +1,30 @@
+@import 'sass';
+
+.SectionOuter {
+	position: relative;
+	min-height: 500px;
+
+	.SectionInner {
+		padding: 35px 0 270px 0;
+		position: relative;
+		z-index: 100;
+		.Body {
+			h1 {
+				@include body-hdr-default;
+			}
+
+			h3 {
+				@include sub-default;
+				color: map-get($colors, color_secondary);
+			}
+
+			p {
+				@include p-default;
+			}
+
+			button {
+				margin-top: 40px !important;
+			}
+		}
+	}
+}

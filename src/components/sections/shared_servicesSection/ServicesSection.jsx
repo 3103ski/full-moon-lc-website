@@ -52,16 +52,7 @@ export default function ServicesSection() {
 									</Button>
 								</div>
 							</Grid.Column>
-							<Grid.Column mobile={16} only='mobile'>
-								<Button.FluidWrapper>
-									<Button fluid space={'10y'} as={Link} to={VIDEOS} icon={YOUTUBE}>
-										Videos
-									</Button>
-									<Button fluid icon={LEAF}>
-										Request Quote
-									</Button>
-								</Button.FluidWrapper>
-							</Grid.Column>
+
 							<Grid.Column only='computer' computer={7}>
 								<img
 									className={Style.ServiceGraphic}
@@ -84,6 +75,21 @@ export default function ServicesSection() {
 							/>
 						))}
 					</ArticleCard.CardGroup>
+
+					<Grid>
+						<Grid.Row>
+							<Grid.Column mobile={16} only='mobile'>
+								<Button.FluidWrapper>
+									<Button fluid space={'10y'} as={Link} to={VIDEOS} icon={YOUTUBE}>
+										Videos
+									</Button>
+									<Button fluid icon={LEAF}>
+										Request Quote
+									</Button>
+								</Button.FluidWrapper>
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
 				</Container>
 			</section>
 		)

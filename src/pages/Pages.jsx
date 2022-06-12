@@ -33,7 +33,7 @@ export default function AnimatedRoutes() {
 				<Route path={`${ARTICLES}/:slug`} element={<ArticleTemplatePage />} />
 				<Route exact path={VIDEOS} element={<VideosPage />} />
 				<Route exact path={OUR_WORK} element={<ExploreWorkPage />} />
-				<Route path={`${OUR_WORK}/:projectId`} element={<WorkTemplatePage />} />
+				<Route path={`${OUR_WORK}/:slug`} element={<WorkTemplatePage />} />
 			</Routes>
 		</AnimatePresence>
 	);

@@ -1,2 +1,2 @@
 export * from './framerMotion.js';
-export * from './scrollHelpers.js';
+export * from './helpers.js';

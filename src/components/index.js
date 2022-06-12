@@ -8,6 +8,7 @@ export { default as Modal } from './generic/modal/Modal.jsx';
 export { default as PageHeader } from './generic/pageHeader/PageHeader.jsx';
 export { default as SocialIcon } from './generic/socialIcon/SocialIcon.jsx';
 export { default as Loading } from './generic/loading/Loading.jsx';
+export { default as Slider } from './generic/slider/Slider.jsx';
 
 //••••••••••••••••
 // PRESENTATIONAL
@@ -33,6 +34,9 @@ export { default as LearnLawnCareSection } from './sections/shared_learnLawnCare
 export { default as ServicesSection } from './sections/shared_servicesSection/ServicesSection.jsx';
 export { default as HappyClientsSection } from './sections/shared_happyClients/HappyClients.jsx';
 
+// Portfolio Sections
+export { default as PortfolioBrowse } from './sections/portfolio_browse/portfolioBrowse.jsx';
+
 // Home Sections
 export { default as HomeLandingSection } from './sections/home_landing/HomeLanding.jsx';
 export { default as ProfLawnCareSection } from './sections/home_profLawnCare/ProfLawnCare.jsx';
@@ -40,6 +44,9 @@ export { default as ProfLawnCareSection } from './sections/home_profLawnCare/Pro
 // About Sections
 export { default as AboutHeaderSection } from './sections/about_header/AboutHeader.jsx';
 export { default as AboutBioSection } from './sections/about_bio/AboutBioSection.jsx';
+
+// Work Template
+export { default as WorkContent } from './sections/work_content/WorkContent.jsx';
 
 // Service Template
 export { default as ServiceInfoSection } from './sections/service_info/ServiceInfo.jsx';
