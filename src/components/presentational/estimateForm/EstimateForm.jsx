@@ -1,34 +1,17 @@
 // --> React
 import React from 'react';
 
-// --> Project Imports
-import { TextInput, Button } from 'components';
-
-// --> Component Imports
-import Style from './estimateForm.module.scss';
-
 export default function EstimateForm() {
 	return (
-		<form
-			className={`ui form ${Style.Form}`}
-			method='post'
-			data-netlify='true'
-			name='request-estimate'
-			action='/videos'>
-			<input type='hidden' name='form-name' value='request-estimate' />
-			<TextInput placeholder='Your Name' name='name' />
-			<TextInput placeholder='Phone Number' name='phone' />
-			<div>
-				<p>something</p>
-				<input type='checkbox' name='mowing' />
-			</div>
-			<div>
-				<p>another</p>
-				<input type='checkbox' name='gardening' />
-			</div>
-			<Button type='submit' fluid>
-				Send
-			</Button>
-		</form>
+		<iframe
+			src='https://docs.google.com/forms/d/e/1FAIpQLSddWUrHPtY70j-hRJ-naCrCZLCyHBIWHTRDx2zDk5g5MwTIVA/viewform?embedded=true'
+			width='100%'
+			height='100%'
+			title='request-estimate'
+			frameborder='0'
+			marginheight='0'
+			marginwidth='0'>
+			Loading…
+		</iframe>
 	);
 }
