@@ -1,5 +1,6 @@
 // --> React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --> Packages
 import { Container, Grid } from 'semantic-ui-react';
@@ -8,22 +9,30 @@ import SanityBlockContent from '@sanity/block-content-to-react';
 // --> Project Imports
 import { Button, FAQ, FAQItem, CurveGraphic } from 'components';
 import { MOWER } from 'icons';
+import { ESTIMATE } from 'routes';
 
 // --> Component Imports
-import style from './serviceInfo.module.scss';
+import Style from './serviceInfo.module.scss';
 
 export default function ServiceInfoSection({ service = null }) {
 	return (
 		service && (
-			<section className={style.SectionWrapper}>
+			<section className={Style.SectionWrapper}>
 				<Container>
 					<Grid>
 						<Grid.Row>
-							<Grid.Column mobile={16} tablet={9} computer={10} className={style.Body}>
+							<Grid.Column mobile={16} tablet={9} computer={10} className={Style.Body}>
 								<SanityBlockContent blocks={service.body} />
-								<Button selfCenter space='10xy' icon={MOWER} color='secondary'>
-									Get Estimate
-								</Button>
+								<Link to={ESTIMATE}>
+									<Button
+										className={Style.Btn}
+										selfCenter
+										space='10xy'
+										icon={MOWER}
+										color='secondary'>
+										Get Estimate
+									</Button>
+								</Link>
 							</Grid.Column>
 							<Grid.Column mobile={16} tablet={7} computer={6}>
 								<FAQ>

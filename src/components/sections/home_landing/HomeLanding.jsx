@@ -8,7 +8,7 @@ import { Container, Grid } from 'semantic-ui-react';
 // --> Project Imports
 import { Button } from 'components';
 import { placeholderLawn, banner1000, bannerVert_700 } from 'assets';
-import { OUR_WORK } from 'routes';
+import { OUR_WORK, ESTIMATE } from 'routes';
 import { MOWER, LEAF } from 'icons';
 
 // --> Component Imports
@@ -36,7 +36,7 @@ export default function HomeLandingSection() {
 						{/* TABLET + COMPUTER BUTTONS  */}
 						<Grid.Column textAlign='center' tablet={16} computer={16} only='tablet computer'>
 							<div className={style.ButtonWrapper}>
-								<Button space='10x' color='secondaryTransp' icon={LEAF}>
+								<Button as={Link} to={ESTIMATE} space='10x' color='secondaryTransp' icon={LEAF}>
 									Get Estimate
 								</Button>
 								<Button space='10x' as={Link} to={OUR_WORK} color='secondaryTransp' icon={MOWER}>
@@ -48,7 +48,7 @@ export default function HomeLandingSection() {
 						{/* MOBILE BUTTONS */}
 						<Grid.Column textAlign='center' mobile={16} only='mobile'>
 							<Button.FluidWrapper>
-								<Button fluid space='10y' color='secondaryTransp' icon={LEAF}>
+								<Button as={Link} to={ESTIMATE} fluid space='10y' color='secondaryTransp' icon={LEAF}>
 									Get Estimate
 								</Button>
 								<Button fluid color='secondaryTransp' as={Link} to={OUR_WORK} icon={MOWER}>

@@ -1,5 +1,6 @@
 // --> React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --> Packages
 import { motion } from 'framer-motion';
@@ -7,7 +8,7 @@ import { motion } from 'framer-motion';
 // --> Project Imports
 import { motion_variants_nav } from 'util';
 import { Button } from 'components';
-import { VIDEOS, OUR_WORK, ARTICLES, SERVICE, ABOUT_US } from 'routes';
+import { VIDEOS, OUR_WORK, ARTICLES, SERVICE, ABOUT_US, ESTIMATE } from 'routes';
 import { LEAF, PHONE } from 'icons';
 import { fetchServiceSlugs } from 'groq';
 
@@ -61,11 +62,11 @@ export default function DesktopNav() {
 				</div>
 				<div className={Style.RightLinks}>
 					<RootLink to={ABOUT_US} hover={false} padding={false}>
-						<Button thin icon={LEAF} color='secondary'>
+						<Button as={Link} to={ESTIMATE} thin icon={LEAF} color='secondary'>
 							Get Estimate
 						</Button>
 					</RootLink>
-					<RootLink to={ABOUT_US} hover={false}>
+					<RootLink href='tel:7724185307' hover={false}>
 						<Button icon={PHONE} thin color='none'>
 							Call Us Now
 						</Button>

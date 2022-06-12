@@ -1,8 +1,9 @@
 // --> React
 import React from 'react';
+// import { Link } from 'react-router-dom';
 
 // --> Project Imports
-import { SERVICE, ABOUT_US, VIDEOS, OUR_WORK, HOME, ARTICLES } from 'routes';
+import { SERVICE, ABOUT_US, VIDEOS, OUR_WORK, HOME, ARTICLES, ESTIMATE } from 'routes';
 import { Button, Modal } from 'components';
 import { PHONE, LEAF } from 'icons';
 import { fetchServiceSlugs } from 'groq';
@@ -35,11 +36,23 @@ export default function MobileNav() {
 				</Button>
 				<Modal isOpen={contactOpen} title='Help Center' callback={toggleContactOpen}>
 					<Button.FluidWrapper>
-						<Button icon={LEAF} fluid space='10y'>
+						<Button
+							as={Link}
+							to={ESTIMATE}
+							icon={LEAF}
+							onClick={() => toggleContactOpen(false)}
+							fluid
+							space='10y'>
 							Request A Quote
 						</Button>
-						<Button icon={PHONE} fluid>
-							Call Us
+						<Button
+							as={'a'}
+							href='tel:7724185307'
+							onClick={() => toggleContactOpen(false)}
+							space='10y'
+							fluid
+							icon={PHONE}>
+							Call Us Now
 						</Button>
 					</Button.FluidWrapper>
 				</Modal>
@@ -73,11 +86,16 @@ export default function MobileNav() {
 								{s.title}
 							</Link>
 						))}
-						<Link toggle={toggleOpen} to={HOME}>
-							<Button space='10y' fluid icon={PHONE} color='secondary'>
-								Call Us Now
-							</Button>
-						</Link>
+						<Button
+							as={'a'}
+							href='tel:7724185307'
+							onClick={() => toggleOpen(false)}
+							space='10y'
+							fluid
+							icon={PHONE}
+							color='secondary'>
+							Call Us Now
+						</Button>
 					</Link.Container>
 				</Drawer>
 			</div>

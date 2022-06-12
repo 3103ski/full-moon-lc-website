@@ -17,6 +17,7 @@ export default function Button({
 	space = '',
 	selfCenter = null,
 	children,
+	className,
 	...rest
 }) {
 	return (
@@ -27,7 +28,7 @@ export default function Button({
 			data-txt-color={txtcolor}
 			data-thin={thin ? '1' : '0'}
 			data-self-center={selfCenter ? 1 : 0}
-			className={style.Button}
+			className={`${style.Button} ${className}`}
 			{...rest}>
 			{icon ? <Icon icon={icon} /> : null}
 			{children}

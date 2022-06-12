@@ -27,20 +27,11 @@
 			font-weight: 700 !important;
 			letter-spacing: 2px !important;
 			text-align: center;
-			// margin-bottom: 40px;
 		}
 
 		.ButtonWrapper {
-			@include flex-center;
-
+			@include flex-center-center;
 			width: 100%;
-
-			button:first-of-type {
-				margin-left: auto !important;
-			}
-			button:last-of-type {
-				margin-right: auto !important;
-			}
 		}
 	}
 }

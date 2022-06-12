@@ -7,11 +7,12 @@ import { AnimatePresence } from 'framer-motion';
 
 // Project Imports
 import { scrollToTopOf } from 'util';
-import { HOME, ABOUT_US, OUR_WORK, VIDEOS, ARTICLES, SERVICE } from 'routes';
+import { HOME, ABOUT_US, OUR_WORK, VIDEOS, ARTICLES, SERVICE, ESTIMATE } from 'routes';
 import {
 	AboutPage,
 	ArticleTemplatePage,
 	BrowseArticlesPage,
+	EstimateRequestPage,
 	ExploreWorkPage,
 	HomePage,
 	ServiceTemplatePage,
@@ -34,6 +35,7 @@ export default function AnimatedRoutes() {
 				<Route exact path={VIDEOS} element={<VideosPage />} />
 				<Route exact path={OUR_WORK} element={<ExploreWorkPage />} />
 				<Route path={`${OUR_WORK}/:slug`} element={<WorkTemplatePage />} />
+				<Route exact path={ESTIMATE} element={<EstimateRequestPage />} />
 			</Routes>
 		</AnimatePresence>
 	);

@@ -1,5 +1,6 @@
 // --> React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --> Packages
 import { Container } from 'semantic-ui-react';
@@ -7,6 +8,7 @@ import { Container } from 'semantic-ui-react';
 // --> Project Imports
 import { Button } from 'components';
 import { MOWER } from 'icons';
+import { ESTIMATE } from 'routes';
 
 // Local Styling
 import style from './aboutBioSection.module.scss';
@@ -28,7 +30,7 @@ export default function AboutBioSection() {
 					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
 					sed quia consequuntur
 				</p>
-				<Button icon={MOWER} color='primary' selfCenter>
+				<Button as={Link} to={ESTIMATE} icon={MOWER} color='primary' selfCenter>
 					Get Estimate
 				</Button>
 			</Container>

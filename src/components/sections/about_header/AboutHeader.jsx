@@ -1,5 +1,6 @@
 // --> React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // --> Packages
 import { Container, Grid } from 'semantic-ui-react';
@@ -8,6 +9,7 @@ import { Container, Grid } from 'semantic-ui-react';
 import { backgroundMowing, banner1000 } from 'assets';
 import { Button } from 'components';
 import { STAR_FILLED, YOUTUBE } from 'icons';
+import { VIDEOS, YELP_URL } from 'routes';
 
 // --> Component Imports
 import style from './aboutHeader.module.scss';
@@ -21,19 +23,25 @@ export default function AboutHeader() {
 				<h3>BEST SERVICE IN TOWN</h3>
 				<Grid className={style.ButtonWrapper}>
 					<Grid.Row only='tablet computer'>
-						<Button space={'10xy'} color='secondaryTransp' icon={YOUTUBE}>
+						<Button as={Link} to={VIDEOS} space={'10xy'} color='secondaryTransp' icon={YOUTUBE}>
 							Videos
 						</Button>
-						<Button space={'10xy'} color='secondaryTransp' icon={STAR_FILLED}>
+						<Button as={'a'} href={YELP_URL} space={'10xy'} color='secondaryTransp' icon={STAR_FILLED}>
 							Reviews
 						</Button>
 					</Grid.Row>
 					<Grid.Row only='mobile'>
 						<Button.FluidWrapper>
-							<Button space={'10y'} fluid color='secondaryTransp' icon={YOUTUBE}>
+							<Button as={Link} to={VIDEOS} space={'10y'} fluid color='secondaryTransp' icon={YOUTUBE}>
 								Videos
 							</Button>
-							<Button fluid color='secondaryTransp' icon={STAR_FILLED}>
+							<Button
+								as={'a'}
+								target={'_blank'}
+								href={YELP_URL}
+								fluid
+								color='secondaryTransp'
+								icon={STAR_FILLED}>
 								Reviews
 							</Button>
 						</Button.FluidWrapper>

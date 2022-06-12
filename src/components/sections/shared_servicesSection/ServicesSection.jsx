@@ -9,7 +9,7 @@ import { Container, Grid } from 'semantic-ui-react';
 import { ArticleCard, Button, CurveGraphic } from 'components';
 import { mascotCleanup1000, stockHome } from 'assets';
 import { fetchServicesSectionContent } from 'groq';
-import { SERVICE, VIDEOS } from 'routes';
+import { ESTIMATE, SERVICE, VIDEOS } from 'routes';
 import { LEAF, YOUTUBE } from 'icons';
 
 // --> Component Imports
@@ -47,7 +47,7 @@ export default function ServicesSection() {
 									<Button space={'10x'} as={Link} to={VIDEOS} icon={YOUTUBE}>
 										Videos
 									</Button>
-									<Button space={'10x'} icon={LEAF}>
+									<Button as={Link} to={ESTIMATE} space={'10x'} icon={LEAF}>
 										Request Quote
 									</Button>
 								</div>
@@ -83,7 +83,7 @@ export default function ServicesSection() {
 									<Button fluid space={'10y'} as={Link} to={VIDEOS} icon={YOUTUBE}>
 										Videos
 									</Button>
-									<Button fluid icon={LEAF}>
+									<Button as={Link} to={ESTIMATE} fluid icon={LEAF}>
 										Request Quote
 									</Button>
 								</Button.FluidWrapper>

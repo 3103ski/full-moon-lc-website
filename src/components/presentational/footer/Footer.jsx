@@ -9,7 +9,7 @@ import { Container, Grid } from 'semantic-ui-react';
 import { banner500 } from 'assets';
 import { Button, SocialIcon } from 'components';
 import { LEAF } from 'icons';
-import { HOME } from 'routes';
+import { HOME, ESTIMATE } from 'routes';
 
 // --> Component Imports
 import style from './footer.module.scss';
@@ -29,15 +29,19 @@ export default function Footer() {
 								</p>
 							</Grid.Column>
 							<Grid.Column only='tablet computer' tablet={6} computer={6}>
-								<Button floated='right' color='secondary' icon={LEAF}>
-									Request Quote
-								</Button>
+								<Link to={ESTIMATE}>
+									<Button floated='right' color='secondary' icon={LEAF}>
+										Request Quote
+									</Button>
+								</Link>
 							</Grid.Column>
 
 							<Grid.Column only='mobile' mobile={16}>
-								<Button selfCenter space={'10xy'} color='secondary' thin icon={LEAF}>
-									Request Quote
-								</Button>
+								<Link to={ESTIMATE}>
+									<Button selfCenter space={'10xy'} color='secondary' thin icon={LEAF}>
+										Request Quote
+									</Button>
+								</Link>
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>

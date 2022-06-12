@@ -12,10 +12,14 @@ import { motion_variants_nav } from 'util';
 import Style from './link.module.scss';
 
 export default function MobileLink({ children, toggle, to, ...rest }) {
-	return (
+	return to ? (
 		<Link to={to} onClick={() => toggle(false)} className={Style.Link} {...rest}>
 			{children}
 		</Link>
+	) : (
+		<a onClick={() => toggle(false)} className={Style.Link} {...rest}>
+			{children}
+		</a>
 	);
 }
 

@@ -25,6 +25,7 @@ export { default as CustomerReview } from './presentational/customerReview/Custo
 
 export { default as BrowseFilters } from './presentational/browseFilters/BrowseFilters.jsx';
 
+export { default as EstimateForm } from './presentational/estimateForm/EstimateForm.jsx';
 //•••••••••••••••••
 // PAGE SECTIONS
 //•••••••••••••••••

@@ -1,6 +1,7 @@
 @import 'sass';
 
 .DrawerWrapper {
+	@include remove-scrollbar;
 	position: relative;
 	z-index: 121;
 	height: 100vh;
@@ -8,7 +9,10 @@
 	background-color: map-get($colors, color_primary);
 	overflow-y: scroll;
 
-	@include remove-scrollbar;
+	.EstBtn {
+		position: relative;
+		z-index: 130;
+	}
 }
 
 .Backdrop {
