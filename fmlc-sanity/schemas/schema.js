@@ -11,6 +11,7 @@ import article from './article';
 import author from './author';
 import service from './service';
 import faq from './faq';
+import video from './video';
 
 import sectionLearnLawncare from './sectionLearnLawncare';
 import sectionProfLawnCare from './sectionProfLawnCare';
@@ -23,13 +24,14 @@ export default createSchema({
 	types: schemaTypes.concat([
 		article,
 		service,
+		video,
 		portfolioItem,
-		sectionProfLawnCare,
-		sectionLearnLawncare,
-		sectionServices,
 		faq,
 		tag,
 		author,
+		sectionProfLawnCare,
+		sectionLearnLawncare,
+		sectionServices,
 		blockContent,
 	]),
 });

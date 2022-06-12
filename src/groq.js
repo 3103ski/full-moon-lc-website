@@ -10,6 +10,18 @@ import sanityClient from 'sanityClient';
 // •••••••••••••••••••••••••••••••••••••••••••••
 
 //---------
+// --> VIDEOS
+//---------
+export function fetchVideos() {
+	return sanityClient.fetch(
+		`*[_type == 'video']{
+            title, 
+            embed
+        }`
+	);
+}
+
+//---------
 // --> SERVICES
 //---------
 

@@ -10,7 +10,7 @@ import { OUR_WORK } from 'routes';
 import { fetchPortfolioItems } from 'groq';
 
 // --> Component Imports
-import Style from './portfolioBrowse.module.scss';
+import Style from './browsePortfolio.module.scss';
 
 export default function PortfolioBrowse() {
 	const [portfolioItems, setPortfolioItems] = React.useState(null);

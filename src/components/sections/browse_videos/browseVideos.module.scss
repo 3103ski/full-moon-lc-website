@@ -1,0 +1,23 @@
+@import 'sass';
+
+.SectionWrapper {
+	padding: 45px 0;
+
+	.Col {
+		h3 {
+			@include sub-default;
+			margin: 0;
+		}
+		@media #{map-get($media, mobile)} {
+			h3 {
+				margin: 35px 0 0 0;
+			}
+
+			&:first-of-type {
+				h3 {
+					margin-top: 0 !important;
+				}
+			}
+		}
+	}
+}

@@ -30,28 +30,29 @@ export { default as EstimateForm } from './presentational/estimateForm/EstimateF
 // PAGE SECTIONS
 //•••••••••••••••••
 
-// Shared Sections
+// Shared
 export { default as LearnLawnCareSection } from './sections/shared_learnLawnCare/LearnLawnCare.jsx';
 export { default as ServicesSection } from './sections/shared_servicesSection/ServicesSection.jsx';
 export { default as HappyClientsSection } from './sections/shared_happyClients/HappyClients.jsx';
 
-// Portfolio Sections
-export { default as PortfolioBrowse } from './sections/portfolio_browse/portfolioBrowse.jsx';
-
-// Home Sections
+// Home
 export { default as HomeLandingSection } from './sections/home_landing/HomeLanding.jsx';
 export { default as ProfLawnCareSection } from './sections/home_profLawnCare/ProfLawnCare.jsx';
 
-// About Sections
+// About
 export { default as AboutHeaderSection } from './sections/about_header/AboutHeader.jsx';
 export { default as AboutBioSection } from './sections/about_bio/AboutBioSection.jsx';
 
-// Work Template
+// Portfolio
 export { default as PortfolioItemContent } from './sections/portfolioItem_content/PortfolioItemContent.jsx';
+export { default as BrowsePortfolio } from './sections/browse_portfolio/BrowsePortfolio.jsx';
 
-// Service Template
+// Service
+export { default as BrowseVideos } from './sections/browse_videos/BrowseVideos.jsx';
+
+// Service
 export { default as ServiceInfoSection } from './sections/service_info/ServiceInfo.jsx';
 
-// Article Pages
+// Articles
 export { default as ArticleContentSection } from './sections/article_content/ArticleContent.jsx';
-export { default as BrowseArticlesSection } from './sections/articles_browse/BrowseArticles.jsx';
+export { default as BrowseArticlesSection } from './sections/browse_articles/BrowseArticles.jsx';
