@@ -13,7 +13,12 @@ import Style from './estimateForm.module.scss';
 
 export default function EstimateForm() {
 	return (
-		<form className={`ui form ${Style.Form}`} method='post' data-netlify='true' name='request-estimate' action='/'>
+		<form
+			className={`ui form ${Style.Form}`}
+			method='post'
+			data-netlify='true'
+			name='request-estimate'
+			action='/videos'>
 			<input type='hidden' name='form-name' value='request-estimate' />
 			<TextInput placeholder='Your Name' name='name' />
 			<TextInput placeholder='Phone Number' name='phone' />
