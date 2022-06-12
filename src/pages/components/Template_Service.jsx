@@ -14,7 +14,6 @@ export default function ServiceTemplatePage() {
 	React.useEffect(() => {
 		fetchServiceTemplateContent(slug)
 			.then((data) => {
-				console.log({ data });
 				if (data.length > 0) setService(data[0]);
 			})
 			.catch(console.error);

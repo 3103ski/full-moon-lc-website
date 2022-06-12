@@ -29,8 +29,9 @@ export default function PortfolioBrowse() {
 		<Container as='section' className={Style.SectionWrapper}>
 			<BrowseFilters items={portfolioItems} />
 			<ArticleCard.CardGroup>
-				{portfolioItems.map((item) => (
+				{portfolioItems.map((item, i) => (
 					<ArticleCard
+						key={`${item.slug.current}_${i}`}
 						to={`${OUR_WORK}/${item.slug.current}`}
 						title={item.title}
 						backgroundImage={item.photos[0].asset.url}

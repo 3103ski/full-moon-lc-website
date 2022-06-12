@@ -28,6 +28,7 @@
 	.SelectorOuter {
 		@include flex-center-center;
 		@include remove-scrollbar;
+
 		position: absolute;
 		width: 100%;
 		background-color: rgba(217, 217, 217, 0.72);
@@ -42,6 +43,7 @@
 		.SelectorInner {
 			@include flex-center;
 			@include remove-scrollbar;
+
 			padding: 10px;
 			height: 100%;
 			margin: 0 auto !important;
@@ -50,7 +52,7 @@
 			img {
 				@include hover-cursor;
 				height: 60px;
-				margin: 0 4px;
+				margin: 0 10px;
 				transition: 0.13s;
 
 				&[data-active='1'] {

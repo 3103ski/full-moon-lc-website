@@ -30,9 +30,11 @@ export default function AboutBioSection() {
 					dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
 					sed quia consequuntur
 				</p>
-				<Button as={Link} to={ESTIMATE} icon={MOWER} color='primary' selfCenter>
-					Get Estimate
-				</Button>
+				<Link to={ESTIMATE}>
+					<Button icon={MOWER} color='primary' selfCenter>
+						Get Estimate
+					</Button>
+				</Link>
 			</Container>
 		</section>
 	);

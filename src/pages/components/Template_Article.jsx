@@ -16,7 +16,6 @@ export default function ArticleTemplatePage() {
 			.then((data) => (data[0] ? setArticle(data[0]) : null))
 			.catch(console.error);
 	}, [slug]);
-	console.log({ article });
 	return (
 		<ViewWrapper>
 			{!article ? (

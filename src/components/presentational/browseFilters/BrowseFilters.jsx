@@ -15,7 +15,7 @@ export default function BrowseFilters({ items, setActiveCallback }) {
 		(option) => {
 			let newActive = [...active, option];
 			setActive(newActive);
-			setActiveCallback(newActive);
+			if (setActiveCallback) setActiveCallback(newActive);
 		},
 		[active, setActiveCallback]
 	);
@@ -24,7 +24,7 @@ export default function BrowseFilters({ items, setActiveCallback }) {
 		(option) => {
 			let newActive = active.filter((f) => f !== option);
 			setActive(newActive);
-			setActiveCallback(newActive);
+			if (setActiveCallback) setActiveCallback(newActive);
 		},
 		[active, setActiveCallback]
 	);
@@ -57,14 +57,11 @@ export default function BrowseFilters({ items, setActiveCallback }) {
 
 BrowseFilters.collectTags = ({ items = [] }) => {
 	let tagsArr = items.map((i) => i.tags); // <-- Generates array of arrays
-	tagsArr = [...new Set(tagsArr.flat(1).map((t) => t.title))];
-	return tagsArr;
+	return (tagsArr = [...new Set(tagsArr.flat(1).map((t) => t.title))]);
 };
 
 BrowseFilters.itemHasActiveTag = (active = [], tags = []) => {
-	console.log({ active });
 	for (let x = 0; x < tags.length; x++) {
-		console.log({ tagname: tags[x] });
 		if (active.includes(tags[x].title)) return true;
 	}
 	return false;

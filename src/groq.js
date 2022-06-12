@@ -65,6 +65,7 @@ export function fetchPortfolioItems() {
             tags[]->{
                 title
             },
+            
         }`
 	);
 }
@@ -87,6 +88,9 @@ export function fetchPortfolioItem(slug) {
                 answer
             },
             tags[]->{
+                title
+            },
+            services[]->{
                 title
             },
             body

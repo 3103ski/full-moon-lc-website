@@ -10,7 +10,7 @@ import SanityBlockContent from '@sanity/block-content-to-react';
 import { Button, Card, CurveGraphic, SocialIcon } from 'components';
 import { MOWER } from 'icons';
 import { mascotThumRight1000 } from 'assets';
-import { ARTICLES } from 'routes';
+import { ARTICLES, ESTIMATE } from 'routes';
 
 // --> Component Imports
 import style from './articleContent.module.scss';
@@ -41,9 +41,11 @@ export default function ArticleContentSection({ article }) {
 								<div className={style.Body}>
 									{article.body && <SanityBlockContent blocks={article.body} />}
 								</div>
-								<Button icon={MOWER} space={'10y'} color='secondary'>
-									Get Estimate Now
-								</Button>
+								<Link to={ESTIMATE}>
+									<Button icon={MOWER} space={'10y'} color='secondary'>
+										Get Estimate Now
+									</Button>
+								</Link>
 							</Grid.Column>
 							<Grid.Column mobile={2} only='mobile'>
 								<SocialIcons />

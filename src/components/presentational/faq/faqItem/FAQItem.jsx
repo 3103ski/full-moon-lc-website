@@ -28,7 +28,7 @@ export default function FAQItem({
 				<p className={Style.Question}>{question}</p>
 			</div>
 			<Modal isOpen={isOpen} callback={setIsOpen} title={question}>
-				<p className={Style.Answer}>{blockContent ? <SanityBlockContent blocks={answer} /> : { answer }}</p>
+				<div className={Style.Answer}>{blockContent ? <SanityBlockContent blocks={answer} /> : { answer }}</div>
 				<Button selfCenter onClick={() => setIsOpen(false)}>
 					Got It
 				</Button>

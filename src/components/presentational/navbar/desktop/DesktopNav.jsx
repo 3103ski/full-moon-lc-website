@@ -1,6 +1,5 @@
 // --> React
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 // --> Packages
 import { motion } from 'framer-motion';
@@ -61,8 +60,8 @@ export default function DesktopNav() {
 					<RootLink to={ABOUT_US}>About Us</RootLink>
 				</div>
 				<div className={Style.RightLinks}>
-					<RootLink to={ABOUT_US} hover={false} padding={false}>
-						<Button as={Link} to={ESTIMATE} thin icon={LEAF} color='secondary'>
+					<RootLink to={ESTIMATE} hover={false} padding={false}>
+						<Button thin icon={LEAF} color='secondary'>
 							Get Estimate
 						</Button>
 					</RootLink>

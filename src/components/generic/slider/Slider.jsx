@@ -5,7 +5,7 @@ import React from 'react';
 // import { Icon } from '@iconify/react';
 
 // --> Project Imports
-import { intFromPx, refWidth, refHeight } from 'util';
+import { intFromPx, refHeight } from 'util';
 
 // --> Component Imports
 import Style from './slider.module.scss';
@@ -13,11 +13,7 @@ import Style from './slider.module.scss';
 export default function Slider({ srcUrls = [] }) {
 	const [active, setActive] = React.useState(0);
 	const [isMobile, setIsMobile] = React.useState(false);
-
 	const outerRef = React.useRef();
-
-	console.log(refWidth(outerRef));
-	console.log(intFromPx(Style.bp_mobile_lg));
 
 	React.useEffect(() => {
 		window.addEventListener('resize', (e) => {

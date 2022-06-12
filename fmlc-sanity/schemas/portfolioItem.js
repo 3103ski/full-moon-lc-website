@@ -44,6 +44,13 @@ export default {
 			of: [{ type: 'reference', to: { type: 'faq' } }],
 		},
 		{
+			name: 'services',
+			title: 'Services Provided',
+			type: 'array',
+			validation: (Rule) => Rule.required().min(1),
+			of: [{ type: 'reference', to: { type: 'service' } }],
+		},
+		{
 			name: 'tags',
 			title: 'Tags',
 			type: 'array',

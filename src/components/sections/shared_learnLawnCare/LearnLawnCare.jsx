@@ -26,8 +26,6 @@ export default function LearnLawnCareSection({ picture = false }) {
 			.catch(console.error);
 	}, []);
 
-	console.log(content);
-
 	return (
 		content && (
 			<section
