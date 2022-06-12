@@ -14,11 +14,13 @@ import Style from './portfolioBrowse.module.scss';
 
 export default function PortfolioBrowse() {
 	const [portfolioItems, setPortfolioItems] = React.useState(null);
+	const [activeFilters, setActiveFilters] = React.useState([]);
 
 	React.useEffect(() => {
 		fetchPortfolioItems()
 			.then((data) => {
 				setPortfolioItems(data);
+				console.log(data);
 			})
 			.catch(console.error);
 	}, []);
@@ -27,18 +29,20 @@ export default function PortfolioBrowse() {
 		<Loading size='small' />
 	) : (
 		<Container as='section' className={Style.SectionWrapper}>
-			<BrowseFilters items={portfolioItems} />
+			<BrowseFilters items={portfolioItems} notTag='services' setActiveCallback={setActiveFilters} />
 			<ArticleCard.CardGroup>
-				{portfolioItems.map((item, i) => (
-					<ArticleCard
-						key={`${item.slug.current}_${i}`}
-						to={`${OUR_WORK}/${item.slug.current}`}
-						title={item.title}
-						backgroundImage={item.photos[0].asset.url}
-						summary={item.shortSummary}
-						linkText='See Work'
-					/>
-				))}
+				{portfolioItems.map((item, i) =>
+					activeFilters.length > 0 && !BrowseFilters.itemHasActiveTag(activeFilters, item.services) ? null : (
+						<ArticleCard
+							key={`${item.slug.current}_${i}`}
+							to={`${OUR_WORK}/${item.slug.current}`}
+							title={item.title}
+							backgroundImage={item.photos[0].asset.url}
+							summary={item.shortSummary}
+							linkText='See Work'
+						/>
+					)
+				)}
 			</ArticleCard.CardGroup>
 		</Container>
 	);

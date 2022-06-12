@@ -47,7 +47,7 @@ export { default as AboutHeaderSection } from './sections/about_header/AboutHead
 export { default as AboutBioSection } from './sections/about_bio/AboutBioSection.jsx';
 
 // Work Template
-export { default as WorkContent } from './sections/work_content/WorkContent.jsx';
+export { default as PortfolioItemContent } from './sections/portfolioItem_content/PortfolioItemContent.jsx';
 
 // Service Template
 export { default as ServiceInfoSection } from './sections/service_info/ServiceInfo.jsx';

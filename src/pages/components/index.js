@@ -8,5 +8,5 @@ export { default as EstimateRequestPage } from './Page_EstimateRequest';
 
 // --> Templates
 export { default as ArticleTemplatePage } from './Template_Article.jsx';
-export { default as WorkTemplatePage } from './Template_Work.jsx';
+export { default as PortfolioItemTemplatePage } from './Template_PortfolioItem.jsx';
 export { default as ServiceTemplatePage } from './Template_Service.jsx';

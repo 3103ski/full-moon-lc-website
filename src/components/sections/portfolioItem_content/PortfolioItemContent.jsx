@@ -9,22 +9,34 @@ import SanityBlockContent from '@sanity/block-content-to-react';
 // --> Project Imports
 import { FAQItem, FAQ, Button, CurveGraphic } from 'components';
 import { MOWER } from 'icons';
-import { ESTIMATE } from 'routes';
+import { ESTIMATE, SERVICE } from 'routes';
 
 // --> Component Imports
-import Style from './workContent.module.scss';
+import Style from './portfolioItemContent.module.scss';
 
-export default function WorkTemplateContent({ workItem }) {
+export default function WorkTemplateContent({ portfolioItem }) {
 	return (
 		<section className={Style.SectionOuter}>
 			<Container className={Style.SectionInner}>
 				<Grid>
 					<Grid.Row>
 						<Grid.Column mobile={16} tablet={8} computer={10} className={Style.Body}>
-							<div></div>
-							<h1>{workItem.title}</h1>
-							{workItem.subtitle && <h3>{workItem.subtitle}</h3>}
-							<SanityBlockContent blocks={workItem.body} />
+							<div className={Style.ServicesProvidedContainer}>
+								<p>Services Provided</p>
+								<div className={Style.TagContainer}>
+									{portfolioItem.services.map((service, i) => (
+										<Link
+											to={`${SERVICE}/${service.slug.current}`}
+											key={`${service.title}_${i}`}
+											className={Style.ServiceTag}>
+											<p>{service.title}</p>
+										</Link>
+									))}
+								</div>
+							</div>
+							<h1>{portfolioItem.title}</h1>
+							{portfolioItem.subtitle && <h3>{portfolioItem.subtitle}</h3>}
+							<SanityBlockContent blocks={portfolioItem.body} />
 							<Link to={ESTIMATE}>
 								<Button selfCenter space='10xy' icon={MOWER} color='secondary'>
 									Get Estimate
@@ -33,7 +45,7 @@ export default function WorkTemplateContent({ workItem }) {
 						</Grid.Column>
 						<Grid.Column mobile={16} tablet={8} computer={6}>
 							<FAQ>
-								{workItem.faqs.map((item, i) => (
+								{portfolioItem.faqs.map((item, i) => (
 									<FAQItem
 										useIcon
 										blockContent

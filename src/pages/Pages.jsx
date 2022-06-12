@@ -17,7 +17,7 @@ import {
 	HomePage,
 	ServiceTemplatePage,
 	VideosPage,
-	WorkTemplatePage,
+	PortfolioItemTemplatePage,
 } from './components';
 
 export default function AnimatedRoutes() {
@@ -34,7 +34,7 @@ export default function AnimatedRoutes() {
 				<Route path={`${ARTICLES}/:slug`} element={<ArticleTemplatePage />} />
 				<Route exact path={VIDEOS} element={<VideosPage />} />
 				<Route exact path={OUR_WORK} element={<ExploreWorkPage />} />
-				<Route path={`${OUR_WORK}/:slug`} element={<WorkTemplatePage />} />
+				<Route path={`${OUR_WORK}/:slug`} element={<PortfolioItemTemplatePage />} />
 				<Route exact path={ESTIMATE} element={<EstimateRequestPage />} />
 			</Routes>
 		</AnimatePresence>

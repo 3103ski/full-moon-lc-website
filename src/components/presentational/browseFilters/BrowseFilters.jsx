@@ -7,8 +7,8 @@ import { Container } from 'semantic-ui-react';
 // --> Component Imports
 import Style from './browseFilters.module.scss';
 
-export default function BrowseFilters({ items, setActiveCallback }) {
-	const [options, setOptions] = React.useState(BrowseFilters.collectTags({ items }));
+export default function BrowseFilters({ items, setActiveCallback, notTag = null }) {
+	const [options, setOptions] = React.useState(null);
 	const [active, setActive] = React.useState([]);
 
 	const addFilter = React.useCallback(
@@ -31,10 +31,12 @@ export default function BrowseFilters({ items, setActiveCallback }) {
 
 	React.useEffect(() => {
 		if (!options) {
-			let filterOptions = BrowseFilters.collectTags({ items });
+			console.log({ notTag });
+			let filterOptions = BrowseFilters.collectTags({ items, notTag });
+			console.log({ filterOptions });
 			setOptions(filterOptions);
 		}
-	}, [items, options]);
+	}, [items, notTag, options]);
 
 	return React.useMemo(
 		() =>
@@ -55,8 +57,14 @@ export default function BrowseFilters({ items, setActiveCallback }) {
 	);
 }
 
-BrowseFilters.collectTags = ({ items = [] }) => {
-	let tagsArr = items.map((i) => i.tags); // <-- Generates array of arrays
+BrowseFilters.collectTags = ({ items = [], notTag = null }) => {
+	let tagsArr;
+	if (notTag) {
+		console.log('right place');
+		tagsArr = items.map((item) => item[notTag]); // <-- Generates array of arrays
+	} else {
+		tagsArr = items.map((item) => item.tags); // <-- Generates array of arrays
+	}
 	return (tagsArr = [...new Set(tagsArr.flat(1).map((t) => t.title))]);
 };
 
