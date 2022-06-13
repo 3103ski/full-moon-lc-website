@@ -15,9 +15,13 @@ import { ESTIMATE } from 'routes';
 import Style from './serviceInfo.module.scss';
 
 export default function ServiceInfoSection({ service = null }) {
+	console.log(service);
 	return (
 		service && (
 			<section className={Style.SectionWrapper}>
+				{service.graphic && (
+					<img className={Style.Graphic} src={service.graphic.img.asset.url} alt='service graphic' />
+				)}
 				<Container>
 					<Grid>
 						<Grid.Row>

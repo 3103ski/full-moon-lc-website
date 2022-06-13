@@ -2,10 +2,23 @@
 
 .SectionWrapper {
 	position: relative;
-	padding: 80px 0 250px 0;
+	padding: 130px 0 250px 0;
+
+	.Graphic {
+		position: absolute;
+		width: 20%;
+		top: 20px;
+		left: 10px;
+		z-index: 2;
+		opacity: 0.15;
+	}
 
 	@media #{map-get($media, mobile)} {
 		padding: 40px 0 160px 0;
+
+		.Graphic {
+			display: none;
+		}
 	}
 
 	.Title,

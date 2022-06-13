@@ -1,6 +1,6 @@
 export default {
 	name: 'article',
-	title: 'Articles',
+	title: 'CMS - Articles',
 	type: 'document',
 	fields: [
 		{

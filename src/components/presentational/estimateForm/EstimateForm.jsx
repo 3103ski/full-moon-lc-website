@@ -1,6 +1,8 @@
 // --> React
 import React from 'react';
 
+import './estimateForm.module.scss';
+
 export default function EstimateForm() {
 	return (
 		<iframe
@@ -8,9 +10,9 @@ export default function EstimateForm() {
 			width='100%'
 			height='100%'
 			title='request-estimate'
-			frameborder='0'
-			marginheight='0'
-			marginwidth='0'>
+			frameBorder='0'
+			marginHeight='0'
+			marginWidth='0'>
 			Loading…
 		</iframe>
 	);

@@ -9,11 +9,20 @@ import { mascotArmsCrossedCutoff1000, backgroundFamily } from 'assets';
 import { Button, CustomerReview } from 'components';
 import { YELP } from 'icons';
 import { YELP_URL } from 'routes';
+import { fetchYelpURL } from 'groq';
 
 // Local Styling
 import style from './happyClients.module.scss';
 
 export default function HappyClients() {
+	const [yelpURL, setYelpURL] = React.useState(null);
+
+	React.useEffect(() => {
+		fetchYelpURL()
+			.then((data) => setYelpURL(data.yelpURL))
+			.catch(console.error);
+	}, [setYelpURL]);
+
 	return (
 		<section className={style.SectionWrapper} style={{ backgroundImage: `url(${backgroundFamily})` }}>
 			<div className={style.Overlay} />
@@ -28,7 +37,14 @@ export default function HappyClients() {
 							<div className={style.ReviewsWrapper}>
 								<CustomerReview />
 							</div>
-							<Button as='a' href={YELP_URL} selfCenter icon={YELP} color='yelp'>
+							<Button
+								as='a'
+								href={yelpURL ? yelpURL : YELP_URL}
+								target='_blank'
+								rel='noreferror'
+								selfCenter
+								icon={YELP}
+								color='yelp'>
 								Read More On Yelp
 							</Button>
 						</Grid.Column>

@@ -43,12 +43,6 @@ import backgroundMowing from './backgound_stock_mowing.jpg';
 import backgroundHouse from './background_stock_home.jpg';
 import backgroundWorker from './background_worker.jpg';
 
-// --> GENERIC SERVICE PHOTOS
-import serviceTileLandscaping from './tiles_service_landscaping.jpg';
-import serviceTileMowing from './tiles_service_mowing.jpeg';
-import serviceTileCleanup from './tiles_service_cleanup.jpeg';
-import serviceTileGardens from './tiles_service_gardening.jpg';
-
 // --> STOCK PHOTOS
 import stockHouse from './stock_house_1.jpg';
 import stockHouse2 from './stock_house_2.png';
@@ -92,10 +86,6 @@ export {
 	mascotThumRight250,
 	mascotThumRight500,
 	mascotThumRight1000,
-	serviceTileLandscaping,
-	serviceTileMowing,
-	serviceTileCleanup,
-	serviceTileGardens,
 	stockHome,
 	stockHouse,
 	stockHouse2,

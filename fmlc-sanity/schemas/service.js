@@ -1,6 +1,6 @@
 export default {
 	name: 'service',
-	title: 'Services',
+	title: 'CMS - Services',
 	type: 'document',
 	fields: [
 		{
@@ -40,21 +40,16 @@ export default {
 			},
 		},
 		{
+			name: 'graphic',
+			title: 'Branding Graphic',
+			type: 'reference',
+			to: { type: 'branding' },
+		},
+		{
 			name: 'faqs',
 			title: 'FAQs',
 			type: 'array',
 			of: [{ type: 'reference', to: { type: 'faq' } }],
-		},
-		{
-			name: 'tags',
-			title: 'Tags',
-			type: 'array',
-			of: [{ type: 'reference', to: { type: 'tag' } }],
-		},
-		{
-			name: 'publishedAt',
-			title: 'Published at',
-			type: 'datetime',
 		},
 		{
 			name: 'body',

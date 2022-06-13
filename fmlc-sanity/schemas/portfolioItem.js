@@ -1,6 +1,6 @@
 export default {
 	name: 'portfolioItem',
-	title: 'Portfolio Items',
+	title: 'CMS - Portfolio',
 	type: 'document',
 	fields: [
 		{
@@ -49,12 +49,6 @@ export default {
 			type: 'array',
 			validation: (Rule) => Rule.required().min(1),
 			of: [{ type: 'reference', to: { type: 'service' } }],
-		},
-		{
-			name: 'tags',
-			title: 'Tags',
-			type: 'array',
-			of: [{ type: 'reference', to: { type: 'tag' } }],
 		},
 		{
 			name: 'body',

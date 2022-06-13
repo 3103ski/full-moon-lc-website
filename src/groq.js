@@ -9,6 +9,38 @@ import sanityClient from 'sanityClient';
 // MORE INFO --> https://www.sanity.io/docs/how-queries-work
 // •••••••••••••••••••••••••••••••••••••••••••••
 
+export function fetchAboutPageInfo() {
+	return sanityClient.fetch(
+		`*[_type == 'about'][0]{
+            headerText,
+            headerVideo,
+            bioHeader,
+            bio
+        }`
+	);
+}
+
+export function fetchGeneralInfo() {
+	return sanityClient.fetch(
+		`*[_type == 'general'][0]{
+            landingSlogan,
+            landingVideo,
+            facebook,
+            instagram,
+            yelp,
+            youtube
+        }`
+	);
+}
+
+export function fetchYelpURL() {
+	return sanityClient.fetch(
+		`*[_type == 'general'][0]{
+            yelp,
+        }`
+	);
+}
+
 //---------
 // --> VIDEOS
 //---------
@@ -42,6 +74,14 @@ export function fetchServiceTemplateContent(slug) {
             title,
             body,
             subtitle,
+            graphic->{
+                img{
+                    asset->{
+                        url,
+                        _id
+                    }
+                }
+            },
             faqs[]-> {
                 question,
                 answer
@@ -228,6 +268,12 @@ export function fetchLearnLawnCareSectionArticles() {
 		`*[_type == 'sectionLearnLawncare']{
             title,
             subtitle,
+            backgroundImage{
+                asset-> {
+                    url,
+                    _id
+                }
+            },
             articles {
                 articleOne->{
                     title,

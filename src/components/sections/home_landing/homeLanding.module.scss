@@ -6,53 +6,19 @@
 
 	position: relative;
 	width: 100vw;
-	min-height: 100vh;
+
+	&[data-video='1'] {
+		height: 100%;
+	}
+
+	&[data-video='0'] {
+		min-height: 100vh;
+	}
 
 	.Overlay {
 		@include bg-overlay-1;
 
 		z-index: 1;
-	}
-
-	.Wrapper {
-		@include flex-col-center-center;
-		@include no-select;
-
-		position: relative;
-		z-index: 2;
-
-		img {
-			width: 100%;
-			max-width: 800px;
-			margin: 0 auto;
-		}
-
-		h3 {
-			@include sub-default;
-			color: white;
-		}
-
-		.LogoDesktop {
-			@include flex-center-center;
-
-			img {
-				width: 65%;
-			}
-		}
-
-		.LogoMobile {
-			@include flex-center-center;
-
-			img {
-				width: 65%;
-				margin: 0 auto 20px auto !important;
-			}
-		}
-
-		.ButtonWrapper {
-			padding: 20px;
-			width: 100%;
-		}
 	}
 
 	@media #{map-get($media, mobile)} {
@@ -77,6 +43,66 @@
 	@media #{map-get($media, tablet)} {
 		.LogoDesktop img {
 			width: 85% !important;
+		}
+	}
+}
+
+.Wrapper {
+	@include flex-col-center-center;
+	@include no-select;
+
+	position: relative;
+	z-index: 2;
+
+	img {
+		width: 100%;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	h3 {
+		@include sub-default;
+		color: white;
+	}
+
+	.LogoDesktop {
+		@include flex-center-center;
+
+		img {
+			width: 65%;
+		}
+	}
+
+	.LogoMobile {
+		@include flex-center-center;
+
+		img {
+			width: 65%;
+			margin: 0 auto 20px auto !important;
+		}
+	}
+
+	.ButtonWrapper {
+		padding: 20px;
+		width: 100%;
+	}
+}
+
+.HeaderVideoContainer {
+	position: relative;
+
+	.HeaderVideoOverlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(174, 174, 174, 0.275);
+
+		z-index: 99;
+
+		@media only screen and (max-width: 768px) {
+			display: none;
 		}
 	}
 }

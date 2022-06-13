@@ -12,11 +12,14 @@ import author from './author';
 import service from './service';
 import faq from './faq';
 import video from './video';
-
+import branding from './branding';
 import sectionLearnLawncare from './sectionLearnLawncare';
 import sectionProfLawnCare from './sectionProfLawnCare';
 import sectionServices from './sectionServices';
 import portfolioItem from './portfolioItem';
+
+import generalInformaion from './generalInformaion';
+import aboutPage from './aboutPage';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,11 +30,14 @@ export default createSchema({
 		video,
 		portfolioItem,
 		faq,
-		tag,
-		author,
+		aboutPage,
 		sectionProfLawnCare,
 		sectionLearnLawncare,
 		sectionServices,
+		generalInformaion,
+		branding,
+		tag,
+		author,
 		blockContent,
 	]),
 });

@@ -1,6 +1,6 @@
 export default {
 	name: 'video',
-	title: 'Youtube Videos',
+	title: 'CMS - Youtube Videos',
 	type: 'document',
 	fields: [
 		{

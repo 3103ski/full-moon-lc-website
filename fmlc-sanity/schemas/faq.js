@@ -1,6 +1,6 @@
 export default {
 	name: 'faq',
-	title: 'Frequently Asked Questions',
+	title: 'CMS - FAQs',
 	type: 'document',
 	fields: [
 		{

@@ -16,6 +16,14 @@ export default {
 			validation: (Rule) => Rule.required().max(80),
 		},
 		{
+			name: 'backgroundImage',
+			title: 'Section BackgroundImage',
+			type: 'image',
+			options: {
+				hotspot: true,
+			},
+		},
+		{
 			name: 'articles',
 			title: 'Visible Articles',
 			type: 'document',
