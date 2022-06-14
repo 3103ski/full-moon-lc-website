@@ -14,19 +14,6 @@ export default function ArticleTemplatePage() {
 
 	React.useEffect(() => {
 		checkSeshStorageAddIfNeeded(`fmlc_${slug}__article`, setArticle, () => fetchArticleTemplateContent(slug));
-		// let storedData = sessionStorage.getItem(`fmlc_${slug}__article`);
-		// if (storedData) {
-		// 	setArticle(JSON.parse(storedData));
-		// } else {
-		// 	fetchArticleTemplateContent(slug)
-		// 		.then((data) => {
-		// 			if (data[0]) {
-		// 				sessionStorage.setItem(`fmlc_${slug}__article`, JSON.stringify(data[0]));
-		// 				setArticle(data[0]);
-		// 			}
-		// 		})
-		// 		.catch(console.error);
-		// }
 	}, [slug]);
 	return (
 		<ViewWrapper>

@@ -21,15 +21,6 @@ export default function Footer() {
 
 	React.useEffect(() => {
 		checkSeshStorageAddIfNeeded('fmlc_gen_info', setSocialLinks, fetchGeneralInfo);
-		// let genInfo = sessionStorage.getItem('fmlc_gen_info');
-		// if (genInfo) {
-		// 	setSocialLinks(JSON.parse(genInfo));
-		// } else {
-		// 	fetchGeneralInfo().then((data) => {
-		// 		sessionStorage.setItem('fmlc_gen_info', JSON.stringify(data));
-		// 		setSocialLinks(data);
-		// 	});
-		// }
 	}, []);
 
 	return (

@@ -10,27 +10,24 @@ import { Button } from 'components';
 import { placeholderLawn, banner1000, bannerVert_700 } from 'assets';
 import { OUR_WORK, ESTIMATE } from 'routes';
 import { MOWER, LEAF } from 'icons';
+import { checkSeshStorageAddIfNeeded } from 'util';
 import { fetchGeneralInfo } from 'groq';
-
 // --> Component Imports
+
 import style from './homeLanding.module.scss';
 
 export default function HomeLandingSection() {
 	const [video, setVideo] = React.useState(null);
 
 	React.useEffect(() => {
-		fetchGeneralInfo().then((data) => {
-			if (data.landingVideo) {
-				setVideo(data.landingVideo);
-			}
-		});
-	});
+		checkSeshStorageAddIfNeeded(`fmlc_landingvideo`, setVideo, fetchGeneralInfo, null, 'landingVideo');
+	}, []);
 
 	return video ? (
 		<div className={style.HeaderVideoContainer} id={'section-1'}>
 			{/* Overlay not only for style but to prevent hover styles on the youtube video and prevent the youtube brand popup as well as pause abilities. */}
 			<div className={style.HeaderVideoOverlay}>
-				<header className={style.SectionWrapper} data-video={video ? 1 : 0}>
+				<header className={style.SectionWrapper} data-video={video.landingVideo ? 1 : 0}>
 					<Container>
 						<Grid className={style.Wrapper}>
 							<Grid.Row>

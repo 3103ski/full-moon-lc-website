@@ -1,24 +1,26 @@
-export function checkSeshStorageAddIfNeeded(key, callback, query, arg = null) {
+export function checkSeshStorageAddIfNeeded(key, callback, query, arg = null, checkFor = null) {
 	let storedData = sessionStorage.getItem(key);
+
 	if (storedData) {
-		console.log(`found ${key} in session storage`);
 		callback(JSON.parse(storedData));
 	} else {
+		const storeThis = (data) => {
+			console.log({ thisCameIn: data });
+			if (checkFor) {
+				sessionStorage.setItem(key, 'null');
+				if (data[checkFor]) callback(data[checkFor]);
+			} else {
+				sessionStorage.setItem(key, JSON.stringify(data));
+				callback(data);
+			}
+		};
 		if (arg) {
 			query(arg)
-				.then((data) => {
-					console.log('made arg query', data);
-					sessionStorage.setItem(key, JSON.stringify(data));
-					callback(data);
-				})
+				.then((data) => storeThis(data))
 				.catch(console.error);
 		} else {
 			query()
-				.then((data) => {
-					console.log('made query');
-					sessionStorage.setItem(key, JSON.stringify(data));
-					callback(data);
-				})
+				.then((data) => storeThis(data))
 				.catch(console.error);
 		}
 	}

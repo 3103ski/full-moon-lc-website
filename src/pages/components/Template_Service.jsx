@@ -14,19 +14,6 @@ export default function ServiceTemplatePage() {
 
 	React.useEffect(() => {
 		checkSeshStorageAddIfNeeded(`fmlc_${slug}__service`, setService, fetchServiceTemplateContent, slug);
-		// let storedData = sessionStorage.getItem(`fmlc_${slug}__service`);
-		// if (storedData) {
-		// 	setService(JSON.parse(storedData));
-		// } else {
-		// 	fetchServiceTemplateContent(slug)
-		// 		.then((data) => {
-		// 			if (data.length > 0) {
-		// 				sessionStorage.setItem(`fmlc_${slug}__service`, data[0]);
-		// 				setService(data[0]);
-		// 			}
-		// 		})
-		// 		.catch(console.error);
-		// }
 	}, [slug]);
 
 	return !service ? (

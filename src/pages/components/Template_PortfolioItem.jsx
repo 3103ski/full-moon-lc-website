@@ -14,17 +14,6 @@ export default function PortfolioItemTemplatePage() {
 
 	React.useEffect(() => {
 		checkSeshStorageAddIfNeeded(`fmlc_${slug}__portfolio`, setPortfolioItem, () => fetchPortfolioItem(slug));
-		// let storedData = sessionStorage.getItem(`fmlc_${slug}__portfolio`);
-		// if (storedData) {
-		// 	setPortfolioItem(JSON.parse(storedData));
-		// } else {
-		// 	fetchPortfolioItem(slug)
-		// 		.then((data) => {
-		// 			sessionStorage.setItem(`fmlc_${slug}__portfolio`);
-		// 			setPortfolioItem(data);
-		// 		})
-		// 		.catch(console.error);
-		// }
 	}, [slug]);
 	return !portfolioItem ? (
 		<Loading size='screen' />
