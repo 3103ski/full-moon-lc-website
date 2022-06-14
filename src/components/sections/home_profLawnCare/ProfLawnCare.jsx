@@ -18,12 +18,23 @@ import style from './profLawnCare.module.scss';
 
 export default function ProfLawnCareSection() {
 	const [content, setContent] = React.useState(null);
+	const [circleSet, toggleCircleSet] = React.useState(false);
+
 	const circleRef = React.useRef(null);
 
 	React.useEffect(() => {
 		checkSeshStorageAddIfNeeded(`fmlc_proflawncare__content`, setContent, fetchProfLawncareContent);
 	}, []);
-	console.log({ content, circleRef: circleRef.current });
+
+	React.useEffect(() => {
+		if (circleRef.current && content && !circleSet) {
+			let img = `url(${content.sectionPicture.asset.url}?fit=crop&h=${circleRef.current.clientHeight}&w=${circleRef.current.clientWidth})`;
+			let circle = document.getElementById('circleImg');
+			circle.style.backgroundImage = img;
+			toggleCircleSet(true);
+		}
+	}, [circleSet, content]);
+
 	return React.useMemo(
 		() =>
 			content && (
@@ -50,14 +61,7 @@ export default function ProfLawnCareSection() {
 									/>
 								</Grid.Column>
 								<Grid.Column only='computer' computer={8} className={style.Column}>
-									<div
-										ref={circleRef}
-										className={style.CircleImage}
-										style={{
-											backgroundImage: !circleRef.current
-												? ''
-												: `url(${content.sectionPicture.asset.url}?fit=crop&h=${circleRef.current.clientHeight}&w=${circleRef.current.clientWidth})`,
-										}}></div>
+									<div ref={circleRef} className={style.CircleImage} id='circleImg'></div>
 								</Grid.Column>
 							</Grid.Row>
 						</Grid>
