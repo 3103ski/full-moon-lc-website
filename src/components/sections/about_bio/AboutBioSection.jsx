@@ -16,16 +16,18 @@ import style from './aboutBioSection.module.scss';
 
 export default function AboutBioSection({ content }) {
 	return (
-		<section className={style.SectionWrapper}>
-			<Container>
-				<h1>{content.bioHeader && content.bioHeader}</h1>
-				<SanityBlockContent blocks={content.bio} />
-				<Link to={ESTIMATE}>
-					<Button icon={LEAF} color='primary' selfCenter>
-						Get Estimate
-					</Button>
-				</Link>
-			</Container>
-		</section>
+		content && (
+			<section className={style.SectionWrapper}>
+				<Container>
+					<h1>{content.bioHeader && content.bioHeader}</h1>
+					<SanityBlockContent blocks={content.bio} />
+					<Link to={ESTIMATE}>
+						<Button icon={LEAF} color='primary' selfCenter>
+							Get Estimate
+						</Button>
+					</Link>
+				</Container>
+			</section>
+		)
 	);
 }

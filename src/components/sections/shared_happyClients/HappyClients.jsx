@@ -9,6 +9,7 @@ import { mascotArmsCrossedCutoff1000, backgroundFamily } from 'assets';
 import { Button, CustomerReview } from 'components';
 import { YELP } from 'icons';
 import { YELP_URL } from 'routes';
+import { checkSeshStorageAddIfNeeded } from 'util';
 import { fetchYelpURL } from 'groq';
 
 // Local Styling
@@ -18,9 +19,7 @@ export default function HappyClients() {
 	const [yelpURL, setYelpURL] = React.useState(null);
 
 	React.useEffect(() => {
-		fetchYelpURL()
-			.then((data) => setYelpURL(data.yelpURL))
-			.catch(console.error);
+		checkSeshStorageAddIfNeeded(`fmlc__yelpurl`, setYelpURL, fetchYelpURL, 'yelpURL');
 	}, [setYelpURL]);
 
 	return (

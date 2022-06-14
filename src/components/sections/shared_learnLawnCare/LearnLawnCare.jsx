@@ -10,6 +10,7 @@ import { placeholderMowing } from 'assets';
 import { Button, ArticleCard } from 'components';
 import { ARTICLES } from 'routes';
 import { fetchLearnLawnCareSectionArticles } from 'groq';
+import { checkSeshStorageAddIfNeeded } from 'util';
 
 // --> Styling
 import style from './learnLawnCare.module.scss';
@@ -19,11 +20,7 @@ export default function LearnLawnCareSection({ picture = false }) {
 	const [content, setContent] = React.useState(null);
 
 	React.useEffect(() => {
-		fetchLearnLawnCareSectionArticles()
-			.then((data) => {
-				if (data.length > 0) setContent(data[0]);
-			})
-			.catch(console.error);
+		checkSeshStorageAddIfNeeded(`fmlc_learnlawncare__content`, setContent, fetchLearnLawnCareSectionArticles);
 	}, []);
 
 	return (

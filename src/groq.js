@@ -208,7 +208,7 @@ export function fetchArticleTemplateContent(slug) {
 // Get content for website services section
 export function fetchServicesSectionContent() {
 	return sanityClient.fetch(
-		`*[_type == 'sectionServices']{
+		`*[_type == 'sectionServices'][0]{
             titleTop,
             titleBottom,
             subtitle,
@@ -265,7 +265,7 @@ export function fetchServicesSectionContent() {
 // Get articles for Learn Lawncare section banner
 export function fetchLearnLawnCareSectionArticles() {
 	return sanityClient.fetch(
-		`*[_type == 'sectionLearnLawncare']{
+		`*[_type == 'sectionLearnLawncare'][0]{
             title,
             subtitle,
             backgroundImage{
@@ -311,7 +311,7 @@ export function fetchLearnLawnCareSectionArticles() {
 // Fetch content for 'Professional Lawn Care' Section on home page
 export function fetchProfLawncareContent() {
 	return sanityClient.fetch(
-		`*[_type == 'sectionProfLawncare']{
+		`*[_type == 'sectionProfLawncare'][0]{
             title,
             subtitle,
             body,

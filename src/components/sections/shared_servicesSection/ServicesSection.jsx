@@ -11,6 +11,7 @@ import { mascotCleanup1000, stockHome } from 'assets';
 import { fetchServicesSectionContent } from 'groq';
 import { ESTIMATE, SERVICE, VIDEOS } from 'routes';
 import { LEAF, YOUTUBE } from 'icons';
+import { checkSeshStorageAddIfNeeded } from 'util';
 
 // --> Component Imports
 import Style from './servicesSection.module.scss';
@@ -19,9 +20,7 @@ export default function ServicesSection() {
 	const [content, setContent] = React.useState(null);
 
 	React.useEffect(() => {
-		fetchServicesSectionContent().then((content) => {
-			if (content.length > 0) setContent(content[0]);
-		});
+		checkSeshStorageAddIfNeeded(`fmlc_servicessection__content`, setContent, fetchServicesSectionContent);
 	}, []);
 
 	return (
