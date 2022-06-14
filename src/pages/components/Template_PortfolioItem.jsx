@@ -4,9 +4,9 @@ import { useParams } from 'react-router-dom';
 
 // --> Project Imports
 import { Loading, ServicesSection, PortfolioItemContent, Slider } from 'components';
-import ViewWrapper from './ViewWrapper.jsx';
-import { checkSeshStorageAddIfNeeded } from 'util/sessionStorage.js';
+import { checkSeshStorageAddIfNeeded } from 'util';
 import { fetchPortfolioItem } from 'groq.js';
+import ViewWrapper from './ViewWrapper.jsx';
 
 export default function PortfolioItemTemplatePage() {
 	const [portfolioItem, setPortfolioItem] = React.useState(null);

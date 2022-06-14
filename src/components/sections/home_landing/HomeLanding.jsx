@@ -19,135 +19,91 @@ import style from './homeLanding.module.scss';
 export default function HomeLandingSection() {
 	const [video, setVideo] = React.useState(null);
 
+	console.log(video);
+
 	React.useEffect(() => {
-		checkSeshStorageAddIfNeeded(`fmlc_landingvideo`, setVideo, fetchGeneralInfo, null, 'landingVideo');
+		checkSeshStorageAddIfNeeded(
+			`fmlc_landingvideo`,
+			(vid) => setVideo(vid.split('=')[1]),
+			fetchGeneralInfo,
+			null,
+			'landingVideo'
+		);
 	}, []);
+
+	const Header = ({ vid = null }) => {
+		return (
+			<header
+				className={style.SectionWrapper}
+				data-video={vid ? 1 : 0}
+				style={{ backgroundImage: vid ? '' : `url(${placeholderLawn})` }}>
+				<Container>
+					<Grid className={style.Wrapper}>
+						<Grid.Row>
+							<Grid.Column className={style.LogoDesktop} tablet={16} computer={16} only='tablet computer'>
+								<img src={banner1000} alt='Full Moon Banner' />
+							</Grid.Column>
+							<Grid.Column className={style.LogoMobile} mobile={16} only='mobile'>
+								<img src={bannerVert_700} alt='Full Moon Banner' />
+							</Grid.Column>
+
+							<Grid.Column textAlign='center' mobile={16}>
+								<h3>The Right Services. The Right Price.</h3>
+							</Grid.Column>
+
+							<Grid.Column textAlign='center' tablet={16} computer={16} only='tablet computer'>
+								<div className={style.ButtonWrapper}>
+									<Button as={Link} to={ESTIMATE} space='10x' color='secondaryTransp' icon={LEAF}>
+										Get Estimate
+									</Button>
+									<Button space='10x' as={Link} to={OUR_WORK} color='secondaryTransp' icon={MOWER}>
+										Our Work
+									</Button>
+								</div>
+							</Grid.Column>
+
+							<Grid.Column textAlign='center' mobile={16} only='mobile'>
+								<Button.FluidWrapper>
+									<Button
+										as={Link}
+										to={ESTIMATE}
+										fluid
+										space='10y'
+										color='secondaryTransp'
+										icon={LEAF}>
+										Get Estimate
+									</Button>
+									<Button fluid color='secondaryTransp' as={Link} to={OUR_WORK} icon={MOWER}>
+										Our Work
+									</Button>
+								</Button.FluidWrapper>
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+				</Container>
+				<div className={style.Overlay} />
+			</header>
+		);
+	};
 
 	return video ? (
 		<div className={style.HeaderVideoContainer} id={'section-1'}>
-			{/* Overlay not only for style but to prevent hover styles on the youtube video and prevent the youtube brand popup as well as pause abilities. */}
 			<div className={style.HeaderVideoOverlay}>
-				<header className={style.SectionWrapper} data-video={video.landingVideo ? 1 : 0}>
-					<Container>
-						<Grid className={style.Wrapper}>
-							<Grid.Row>
-								{/* MOBILE & DESKTOP LOGS */}
-								<Grid.Column
-									className={style.LogoDesktop}
-									tablet={16}
-									computer={16}
-									only='tablet computer'>
-									<img src={banner1000} alt='Full Moon Banner' />
-								</Grid.Column>
-								<Grid.Column className={style.LogoMobile} mobile={16} only='mobile'>
-									<img src={bannerVert_700} alt='Full Moon Banner' />
-								</Grid.Column>
-
-								{/* BELOW BANNER SLOGAN */}
-								<Grid.Column textAlign='center' mobile={16}>
-									<h3>The Right Services. The Right Price.</h3>
-								</Grid.Column>
-
-								{/* TABLET + COMPUTER BUTTONS  */}
-								<Grid.Column textAlign='center' tablet={16} computer={16} only='tablet computer'>
-									<div className={style.ButtonWrapper}>
-										<Button as={Link} to={ESTIMATE} space='10x' color='secondaryTransp' icon={LEAF}>
-											Get Estimate
-										</Button>
-										<Button
-											space='10x'
-											as={Link}
-											to={OUR_WORK}
-											color='secondaryTransp'
-											icon={MOWER}>
-											Our Work
-										</Button>
-									</div>
-								</Grid.Column>
-
-								{/* MOBILE BUTTONS */}
-								<Grid.Column textAlign='center' mobile={16} only='mobile'>
-									<Button.FluidWrapper>
-										<Button
-											as={Link}
-											to={ESTIMATE}
-											fluid
-											space='10y'
-											color='secondaryTransp'
-											icon={LEAF}>
-											Get Estimate
-										</Button>
-										<Button fluid color='secondaryTransp' as={Link} to={OUR_WORK} icon={MOWER}>
-											Our Work
-										</Button>
-									</Button.FluidWrapper>
-								</Grid.Column>
-							</Grid.Row>
-						</Grid>
-					</Container>
-					<div className={style.Overlay} />
-				</header>
+				<Header vid={video} />
 			</div>
 			<Embed
 				autoplay={true}
-				id='ofddQHqdLiA'
+				id={video}
 				active
 				source='youtube'
 				iframe={{
 					allowFullScreen: true,
-					src: 'https://www.youtube.com/embed/ofddQHqdLiA?autoplay=1&;mute=1&;playlist=ofddQHqdLiA&;loop=1&;controls=0&;rel=0',
+					src: `https://www.youtube.com/embed/${video}?autoplay=1&;mute=1&;playlist=${video}&;loop=1&;controls=0&;rel=0`,
 					allow: 'autoplay',
 				}}
 			/>
 		</div>
 	) : (
-		<header
-			className={style.SectionWrapper}
-			data-video={video ? 1 : 0}
-			style={{ backgroundImage: `url(${placeholderLawn})` }}>
-			<Container>
-				<Grid className={style.Wrapper}>
-					<Grid.Row>
-						{/* MOBILE & DESKTOP LOGS */}
-						<Grid.Column className={style.LogoDesktop} tablet={16} computer={16} only='tablet computer'>
-							<img src={banner1000} alt='Full Moon Banner' />
-						</Grid.Column>
-						<Grid.Column className={style.LogoMobile} mobile={16} only='mobile'>
-							<img src={bannerVert_700} alt='Full Moon Banner' />
-						</Grid.Column>
-
-						{/* BELOW BANNER SLOGAN */}
-						<Grid.Column textAlign='center' mobile={16}>
-							<h3>The Right Services. The Right Price.</h3>
-						</Grid.Column>
-
-						{/* TABLET + COMPUTER BUTTONS  */}
-						<Grid.Column textAlign='center' tablet={16} computer={16} only='tablet computer'>
-							<div className={style.ButtonWrapper}>
-								<Button as={Link} to={ESTIMATE} space='10x' color='secondaryTransp' icon={LEAF}>
-									Get Estimate
-								</Button>
-								<Button space='10x' as={Link} to={OUR_WORK} color='secondaryTransp' icon={MOWER}>
-									Our Work
-								</Button>
-							</div>
-						</Grid.Column>
-
-						{/* MOBILE BUTTONS */}
-						<Grid.Column textAlign='center' mobile={16} only='mobile'>
-							<Button.FluidWrapper>
-								<Button as={Link} to={ESTIMATE} fluid space='10y' color='secondaryTransp' icon={LEAF}>
-									Get Estimate
-								</Button>
-								<Button fluid color='secondaryTransp' as={Link} to={OUR_WORK} icon={MOWER}>
-									Our Work
-								</Button>
-							</Button.FluidWrapper>
-						</Grid.Column>
-					</Grid.Row>
-				</Grid>
-			</Container>
-			<div className={style.Overlay} />
-		</header>
+		<Header vid={video} />
 	);
 }

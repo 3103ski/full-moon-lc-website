@@ -11,8 +11,11 @@ export function checkSeshStorageAddIfNeeded(key, callback, query, arg = null, ch
 		// Consolidate storage function for both arg and non-arg scanario
 		function storeThis(data) {
 			if (checkFor) {
-				sessionStorage.setItem(key, 'null');
-				if (data[checkFor]) callback(data[checkFor]);
+				if (data[checkFor]) {
+					console.log(data[checkFor]);
+					sessionStorage.setItem(key, JSON.stringify(data[checkFor]));
+					callback(data[checkFor]);
+				}
 			} else {
 				sessionStorage.setItem(key, JSON.stringify(data));
 				callback(data);
