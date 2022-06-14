@@ -8,6 +8,7 @@ import { Container } from 'semantic-ui-react';
 import { Loading, ArticleCard, BrowseFilters } from 'components';
 import { OUR_WORK } from 'routes';
 import { fetchPortfolioItems } from 'groq';
+import { checkSeshStorageAddIfNeeded } from 'util';
 
 // --> Component Imports
 import Style from './browsePortfolio.module.scss';
@@ -17,12 +18,7 @@ export default function PortfolioBrowse() {
 	const [activeFilters, setActiveFilters] = React.useState([]);
 
 	React.useEffect(() => {
-		fetchPortfolioItems()
-			.then((data) => {
-				setPortfolioItems(data);
-				console.log(data);
-			})
-			.catch(console.error);
+		checkSeshStorageAddIfNeeded('fmlc__portfolioBrowse', setPortfolioItems, fetchPortfolioItems);
 	}, []);
 
 	return !portfolioItems ? (

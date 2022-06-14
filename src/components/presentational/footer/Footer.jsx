@@ -11,6 +11,7 @@ import { Button, SocialIcon } from 'components';
 import { LEAF } from 'icons';
 import { HOME, ESTIMATE } from 'routes';
 import { fetchGeneralInfo } from 'groq';
+import { checkSeshStorageAddIfNeeded } from 'util';
 
 // --> Component Imports
 import style from './footer.module.scss';
@@ -19,9 +20,16 @@ export default function Footer() {
 	const [socialLinks, setSocialLinks] = React.useState(null);
 
 	React.useEffect(() => {
-		fetchGeneralInfo().then((data) => {
-			setSocialLinks(data);
-		});
+		checkSeshStorageAddIfNeeded('fmlc_gen_info', setSocialLinks, fetchGeneralInfo);
+		// let genInfo = sessionStorage.getItem('fmlc_gen_info');
+		// if (genInfo) {
+		// 	setSocialLinks(JSON.parse(genInfo));
+		// } else {
+		// 	fetchGeneralInfo().then((data) => {
+		// 		sessionStorage.setItem('fmlc_gen_info', JSON.stringify(data));
+		// 		setSocialLinks(data);
+		// 	});
+		// }
 	}, []);
 
 	return (

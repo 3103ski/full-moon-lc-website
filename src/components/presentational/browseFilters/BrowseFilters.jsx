@@ -31,9 +31,7 @@ export default function BrowseFilters({ items, setActiveCallback, notTag = null 
 
 	React.useEffect(() => {
 		if (!options) {
-			console.log({ notTag });
 			let filterOptions = BrowseFilters.collectTags({ items, notTag });
-			console.log({ filterOptions });
 			setOptions(filterOptions);
 		}
 	}, [items, notTag, options]);
@@ -60,7 +58,6 @@ export default function BrowseFilters({ items, setActiveCallback, notTag = null 
 BrowseFilters.collectTags = ({ items = [], notTag = null }) => {
 	let tagsArr;
 	if (notTag) {
-		console.log('right place');
 		tagsArr = items.map((item) => item[notTag]); // <-- Generates array of arrays
 	} else {
 		tagsArr = items.map((item) => item.tags); // <-- Generates array of arrays

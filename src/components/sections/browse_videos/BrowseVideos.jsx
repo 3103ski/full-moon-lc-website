@@ -6,6 +6,7 @@ import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
 import { fetchVideos } from 'groq';
+import { checkSeshStorageAddIfNeeded } from 'util';
 
 // -->  Component Imports
 import Style from './browseVideos.module.scss';
@@ -16,13 +17,16 @@ export default function BrowseVideosSection() {
 	const colRef = React.useRef();
 
 	React.useEffect(() => {
+		checkSeshStorageAddIfNeeded('fmlc__videoBrowse', setVideos, fetchVideos);
+	}, []);
+
+	React.useEffect(() => {
 		if (colRef && !videoWidth) {
 			setVideoWidth(colRef.current.clientWidth);
 		}
 		window.addEventListener('resize', function () {
 			setVideoWidth(colRef.current.clientWidth);
 		});
-		fetchVideos().then((data) => setVideos(data));
 	}, [videoWidth]);
 
 	return (

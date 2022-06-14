@@ -70,7 +70,7 @@ export function fetchServiceSlugs() {
 // Get Specific Service Content
 export function fetchServiceTemplateContent(slug) {
 	return sanityClient.fetch(
-		`*[slug.current == $slug]{
+		`*[slug.current == $slug][0]{
             title,
             body,
             subtitle,
@@ -182,7 +182,7 @@ export function fetchArticles() {
 // Get Single Article
 export function fetchArticleTemplateContent(slug) {
 	return sanityClient.fetch(
-		`*[slug.current == $slug]{
+		`*[slug.current == $slug][0]{
             title,
             subtitle,
             body,

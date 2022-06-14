@@ -8,6 +8,7 @@ import { Container } from 'semantic-ui-react';
 import { ArticleCard, BrowseFilters, Loading } from 'components';
 import { ARTICLES } from 'routes';
 import { fetchArticles } from 'groq';
+import { checkSeshStorageAddIfNeeded } from 'util';
 
 // --> Component Imports
 import Style from './browseArticles.module.scss';
@@ -17,11 +18,7 @@ export default function BrowseArticles() {
 	const [activeFilters, setActiveFilters] = React.useState([]);
 
 	React.useEffect(() => {
-		fetchArticles()
-			.then((data) => {
-				setArticles(data);
-			})
-			.catch(console.error);
+		checkSeshStorageAddIfNeeded('fmlc__articleBrowse', setArticles, fetchArticles);
 	}, []);
 
 	return !articles ? (

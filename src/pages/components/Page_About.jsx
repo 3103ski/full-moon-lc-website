@@ -5,14 +5,13 @@ import React from 'react';
 import { LearnLawnCareSection, HappyClientsSection, AboutHeaderSection, AboutBioSection, Loading } from 'components';
 import ViewWrapper from './ViewWrapper';
 import { fetchAboutPageInfo } from 'groq';
+import { checkSeshStorageAddIfNeeded } from 'util';
 
 export default function AboutPage() {
 	const [content, setContent] = React.useState(null);
 
 	React.useEffect(() => {
-		fetchAboutPageInfo()
-			.then((data) => setContent(data))
-			.catch(console.error);
+		checkSeshStorageAddIfNeeded(`fmlc_aboutpage`, setContent, fetchAboutPageInfo);
 	}, []);
 
 	return !content ? (
