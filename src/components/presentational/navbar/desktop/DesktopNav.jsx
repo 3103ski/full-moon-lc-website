@@ -9,7 +9,6 @@ import { motion_variants_nav } from 'util';
 import { Button } from 'components';
 import { VIDEOS, OUR_WORK, ARTICLES, SERVICE, ABOUT_US, ESTIMATE } from 'routes';
 import { LEAF, PHONE } from 'icons';
-import { fetchServiceSlugs } from 'groq';
 
 // --> Component Imports
 import NavBranding from './branding/Branding';
@@ -17,9 +16,8 @@ import DropMenu from './links/dropMenu/DropMenu';
 import RootLink from './links/rootLink/RootLink';
 import Style from './descktopNav.module.scss';
 
-export default function DesktopNav() {
+export default function DesktopNav({ services }) {
 	const [scrolled, setScrolled] = React.useState(false);
-	const [services, setServices] = React.useState([]);
 
 	React.useEffect(() => {
 		const appWrapper = document.getElementById('app');
@@ -31,12 +29,6 @@ export default function DesktopNav() {
 			}
 		});
 	}, [scrolled]);
-
-	React.useEffect(() => {
-		fetchServiceSlugs()
-			.then((data) => setServices(data))
-			.catch(console.error);
-	});
 
 	return (
 		<div className={Style.Container}>

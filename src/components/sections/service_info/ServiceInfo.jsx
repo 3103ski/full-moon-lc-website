@@ -15,7 +15,6 @@ import { ESTIMATE } from 'routes';
 import Style from './serviceInfo.module.scss';
 
 export default function ServiceInfoSection({ service = null }) {
-	console.log(service);
 	return (
 		service && (
 			<section className={Style.SectionWrapper}>

@@ -6,7 +6,6 @@ import React from 'react';
 import { SERVICE, ABOUT_US, VIDEOS, OUR_WORK, HOME, ARTICLES, ESTIMATE } from 'routes';
 import { Button, Modal } from 'components';
 import { PHONE, LEAF } from 'icons';
-import { fetchServiceSlugs } from 'groq';
 
 // --> Components Imports
 import Drawer from './drawer/Drawer';
@@ -14,16 +13,9 @@ import Link from './link/Link.jsx';
 import Style from './mobileNav.module.scss';
 import Toggle from './toggle/Toggle.jsx';
 
-export default function MobileNav() {
+export default function MobileNav({ services = [] }) {
 	const [open, toggleOpen] = React.useState(false);
 	const [contactOpen, toggleContactOpen] = React.useState(false);
-	const [serviceSlugs, setServiceSlugs] = React.useState([]);
-
-	React.useEffect(() => {
-		fetchServiceSlugs()
-			.then((data) => setServiceSlugs(data))
-			.catch(console.error);
-	});
 
 	return (
 		<>
@@ -78,7 +70,7 @@ export default function MobileNav() {
 							About Us
 						</Link>
 						<Link.SectionLabel>Services</Link.SectionLabel>
-						{serviceSlugs.map((s, i) => (
+						{services.map((s, i) => (
 							<Link
 								key={`${s.slug.current}_${i}`}
 								toggle={toggleOpen}
