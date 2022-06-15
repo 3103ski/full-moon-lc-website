@@ -5,6 +5,7 @@ import React from 'react';
 import { Container, Grid } from 'semantic-ui-react';
 
 // --> Project Imports
+import { Loading } from 'components';
 import { fetchVideos } from 'groq';
 import { checkSeshStorageAddIfNeeded } from 'util';
 
@@ -34,7 +35,9 @@ export default function BrowseVideosSection() {
 		<Container as={'section'} className={Style.SectionWrapper}>
 			<Grid relaxed>
 				<Grid.Row>
-					{videos &&
+					{!videos ? (
+						<Loading size='small' />
+					) : (
 						videos.map((vid, i) => {
 							let vidID = vid.embed ? vid.embed.split('watch?v=')[1] : '';
 							return (
@@ -57,7 +60,8 @@ export default function BrowseVideosSection() {
 									)}
 								</Grid.Column>
 							);
-						})}
+						})
+					)}
 					<Grid.Column mobile={16} tablet={8} computer={5}>
 						<div
 							id='colWidth'

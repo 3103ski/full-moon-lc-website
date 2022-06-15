@@ -63,16 +63,19 @@ export default function ServicesSection() {
 					</Grid>
 
 					<ArticleCard.CardGroup>
-						{Object.values(content.services).map((service, i) => (
-							<ArticleCard
-								to={`${SERVICE}/${service.slug.current}`}
-								key={`${i}__${service.slug.current}`}
-								title={service.title}
-								summary={service.shortSummary}
-								backgroundImage={service.mainImage.asset.url}
-								linkText='Learn More'
-							/>
-						))}
+						{Object.values(content.services).map(
+							(service, i) =>
+								i < 4 && (
+									<ArticleCard
+										to={`${SERVICE}/${service.slug.current}`}
+										key={`${i}__${service.slug.current}`}
+										title={service.title}
+										summary={service.shortSummary}
+										backgroundImage={service.mainImage.asset.url}
+										linkText='Learn More'
+									/>
+								)
+						)}
 					</ArticleCard.CardGroup>
 
 					<Grid>

@@ -104,7 +104,7 @@
 
 			.Title {
 				font-size: 3rem;
-				margin-bottom: 10px !important;
+				margin-bottom: 40px !important;
 			}
 		}
 	}
@@ -129,8 +129,8 @@
 	}
 
 	@media #{map-get($media, cpu_min)} {
-		width: 330px;
-		height: 330px;
+		width: 300px;
+		height: 300px;
 
 		.Inner {
 			padding: 20px;

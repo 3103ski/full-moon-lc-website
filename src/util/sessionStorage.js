@@ -12,9 +12,12 @@ export function checkSeshStorageAddIfNeeded(key, callback, query, arg = null, ch
 		function storeThis(data) {
 			if (checkFor) {
 				if (data[checkFor]) {
-					console.log(data[checkFor]);
+					// console.log(data[checkFor]);
 					sessionStorage.setItem(key, JSON.stringify(data[checkFor]));
 					callback(data[checkFor]);
+				} else {
+					sessionStorage.setItem(key, 'null');
+					callback(null);
 				}
 			} else {
 				sessionStorage.setItem(key, JSON.stringify(data));

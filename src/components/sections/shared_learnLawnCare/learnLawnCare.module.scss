@@ -2,10 +2,14 @@
 
 .SectionLearnLawn {
 	@include flex-center-center;
-	@include center-cover-bg;
+	// @include center-cover-bg;
 
 	position: relative;
 	min-height: 80vh;
+	background-position-x: center !important;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	&[data-picture='1'] {
 		min-height: 100vh;

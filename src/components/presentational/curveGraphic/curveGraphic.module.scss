@@ -1,14 +1,15 @@
 .Graphic {
-	width: 100%;
-	left: 0;
+	// This 2px offset is a hot fix to a strange issue with the asset.
+	width: calc(100% + 2px);
+	left: -1px;
 	position: absolute;
 	z-index: 1;
 
 	&[data-pos='top'] {
-		top: 0;
+		top: -1px;
 	}
 
 	&[data-pos='bottom'] {
-		bottom: 0;
+		bottom: -1px;
 	}
 }

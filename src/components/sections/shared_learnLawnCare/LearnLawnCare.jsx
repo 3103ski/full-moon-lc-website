@@ -18,6 +18,44 @@ import style from './learnLawnCare.module.scss';
 export default function LearnLawnCareSection({ picture = false }) {
 	const backgroundPic = picture ? `url(${placeholderMowing})` : '';
 	const [content, setContent] = React.useState(null);
+	const [isTablet, setIsTablet] = React.useState(null);
+	const [yOffset, setYOffest] = React.useState(null);
+
+	const handleScroll = React.useCallback(() => {
+		let section = document.getElementById('learn-section').getBoundingClientRect();
+		return section ? setYOffest(section.y) : null;
+	}, []);
+
+	React.useEffect(() => {
+		const app = document.getElementById('app');
+		app.addEventListener('scroll', handleScroll);
+		return () => (app ? app.removeEventListener('scroll', handleScroll) : null);
+	}, [handleScroll]);
+
+	const sizeCheck = React.useCallback(() => {
+		function isBelowCpuBreakpoint() {
+			let vw = window.innerWidth;
+			let limit = parseInt(style.bp_limit_tablet_top.split('px')[0]);
+
+			if (vw < limit) return true;
+			return false;
+		}
+
+		if (isBelowCpuBreakpoint()) {
+			if (!isTablet) setIsTablet(true);
+		} else {
+			if (isTablet) setIsTablet(false);
+		}
+	}, [isTablet]);
+
+	React.useEffect(() => {
+		if (isTablet === null) {
+			sizeCheck();
+		}
+
+		window.addEventListener('resize', sizeCheck);
+		return () => window.removeEventListener('resize', sizeCheck);
+	}, [isTablet, sizeCheck]);
 
 	React.useEffect(() => {
 		checkSeshStorageAddIfNeeded(`fmlc_learnlawncare__content`, setContent, fetchLearnLawnCareSectionArticles);
@@ -27,8 +65,12 @@ export default function LearnLawnCareSection({ picture = false }) {
 		content && (
 			<section
 				className={style.SectionLearnLawn}
+				id={'learn-section'}
 				data-picture={picture ? 1 : 0}
-				style={{ backgroundImage: backgroundPic }}>
+				style={{
+					backgroundImage: backgroundPic,
+					backgroundPositionY: `${isTablet ? 0 : (yOffset / 1.5) * 0.8}px`,
+				}}>
 				<div className={style.Overlay} />
 				<Container className={style.Content}>
 					<h1 className={style.Title}>{content.title}</h1>

@@ -24,7 +24,7 @@ export default function HomeLandingSection() {
 	React.useEffect(() => {
 		checkSeshStorageAddIfNeeded(
 			`fmlc_landingvideo`,
-			(vid) => setVideo(vid.split('=')[1]),
+			(vid) => (vid ? setVideo(vid.split('=')[1]) : setVideo(null)),
 			fetchGeneralInfo,
 			null,
 			'landingVideo'

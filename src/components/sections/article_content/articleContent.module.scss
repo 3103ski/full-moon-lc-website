@@ -29,10 +29,8 @@
 		.Mascot {
 			position: absolute;
 			z-index: 0;
-			transform: scaleX(-1);
 
 			@media #{map-get($media, mobile)} {
-				transform: scaleX(1);
 				bottom: 0px;
 				right: 10px;
 				width: 280px;

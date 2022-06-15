@@ -9,7 +9,7 @@ import SanityBlockContent from '@sanity/block-content-to-react';
 // --> Project Imports
 import { Button, Card, CurveGraphic, SocialIcon } from 'components';
 import { MOWER } from 'icons';
-import { mascotThumRight1000 } from 'assets';
+import { mascotOne1000 } from 'assets';
 import { ARTICLES, ESTIMATE } from 'routes';
 
 // --> Component Imports
@@ -59,7 +59,7 @@ export default function ArticleContentSection({ article }) {
 					</Grid>
 				</Container>
 				<Container className={style.MascotContainer}>
-					<img className={style.Mascot} src={mascotThumRight1000} alt='Mascot Thumbs Up' />
+					<img className={style.Mascot} src={mascotOne1000} alt='Mascot Thumbs Up' />
 				</Container>
 				<CurveGraphic pos='bottom' />
 			</section>

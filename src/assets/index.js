@@ -1,10 +1,10 @@
 // --> LOGO BANNER
-import banner250 from './banner_250.png';
-import banner500 from './banner_500.png';
-import banner1000 from './banner_1400.png';
+import banner250 from './branding/branding_250.png';
+import banner500 from './branding/branding_500.png';
+import banner1000 from './branding/branding_1000.png';
 
-import bannerVert_1000 from './bannerVert_1000.png';
-import bannerVert_700 from './bannerVert_700.png';
+import bannerVert_1000 from './branding/branding_vert_1000.png';
+import bannerVert_700 from './branding/branding_vert_800.png';
 
 //••••••••••••••••••••••
 // --> MASCOT GRAPHICS
@@ -13,29 +13,29 @@ import bannerVert_700 from './bannerVert_700.png';
 import mascotDisc from './fmlc512x512.png';
 
 // --> Thumbs Up (face left)
-import mascotOne250 from './mascot_thumbup_250.png';
-import mascotOne500 from './mascot_thumbup_500.png';
-import mascotOne1000 from './mascot_thumbup_1000.png';
+import mascotOne250 from './branding/masc_thumb_left_250.PNG';
+import mascotOne500 from './branding/masc_thumb_left_500.PNG';
+import mascotOne1000 from './branding/masc_thumb_left_1000.PNG';
 
 // --> Thumbs Up (face right)
-import mascotThumRight1000 from './mascot_thumbup_right_1000.png';
-import mascotThumRight500 from './mascot_thumbup_right_500.png';
-import mascotThumRight250 from './mascot_thumbup_right_250.png';
+import mascotThumRight1000 from './branding/masc_thumb_right_1000.PNG';
+import mascotThumRight500 from './branding/masc_thumb_right_500.PNG';
+import mascotThumRight250 from './branding/masc_thumb_right_250.PNG';
 
 // --> Arms Crossed
-import mascotArmsCrossed1000 from './mascot_armscrossed_1000.png';
-import mascotArmsCrossedCutoff1000 from './mascot_armscrossed_cutoff_1000.png';
+import mascotArmsCrossed1000 from './branding/masc_crossed_1000.PNG';
+import mascotArmsCrossedCutoff1000 from './branding/masc_crossed_1000_cuttoff.PNG';
 
 // --> Property Cleanup
-import mascotCleanup1000 from './mascot_cleanup_1000.png';
+import mascotCleanup1000 from './branding/masc_barrow_right_1000.PNG';
 
 //•••••••••••••••••••••••••
 // --> LAYOUT
 //•••••••••••••••••••••••••
 
 // --> Background Graphics
-import curveGraphicTopLG from './graphic_curve_top_lg.png';
-import curveGraphicBottomLG from './graphic_curve_bottom_lg.png';
+import curveGraphicTopLG from './branding/graphic_curve_top.png';
+import curveGraphicBottomLG from './branding/graphic_curve_bottom.png';
 
 // --> Background Images
 import backgroundFamily from './background_stock_family.jpg';

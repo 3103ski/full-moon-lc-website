@@ -1,7 +1,9 @@
 @import 'sass';
 
 .SectionWrapper {
-	@include center-cover-bg;
+	// @include center-cover-bg;
+	background-size: cover;
+	background-attachment: fixed;
 	position: relative;
 
 	.Overlay {
@@ -44,19 +46,21 @@
 
 	.MascotGraphic {
 		// Default
-		width: 300px;
+		width: 400px;
 		position: absolute;
 		bottom: 0;
 		right: 0;
 
 		// Mobile
 		@media #{map-get($media, mobile)} {
+			width: 300px;
 			right: -140px;
 			transform: scaleX(-1);
 		}
 
 		// Tablet
 		@media #{map-get($media, tablet)} {
+			width: 350px;
 			right: -90px;
 			transform: scaleX(-1);
 		}
