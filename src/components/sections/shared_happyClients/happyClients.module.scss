@@ -1,15 +1,18 @@
 @import 'sass';
 
 .SectionWrapper {
-	// @include center-cover-bg;
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
 
+	@media #{map-get($media, mobile)} {
+		background-attachment: unset !important;
+		background-position: center !important;
+	}
+
 	.Overlay {
 		@include overlay-dark-brand;
 	}
-	// overflow: hidden;
 
 	.Inner {
 		padding: 0px 0;

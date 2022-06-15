@@ -56,6 +56,9 @@
 	}
 
 	@media #{map-get($media, mobile)} {
+		background-attachment: unset;
+		background-size: cover !important;
+		background-position: center !important;
 		height: unset !important;
 	}
 }
