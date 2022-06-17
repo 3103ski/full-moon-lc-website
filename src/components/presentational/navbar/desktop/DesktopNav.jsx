@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 // --> Project Imports
 import { motion_variants_nav } from 'util';
 import { Button } from 'components';
-import { VIDEOS, OUR_WORK, ARTICLES, SERVICE, ABOUT_US, ESTIMATE } from 'routes';
+import { VIDEOS, OUR_WORK, ARTICLES, SERVICE, ABOUT_US, ESTIMATE, PHONE_NUMBER } from 'routes';
 import { LEAF, PHONE } from 'icons';
 
 // --> Component Imports
@@ -57,7 +57,7 @@ export default function DesktopNav({ services }) {
 							Get Estimate
 						</Button>
 					</RootLink>
-					<RootLink href='tel:7724185307' hover={false}>
+					<RootLink href={`tel:${PHONE_NUMBER}`} hover={false}>
 						<Button icon={PHONE} thin color='none'>
 							Call Us Now
 						</Button>

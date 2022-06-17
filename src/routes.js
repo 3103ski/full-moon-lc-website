@@ -6,3 +6,5 @@ export const ARTICLES = `/articles`;
 export const SERVICE = `/service`;
 export const ESTIMATE = '/get-estimate';
 export const YELP_URL = 'https://www.yelp.com';
+
+export const PHONE_NUMBER = `8282830449`;

@@ -3,7 +3,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 // --> Project Imports
-import { SERVICE, ABOUT_US, VIDEOS, OUR_WORK, HOME, ARTICLES, ESTIMATE } from 'routes';
+import { SERVICE, ABOUT_US, VIDEOS, OUR_WORK, HOME, ARTICLES, ESTIMATE, PHONE_NUMBER } from 'routes';
 import { Button, Modal } from 'components';
 import { PHONE, LEAF } from 'icons';
 
@@ -39,7 +39,7 @@ export default function MobileNav({ services = [] }) {
 						</Button>
 						<Button
 							as={'a'}
-							href='tel:7724185307'
+							href={`tel:${PHONE_NUMBER}`}
 							onClick={() => toggleContactOpen(false)}
 							space='10y'
 							fluid
