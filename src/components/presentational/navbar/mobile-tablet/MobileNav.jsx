@@ -80,7 +80,7 @@ export default function MobileNav({ services = [] }) {
 						))}
 						<Button
 							as={'a'}
-							href='tel:7724185307'
+							href={`tel:${PHONE_NUMBER}`}
 							onClick={() => toggleOpen(false)}
 							space='10y'
 							fluid
