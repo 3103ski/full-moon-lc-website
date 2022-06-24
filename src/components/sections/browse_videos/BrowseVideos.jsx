@@ -37,6 +37,8 @@ export default function BrowseVideosSection() {
 				<Grid.Row>
 					{!videos ? (
 						<Loading size='small' />
+					) : videos.length === 0 ? (
+						<p style={{ minHeight: '300px' }}>No videos yet. Check back soon!</p>
 					) : (
 						videos.map((vid, i) => {
 							let vidID = vid.embed ? vid.embed.split('watch?v=')[1] : '';

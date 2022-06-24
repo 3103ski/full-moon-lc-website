@@ -20,7 +20,11 @@ export default function WorkTemplateContent({ portfolioItem }) {
 			<Container className={Style.SectionInner}>
 				<Grid>
 					<Grid.Row>
-						<Grid.Column mobile={16} tablet={8} computer={10} className={Style.Body}>
+						<Grid.Column
+							mobile={16}
+							tablet={!portfolioItem.faqs || portfolioItem.faqs.length === 0 ? 16 : 8}
+							computer={!portfolioItem.faqs || portfolioItem.faqs.length === 0 ? 16 : 10}
+							className={Style.Body}>
 							<div className={Style.ServicesProvidedContainer}>
 								<p>Services Provided</p>
 								<div className={Style.TagContainer}>
@@ -43,19 +47,21 @@ export default function WorkTemplateContent({ portfolioItem }) {
 								</Button>
 							</Link>
 						</Grid.Column>
-						<Grid.Column mobile={16} tablet={8} computer={6}>
-							<FAQ>
-								{portfolioItem.faqs.map((item, i) => (
-									<FAQItem
-										useIcon
-										blockContent
-										question={item.question}
-										key={`${Math.random()}_${i}`}
-										answer={item.answer}
-									/>
-								))}
-							</FAQ>
-						</Grid.Column>
+						{!portfolioItem.faqs || portfolioItem.faqs.length === 0 ? null : (
+							<Grid.Column mobile={16} tablet={8} computer={6}>
+								<FAQ>
+									{portfolioItem.faqs.map((item, i) => (
+										<FAQItem
+											useIcon
+											blockContent
+											question={item.question}
+											key={`${Math.random()}_${i}`}
+											answer={item.answer}
+										/>
+									))}
+								</FAQ>
+							</Grid.Column>
+						)}
 					</Grid.Row>
 				</Grid>
 			</Container>

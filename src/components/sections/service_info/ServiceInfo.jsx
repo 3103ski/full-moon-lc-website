@@ -24,7 +24,11 @@ export default function ServiceInfoSection({ service = null }) {
 				<Container>
 					<Grid>
 						<Grid.Row>
-							<Grid.Column mobile={16} tablet={9} computer={10} className={Style.Body}>
+							<Grid.Column
+								mobile={16}
+								tablet={!service.faqs || service.faqs.length === 0 ? 16 : 9}
+								computer={!service.faqs || service.faqs.length === 0 ? 16 : 10}
+								className={Style.Body}>
 								<SanityBlockContent blocks={service.body} />
 								<Link to={ESTIMATE}>
 									<Button
@@ -37,19 +41,21 @@ export default function ServiceInfoSection({ service = null }) {
 									</Button>
 								</Link>
 							</Grid.Column>
-							<Grid.Column mobile={16} tablet={7} computer={6}>
-								<FAQ>
-									{service.faqs.map((item, i) => (
-										<FAQItem
-											useIcon
-											blockContent
-											question={item.question}
-											key={`${Math.random()}_${i}`}
-											answer={item.answer}
-										/>
-									))}
-								</FAQ>
-							</Grid.Column>
+							{!service.faqs || service.faqs.length === 0 ? null : (
+								<Grid.Column mobile={16} tablet={7} computer={6}>
+									<FAQ>
+										{service.faqs.map((item, i) => (
+											<FAQItem
+												useIcon
+												blockContent
+												question={item.question}
+												key={`${Math.random()}_${i}`}
+												answer={item.answer}
+											/>
+										))}
+									</FAQ>
+								</Grid.Column>
+							)}
 						</Grid.Row>
 					</Grid>
 					<CurveGraphic pos='bottom' />
