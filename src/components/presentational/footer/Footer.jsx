@@ -33,8 +33,8 @@ export default function Footer() {
 								<Grid.Column mobile={16} tablet={10} computer={10}>
 									<h3>Friendly & Ready To Help</h3>
 									<p>
-										We are ready to have a team member work out a quote. Fill our our form or
-										contact us now!
+										We are ready to have a team member work out a quote. Fill our form or contact us
+										now!
 									</p>
 								</Grid.Column>
 								<Grid.Column only='tablet computer' tablet={6} computer={6}>
@@ -66,7 +66,7 @@ export default function Footer() {
 									</Link>
 								</Grid.Column>
 								<Grid.Column mobile={16} tablet={6} computer={6} className={style.InfoWrapper}>
-									<p>Licensed, Insured, and Bonded</p>
+									<p>Licensed & Insured</p>
 									<div className={style.SocialIconWrapper}>
 										<SocialIcon link={socialLinks.instagram} margin='0 4px' type={'insta'} />
 										<SocialIcon link={socialLinks.facebook} margin='0 4px' type={'fb'} />
