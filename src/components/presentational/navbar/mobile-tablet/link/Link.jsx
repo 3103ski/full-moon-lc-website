@@ -38,3 +38,7 @@ MobileLink.Container = ({ children, ...rest }) => {
 		</motion.div>
 	);
 };
+
+MobileLink.SubLinkWrapper = ({ children }) => {
+	return <div className={Style.SubLinkWrapper}>{children}</div>;
+};

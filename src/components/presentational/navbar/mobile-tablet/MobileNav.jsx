@@ -17,6 +17,12 @@ export default function MobileNav({ services = [] }) {
 	const [open, toggleOpen] = React.useState(false);
 	const [contactOpen, toggleContactOpen] = React.useState(false);
 
+	// const ToggleLink = ({ to, children }) => (
+	// 	<Link toggle={toggleOpen} to={to}>
+	// 		{children}
+	// 	</Link>
+	// );
+	console.log([...services, { title: 'test', slug: { current: 'test' } }]);
 	return (
 		<>
 			<div
@@ -56,28 +62,36 @@ export default function MobileNav({ services = [] }) {
 						<Link toggle={toggleOpen} to={HOME}>
 							Home
 						</Link>
-						<Link.SectionLabel>Explore</Link.SectionLabel>
-						<Link toggle={toggleOpen} to={OUR_WORK}>
-							Our Work
-						</Link>
-						<Link toggle={toggleOpen} to={ARTICLES}>
-							Articles
-						</Link>
-						<Link toggle={toggleOpen} to={VIDEOS}>
-							Videos
-						</Link>
 						<Link toggle={toggleOpen} to={ABOUT_US}>
 							About Us
 						</Link>
-						<Link.SectionLabel>Services</Link.SectionLabel>
-						{services.map((s, i) => (
-							<Link
-								key={`${s.slug.current}_${i}`}
-								toggle={toggleOpen}
-								to={`${SERVICE}/${s.slug.current}`}>
-								{s.title}
+						<Link.SectionLabel>Explore</Link.SectionLabel>
+						<Link.SubLinkWrapper>
+							<Link toggle={toggleOpen} to={OUR_WORK}>
+								Our Work
 							</Link>
-						))}
+							<Link toggle={toggleOpen} to={ARTICLES}>
+								Articles
+							</Link>
+							<Link toggle={toggleOpen} to={VIDEOS}>
+								Videos
+							</Link>
+						</Link.SubLinkWrapper>
+
+						<Link.SectionLabel>Services</Link.SectionLabel>
+						<Link.SubLinkWrapper>
+							{services.map((s, i) =>
+								!s.slug || !s.slug.current ? null : (
+									<Link
+										key={`${s.slug.current}_${i}`}
+										toggle={toggleOpen}
+										to={`${SERVICE}/${s.slug.current}`}>
+										{s.title}
+									</Link>
+								)
+							)}
+						</Link.SubLinkWrapper>
+
 						<Button
 							as={'a'}
 							href={`tel:${PHONE_NUMBER}`}

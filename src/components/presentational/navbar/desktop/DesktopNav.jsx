@@ -38,7 +38,17 @@ export default function DesktopNav({ services }) {
 				variants={motion_variants_nav.desktop}>
 				<NavBranding scrolled={scrolled} />
 				<div className={Style.CenterLinks}>
-					<DropMenu links={services.map((s) => ({ label: s.title, to: `${SERVICE}/${s.slug.current}` }))}>
+					<DropMenu
+						links={services
+							.map((s) =>
+								!s.slug || !s.slug.current
+									? null
+									: {
+											label: s.title,
+											to: `${SERVICE}/${s.slug.current}`,
+									  }
+							)
+							.filter((l) => l !== null)}>
 						Services
 					</DropMenu>
 					<DropMenu
